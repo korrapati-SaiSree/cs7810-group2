@@ -1,3 +1,3 @@
 
 
-Project for cs7810 Introduction to Knowledge Engineering.
+Project for CS7810 Introduction to Knowledge Engineering.
