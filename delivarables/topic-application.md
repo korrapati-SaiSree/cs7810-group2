@@ -14,7 +14,7 @@ Even though, there are few knowledge graphs on traffic accidents already in exis
 
 C) **Timeliness**: does creating a knowledge graph for this topic address a current event or important (unsolved) problem?
 
-Yes, this KG can address current problem. Every year, over 1.35 million people are dying in road crashes world wide, and millions more are injured. Even after advancements in road infrastrucutre and vehicle technology, road accidents continue to cause deaths. Traditional approaches to road safety are becoming less effective as they relay on historical data without real-time, integrated insights. A KG that can model crash risks, identigying emerging patterns and predict high risk areas has the potential to save lives. 
+Yes, this KG can address current problem. Every year, over 1.35 million people are dying in road crashes world wide, and millions more are injured. Even after advancements in road infrastrucutre and vehicle technology, road accidents continue to cause deaths. Traditional approaches to road safety are becoming less effective as they relay on historical data without real-time, integrated insights. A KG that can model crash risks, identifying emerging patterns and predict high risk areas has the potential to save lives. 
 
 * **Audience**: broadly, who would be interestd in a knowledge graph for this topic?
 
