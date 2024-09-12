@@ -12,7 +12,10 @@ B) **Novelty**: is there already a knowledge graph for this topic?
 
 Even though, there are few knowledge graphs on traffic accidents already in existence, most of them concentrate on only the most obvious reasons. What makes this project novel is, we are stressing on combining multiple factors to analyze how they interact and increase accidents. This brings fresh dimension. Also the novelty resides in adding less evident causes - which are frequently missed in current knowldge graphs. Over all, we are trying to fill in the gaps left.
 
-* **Timeliness**: does creating a knowledge graph for this topic address a current event or important (unsolved) problem?
+C) **Timeliness**: does creating a knowledge graph for this topic address a current event or important (unsolved) problem?
+
+Yes, this KG can address current problem. Every year, over 1.35 million people are dying in road crashes world wide, and millions more are injured. Even after advancements in road infrastrucutre and vehicle technology, road accidents continue to cause deaths. Traditional approaches to road safety are becoming less effective as they relay on historical data without real-time, integrated insights. A KG that can model crash risks, identigying emerging patterns and predict high risk areas has the potential to save lives. 
+
 * **Audience**: broadly, who would be interestd in a knowledge graph for this topic?
 
 ## Topic 2
