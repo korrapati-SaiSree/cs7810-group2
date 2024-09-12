@@ -16,7 +16,12 @@ C) **Timeliness**: does creating a knowledge graph for this topic address a curr
 
 Yes, this KG can address current problem. Every year, over 1.35 million people are dying in road crashes world wide, and millions more are injured. Even after advancements in road infrastrucutre and vehicle technology, road accidents continue to cause deaths. Traditional approaches to road safety are becoming less effective as they relay on historical data without real-time, integrated insights. A KG that can model crash risks, identifying emerging patterns and predict high risk areas has the potential to save lives. 
 
-* **Audience**: broadly, who would be interestd in a knowledge graph for this topic?
+D) **Audience**: broadly, who would be interestd in a knowledge graph for this topic?
+
+* Public Safety Authorities
+* Insurance Companies
+* Automobile Manufacturers and Autonomous Vehicle Developers
+* General Public
 
 ## Topic 2
 * **Merit**: is the topic intellectually challenging?
