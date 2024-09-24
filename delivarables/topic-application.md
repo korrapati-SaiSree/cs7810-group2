@@ -39,8 +39,8 @@ Yes, indeed, this topic concerns one of the most urgent problems. The challenges
 
 - **Audience**: broadly, who would be interestd in a knowledge graph for this topic?
 
--  Real Estate Developers and Investors
--  Urban Planners and Policymakers
--  Employers and HR Teams
--  Economists and Researchers
+-  a) Real Estate Developers and Investors
+-  b) Urban Planners and Policymakers
+-  c) Employers and HR Teams
+-  d) Economists and Researchers
 
