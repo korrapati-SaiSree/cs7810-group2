@@ -27,9 +27,7 @@ D) **Audience**: broadly, who would be interestd in a knowledge graph for this t
 
 - **Merit**: is the topic intellectually challenging?
 
-Remote work and its impacts for real estate markets are an interesting topic since numerous socio-economic factors, work-related changes and geographical factors operate interactively. There enables an opportunity to examine how changes in the employment size in certain industries relate to the demand for new space in urban and suburban regions. For instance, the development of remote working decreases the requirement of the offices in specific central business districts implying a rise in the real estate in suburban areas as people look for large houses for home offices. However, the challenge arises in relating these trends to firms, sizes, changes in payroll, and changes in employment; especially by establishment size (for instance, firms with less than 500 employees and the ones with more than 500 employees). A vast quantity of high-quality evidence points to the fact that employment and firm size and its interplay matter for real estate across the regions; the analysis of such relationships means having to contend with various economic indicators and their effects.
-
-However, incorporating time variation to compare pre-pandemic and post-pandemic demand patterns and controls for firm size and firm industry simply makes this analysis more challenging and stimulating.
+Remote work and its impacts for real estate markets are an interesting topic since numerous socio-economic factors, work-related changes and geographical factors operate interactively. There enables an opportunity to examine how changes in the employment size in certain industries relate to the demand for new space in urban and suburban regions. For instance, the development of remote working decreases the requirement of the offices in specific central business districts implying a rise in the real estate in suburban areas as people look for large houses for home offices. However, the challenge arises in relating these trends to firms, sizes, changes in payroll, and changes in employment; especially by establishment size (for instance, firms with less than 500 employees and the ones with more than 500 employees). A vast quantity of high-quality evidence points to the fact that employment and firm size and its interplay matter for real estate across the regions; the analysis of such relationships means having to contend with various economic indicators and their effects. However, incorporating time variation to compare pre-pandemic and post-pandemic demand patterns and controls for firm size and firm industry simply makes this analysis more challenging and stimulating.
 
 - **Novelty**: is there already a knowledge graph for this topic?
 
@@ -41,8 +39,8 @@ Yes, indeed, this topic concerns one of the most urgent problems. The challenges
 
 - **Audience**: broadly, who would be interestd in a knowledge graph for this topic?
 
-- Real Estate Developers and Investors
-- Urban Planners and Policymakers
-- Employers and HR Teams
-- Economists and Researchers
+-  Real Estate Developers and Investors
+-  Urban Planners and Policymakers
+-  Employers and HR Teams
+-  Economists and Researchers
 
