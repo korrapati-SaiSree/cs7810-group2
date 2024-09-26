@@ -49,5 +49,10 @@ A thorough, scalable, and adaptable method is offered by the knowledge graph, wh
 7. Socioeconomic and demographic data.
 8. Census data
 
+#  Contributors
+Ruman
+Suyes
+Sai Sree
+
 
 
