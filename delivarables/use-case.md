@@ -1,7 +1,7 @@
 # Narrative
 Despite improvements in infrastructure, safety rules, and technology, road incidents continue to result in millions of injuries and over 1.35 million fatalities annually, posing a multifaceted and complex global issue. An in-depth examination of the complex interactions between variables such driver behaviour, vehicle condition, road infrastructure, weather, and socioeconomic impacts is necessary to comprehend and prevent traffic accidents. A knowledge graph (KG), which enables the modelling of interactions between different aspects and offers a rich, interconnected dataset for deeper insights, can better handle this complexity.
 
-The goal of the road crash knowledge graph is to provide data-driven insights into accident causes, patterns, and risk prediction to public safety agencies, insurance companies, autonomous vehicle developers, and politicians. Because of its varied weather patterns and combination of urban and rural road types, Ohio serves as a particular pilot for our focus on the United States. Nevertheless, based on the integration of the dataset and local requirements, the reach may be broadened either nationally or internationally.
+The goal of the road crash knowledge graph is to provide data-driven insights into accident causes, patterns, and risk prediction to public safety agencies, insurance companies, autonomous vehicle developers, and politicians. Nevertheless, based on the integration of the dataset and local requirements, the reach may be broadened either nationally or internationally.
 
 The KG will simulate intricate relationships between several crash-related variables, including:
 
