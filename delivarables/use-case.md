@@ -23,16 +23,20 @@ A thorough, scalable, and adaptable method is offered by the knowledge graph, wh
 
 
 #  Competency Questions
-1. What have been the top 5 most frequent reasons for distracted driving-related car accidents in Ohio during rush hour during the past 12 months?
-2. Which Ohio regions have the greatest accidents during winter snowstorms, and what aspects of vehicles are most often involved in these collisions?
-3. What is the relationship between crash rates in Ohio's various counties and socioeconomic factors like income levels and availability to public transportation?
-4. Which three types of road conditions—potholes, dimly lighted roads, etc.—are most frequently linked to crashes that occur at night in Ohio's rural areas during the winter?
-5. What factors, such as rain, snow, or fog, along with poorly maintained cars (tires that are too old or brakes that aren't working properly) raise the danger of crashes on Ohio's suburban roads?
-6. What season (time of year) sees the most accidents in Ohio involving young drivers (those between the ages of 16 and 24) and what are the most frequent contributing factors?
-7. Which five factors account for the majority of crashes that occur on Ohio's highways during periods of high traffic (like the holidays)?
-8. Which Ohio counties have the highest frequency of sleep-deprived driving accidents, and how does this change with the kind of road and time of day?
-9. Which Ohio locations have the highest frequency of accidents brought on by badly maintained roads (potholes, missing signage, etc.), and how do these accidents differ across rural and urban areas?
-10. How likely is it that accidents will rise in Ohio's urban regions when inclement weather, distracted driving, and poor road maintenance occur, and how does this relate to rural areas?
+1. What combination of environmental factors (such as weather conditions, lighting, and time of day) and driver impairments is most frequently associated with fatal collisions across the U.S.?
+2. How do the probabilities of multivehicle collisions vary in specific road scenarios, such as limited visibility or construction zones, based on historical data from diverse regions in the U.S.?
+3. How does vehicle type (e.g., truck, sedan, motorcycle) influence the likelihood of accidents and severity of injuries or fatalities, and how do specific driving maneuvers (e.g., lane changes, speeding) or equipment malfunctions affect these outcomes? Additionally, to what extent do safety features (such as seat belts, airbags) mitigate these risks?
+4. What impact do driver characteristics (such as age, past infractions, underage or illegal driving, and experience with the vehicle) have on the likelihood of causing accidents that result in injuries or fatalities?
+5. What have been the top 5 most frequent causes of distracted driving-related car accidents during rush hour across the U.S. in the past 12 months?
+6. Which U.S. regions experience the greatest number of accidents during winter snowstorms, and what types of vehicles are most often involved in these collisions?
+7. How do socioeconomic factors (such as income levels and access to public transportation) influence crash rates in various regions across the U.S., particularly in relation to accident severity?
+8. What are the temporal patterns of accident occurrences across various U.S. regions, particularly during high-traffic periods like holidays or in areas undergoing major road construction?
+9. How do accident rates differ between regions (urban, rural, high-traffic, low-traffic), and what geographic factors are associated with consistently higher rates of severe accidents?
+10. What relationship exists between a driver’s prior crash history and their likelihood of being involved in subsequent high-risk incidents, particularly in cases of impaired driving or speeding?
+11. How have changes in traffic safety regulations (e.g., DUI thresholds, seatbelt laws) affected trends in crash frequency and severity across different U.S. states or regions?
+12. How do animal crossings (e.g., deer, elk) influence accident rates in rural and suburban areas, and what measures have been most effective in mitigating these collisions?
+
+
 
 
 #  Potential Datasets 
