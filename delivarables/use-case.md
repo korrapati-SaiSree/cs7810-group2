@@ -50,9 +50,9 @@ A thorough, scalable, and adaptable method is offered by the knowledge graph, wh
 8. Census data
 
 #  Contributors
-Ruman
-Suyes
-Sai Sree
+* Ruman
+* Suyes
+* Sai Sree
 
 
 
