@@ -1,1 +1,15 @@
 
+## Minutes of Meeting - 10/15/2024
+
+ Agenda:
+  
+  * Track Previous meeting actions
+  * Start making schema diagams for road crashes.
+  * Get to know the yEd for creating diagrams.
+  * Make sure to create schema diagrams for all individual modules.
+ Decisions:
+
+  * Schema Diagrams: We use yEd to create diagrams for each key notion. (follow the sample template).
+  * File Structure: Every diagram will be savd in both .gaphml and .png formats
+  * Combined Diagram: Should stat drafting combined schema diagram once we finish individual diagrams.
+
