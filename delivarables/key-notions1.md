@@ -4,16 +4,16 @@
 
 ### Accident:
 
-**Rationale**: An accident is the core event that connects to the other entities (vehicles, drivers, pedestrians, etc ) and attributes (weather, road conditions, location, fatalities). It is the main focus in the dataset, and many relationship stems out from it.
+**Rationale**: An accident forms the central event that connects the other entities and attributes of the information - vehicles, drivers, pedestrians, etc, and weather, road conditions, location, fatalities. As a matter of fact the core, majority, focus of the data pertains to it and many a relationship emanates from it.
 
 **Connected Pattern**: Event (from MODL) https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/event
-the event pattern from MODL fits the most, as it allows to treat an accident as an event that involves entities and takes place in specific time and location (spatio-temporal).
+from MODL best fits the event pattern, as it allows taking into consideration an accident as an event involving entities in spatio-temporal terms.
 
-**Source Datasets:** Accident Table (processed data from FARs)
+**Source Data-sets:** Accident Table (Processed Data from FARs)
 
 ### Driver:
 
-**Rationale**: Understanding the driver entity, including attributes such as age, sex, driving history, impairments, distractions, and violations, is essential for identifying and analyzing the causes and contributing factors of road accidents. These characteristics provide crucial insights into driver behavior and their impact on accident outcomes.
+**Rationale:** In the analysis of road accidents, identification of the driver entity is made by characteristics like age, sex, driving history, impairments, distractions, and violations. The identified characteristics develop an important part in gaining insight into the behaviour of drivers and the areas where their actions affect the outcomes of an accident.
 
 **Connected Pattern**:
 Agent-role (from MODL) https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/agent-role/agent-role-pattern.pdf
@@ -22,18 +22,17 @@ Agent-role (from MODL) https://github.com/kastle-lab/modular-ontology-design-lib
 
 ### Vehicles:
 
-**Rationale**: Information on vehicle attributes such as make, model, year of manufacture, and type is crucial for accurate vehicle identification. Additionally, factors like vehicle maneuver, condition, defects, speed, and parked/work zone status are critical for understanding the role of the vehicle in contributing to or being involved in an accident. These attributes help uncover potential causes related to vehicle performance and situational dynamics.
-
-**Connected Pattern:**
-CS-MODL Car (from CS-MODL) https://github.com/kastle-lab/commonsense-micropatterns/blob/master/csmodl/patterns/Car.ttl
-provenance-pattern (from MODL) https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/provenance/provenance-pattern.pdf
-identifier-pattern (from MODL) https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/identifier
+**Rationale**: Vehicle attribute data such as make, model, year of manufacture and type are critical for proper identification of the vehicle. Other factors such as condition, defects, speed and parked/ work zone become very important in determining how the vehicle contributed to or was involved with the accident. These attributes provide insight into potential causes associated with vehicle performance and associated situations.
+Related Pattern:
+ CS-MODL Car (from CS-MODL) https://github.com/kastle-lab/commonsense-micropatterns/blob/master/csmodl/patterns/Car.ttl
+provenance-pattern from MODL https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/provenance/provenance-pattern.pdf
+identifier-pattern from MODL https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/identifier
 
 **Source Dataset:** Vehicles Table (processed data from FARs)
 
 ### Location:
 
-**Rationale:** In the context of road accidents, the geographic location where accidents occur (such as the city, county, or state) is crucial for analyzing accident patterns and contextualizing the data with environmental or population-based factors. This notion ties spatial information to accident data, enabling spatial queries and analyses in the knowledge graph.
+**Rationale:** In traffic accidents, the geographical location in which the traffic accident has happened, for example, city or county or state, provides crucial information regarding accident patterns and contextualizes the data using environmental factors or population factors. This binds the spatial with accident data for enabling queries and analysis that are spatial in nature in the knowledge graph.
 
 **Connected Pattern:**
 CS-MODL Area (from CS-MODL) https://github.com/kastle-lab/commonsense-micropatterns/blob/master/csmodl/patterns/Area.ttl
@@ -43,15 +42,15 @@ CS-MODL City (from CS-MODL) https://github.com/kastle-lab/commonsense-micropatte
 
 ### Weather Condition:
 
-**Rationale**: Weather conditions are a critical factor in road accidents, as they directly affect driving conditions (e.g., visibility, traction, and control). Since weather conditions change over time and are location-specific, capturing both the spatial (where) and temporal (when) aspects of weather in relation to accidents is essential for analyzing crash patterns.
+**Rationale**: Weather conditions are one of the most important factors for road accidents as they directly impact the condition for driving, such as visibility, and control. Since weather conditions vary over space and time, addressing the spatial and temporal dimensions of weather conditions with respect to accidents is important in the analysis of accident patterns.
 
 **Connected Pattern**: **Spatiotemporal Extent Pattern** (MODL Library) https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/spatiotemporal-extent
 
-**Source Dataset**: Weather Conditions Table (processed data from FARs), **Accidents Table**(processed data from FARs)
+**Source Dataset**: Weather Conditions Table (preprocessed data from FARs), **Accidents Table**(preprocessed data from FARs)
 
 ### Road Condition:
 
-**Rationale**: Road conditions can be observed and measured through various attributes like the road surface (e.g., wet, dry), road defects (e.g., potholes), and lighting (e.g., well-lit, dark). These are key factors that contribute to road safety and accident likelihood.
+**Rationale**: Road conditions may be observed and measured considering a set of attributes of the condition such as: road surface - wet, dry; road defects - potholes; lighting - well lit, dark. These are critical factors contributing to the safety of the roads and the chance of accidents.
 
 **Connected Pattern**: **MODL Observation** (MODL Library) https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/observation
 
