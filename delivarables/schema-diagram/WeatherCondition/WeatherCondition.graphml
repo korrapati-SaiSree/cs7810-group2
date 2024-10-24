@@ -36,11 +36,9 @@
 			<yjs:SolidColorFill x:Key="1" color="Black"/>
 			<yjs:SolidColorFill x:Key="2" color="#FFFFCC00"/>
 			<yjs:Stroke x:Key="3" fill="#FF000000" miterLimit="1.45" thickness="2"/>
-			<yjs:Font x:Key="4" fontSize="16"/>
-			<yjs:Stroke x:Key="5" fill="WHITE" miterLimit="1.45"/>
-			<yjs:Arrow x:Key="6" type="NONE"/>
-			<y:FreeEdgeLabelModelParameter x:Key="7" Ratio="0.5193428999441593" Distance="1.0319736448697223"/>
-			<yjs:Font x:Key="8" fontSize="16"/>
+			<yjs:Stroke x:Key="4" fill="WHITE" miterLimit="1.45"/>
+			<yjs:Arrow x:Key="5" type="NONE"/>
+			<y:FreeEdgeLabelModelParameter x:Key="6" Ratio="0.5193428999441593" Distance="1.0319736448697223"/>
 		</y:SharedData>
 	</data>
 	<graph id="G" edgedefault="directed">
@@ -93,7 +91,11 @@
 					<y:Label LayoutParameter="{x:Static y:InteriorStretchLabelModel.Center}">
 						<y:Label.Text>Location</y:Label.Text>
 						<y:Label.Style>
-							<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" textWrappingShape="ROUND_RECTANGLE" font="{y:GraphMLReference 4}" autoFlip="false" textFill="{y:GraphMLReference 1}" textSize="16"/>
+							<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" textWrappingShape="ROUND_RECTANGLE" autoFlip="false" textFill="{y:GraphMLReference 1}" textSize="16">
+								<yjs:DefaultLabelStyle.font>
+									<yjs:Font fontSize="16"/>
+								</yjs:DefaultLabelStyle.font>
+							</yjs:DefaultLabelStyle>
 						</y:Label.Style>
 					</y:Label>
 				</x:List>
@@ -194,9 +196,13 @@
 			<data key="d4">
 				<x:List>
 					<y:Label LayoutParameter="{x:Static y:InteriorStretchLabelModel.Center}">
-						<y:Label.Text>Location</y:Label.Text>
+						<y:Label.Text>temporalExtent</y:Label.Text>
 						<y:Label.Style>
-							<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" textWrappingShape="ROUND_RECTANGLE" font="{y:GraphMLReference 4}" autoFlip="false" textFill="{y:GraphMLReference 1}" textSize="16"/>
+							<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" textWrappingShape="ROUND_RECTANGLE" autoFlip="false" textFill="{y:GraphMLReference 1}" textSize="16">
+								<yjs:DefaultLabelStyle.font>
+									<yjs:Font fontSize="16"/>
+								</yjs:DefaultLabelStyle.font>
+							</yjs:DefaultLabelStyle>
 						</y:Label.Style>
 					</y:Label>
 				</x:List>
@@ -212,16 +218,20 @@
 		<edge id="e0" source="n0" target="n1" sourceport="p2" targetport="p0">
 			<data key="d11">
 				<x:List>
-					<y:Label LayoutParameter="{y:GraphMLReference 7}">
+					<y:Label LayoutParameter="{y:GraphMLReference 6}">
 						<y:Label.Text>hasLocation</y:Label.Text>
 						<y:Label.Style>
-							<yjs:DefaultLabelStyle backgroundFill="WHITE" horizontalTextAlignment="CENTER" backgroundStroke="WHITE" shape="PILL" font="{y:GraphMLReference 8}" autoFlip="false" textFill="{y:GraphMLReference 1}" textSize="16"/>
+							<yjs:DefaultLabelStyle backgroundFill="WHITE" horizontalTextAlignment="CENTER" backgroundStroke="WHITE" shape="PILL" autoFlip="false" textFill="{y:GraphMLReference 1}" textSize="16">
+								<yjs:DefaultLabelStyle.font>
+									<yjs:Font fontSize="16"/>
+								</yjs:DefaultLabelStyle.font>
+							</yjs:DefaultLabelStyle>
 						</y:Label.Style>
 					</y:Label>
 				</x:List>
 			</data>
 			<data key="d13">
-				<yjs:PolylineEdgeStyle stroke="{y:GraphMLReference 5}" sourceArrow="{y:GraphMLReference 6}">
+				<yjs:PolylineEdgeStyle stroke="{y:GraphMLReference 4}" sourceArrow="{y:GraphMLReference 5}">
 					<yjs:PolylineEdgeStyle.targetArrow>
 						<yjs:Arrow stroke="#FFFFFFFF" fill="WHITE" cropLength="1"/>
 					</yjs:PolylineEdgeStyle.targetArrow>
@@ -247,7 +257,7 @@
 				</x:List>
 			</data>
 			<data key="d13">
-				<yjs:PolylineEdgeStyle stroke="{y:GraphMLReference 5}" sourceArrow="{y:GraphMLReference 6}">
+				<yjs:PolylineEdgeStyle stroke="{y:GraphMLReference 4}" sourceArrow="{y:GraphMLReference 5}">
 					<yjs:PolylineEdgeStyle.targetArrow>
 						<yjs:Arrow stroke="#FFFFFFFF" fill="WHITE" cropLength="1"/>
 					</yjs:PolylineEdgeStyle.targetArrow>
@@ -273,7 +283,7 @@
 				</x:List>
 			</data>
 			<data key="d13">
-				<yjs:PolylineEdgeStyle stroke="{y:GraphMLReference 5}" sourceArrow="{y:GraphMLReference 6}">
+				<yjs:PolylineEdgeStyle stroke="{y:GraphMLReference 4}" sourceArrow="{y:GraphMLReference 5}">
 					<yjs:PolylineEdgeStyle.targetArrow>
 						<yjs:Arrow stroke="#FFFFFFFF" fill="WHITE" cropLength="1"/>
 					</yjs:PolylineEdgeStyle.targetArrow>
@@ -299,7 +309,7 @@
 				</x:List>
 			</data>
 			<data key="d13">
-				<yjs:PolylineEdgeStyle stroke="{y:GraphMLReference 5}" sourceArrow="{y:GraphMLReference 6}">
+				<yjs:PolylineEdgeStyle stroke="{y:GraphMLReference 4}" sourceArrow="{y:GraphMLReference 5}">
 					<yjs:PolylineEdgeStyle.targetArrow>
 						<yjs:Arrow stroke="#FFFFFFFF" fill="WHITE" cropLength="1"/>
 					</yjs:PolylineEdgeStyle.targetArrow>
@@ -309,16 +319,20 @@
 		<edge id="e4" source="n0" target="n5" sourceport="p7" targetport="p0">
 			<data key="d11">
 				<x:List>
-					<y:Label LayoutParameter="{y:GraphMLReference 7}">
+					<y:Label LayoutParameter="{y:GraphMLReference 6}">
 						<y:Label.Text>hasTemporalExtent</y:Label.Text>
 						<y:Label.Style>
-							<yjs:DefaultLabelStyle backgroundFill="WHITE" horizontalTextAlignment="CENTER" backgroundStroke="WHITE" shape="PILL" font="{y:GraphMLReference 8}" autoFlip="false" textFill="{y:GraphMLReference 1}" textSize="16"/>
+							<yjs:DefaultLabelStyle backgroundFill="WHITE" horizontalTextAlignment="CENTER" backgroundStroke="WHITE" shape="PILL" autoFlip="false" textFill="{y:GraphMLReference 1}" textSize="16">
+								<yjs:DefaultLabelStyle.font>
+									<yjs:Font fontSize="16"/>
+								</yjs:DefaultLabelStyle.font>
+							</yjs:DefaultLabelStyle>
 						</y:Label.Style>
 					</y:Label>
 				</x:List>
 			</data>
 			<data key="d13">
-				<yjs:PolylineEdgeStyle stroke="{y:GraphMLReference 5}" sourceArrow="{y:GraphMLReference 6}">
+				<yjs:PolylineEdgeStyle stroke="{y:GraphMLReference 4}" sourceArrow="{y:GraphMLReference 5}">
 					<yjs:PolylineEdgeStyle.targetArrow>
 						<yjs:Arrow stroke="#FFFFFFFF" fill="WHITE" cropLength="1"/>
 					</yjs:PolylineEdgeStyle.targetArrow>
