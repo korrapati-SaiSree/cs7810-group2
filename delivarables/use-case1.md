@@ -30,6 +30,8 @@ A thorough, scalable, and adaptable method is offered by the knowledge graph, wh
 6. How does crash locations (intersections, work zones), the type of roadway (highways, residential streets, etc.) and vehicle type (trucks, buses, motorbikes, cars) relate to the fatality risk for crash participants?
 7. What is the relationship between driver impairment (alcohol, drugs, fatigue) and crash fatality outcomes?
 8. How do injury severity and survival lag time interrelate among crash victims, and how is this affected by factors such as EMS timing and location?
+9. How does the weight of a vehicle influence the likelihood of fatalities for occupants in the event of a crash?
+10. What is the incidence rate of school bus involvement in accidents, and what are the underlying root causes?
 
 
 #  Potential Datasets 
