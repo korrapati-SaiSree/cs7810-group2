@@ -73,47 +73,40 @@
      Each driver must have exactly one license status.
     
     
-    Module: Emergency Medical Service Schema
+## Module: Emergency Medical Service Schema
+
+![EMS (1)](https://github.com/user-attachments/assets/5d3b316f-25a9-43c5-abd1-267ad666bb28)
+
      
     
     hasNotificationTime some owl:Thing SubClassOf EmergencyMedicalService
-    
     If an entity has a notification time, it must be an emergency medical service.
     
     EmergencyMedicalService SubClassOf hasNotificationTime only TemporalExtent
-    
     The range of the property hasNotificationTime must be a temporal extent.
     
     EmergencyMedicalService SubClassOf hasNotificationTime exactly 1 TemporalExtent
-    
     Every emergency medical service must have exactly one notification time.
      
-    
     hasArrivalTimeToCrash some owl:Thing SubClassOf EmergencyMedicalService
-    
     If an entity has an arrival time to crash, it must be an emergency medical service.
     
     EmergencyMedicalService SubClassOf hasArrivalTimeToCrash only TemporalExtent
-    
     The range of the property hasArrivalTimeToCrash must be a temporal extent.
     
     EmergencyMedicalService SubClassOf hasArrivalTimeToCrash exactly 1 TemporalExtent
-    
     Every emergency medical service must have exactly one arrival time to the crash site.
      
-    
     hasArrivalTimeToHospital some owl:Thing SubClassOf EmergencyMedicalService
-    
     If an entity has an arrival time to hospital, it must be an emergency medical service.
     
     EmergencyMedicalService SubClassOf hasArrivalTimeToHospital only TemporalExtent
-    
     The range of the property hasArrivalTimeToHospital must be a temporal extent.
     
     EmergencyMedicalService SubClassOf hasArrivalTimeToHospital exactly 1 TemporalExtent
-    
     Every emergency medical service must have exactly one arrival time to the hospital.
-    Module: Impairments Schema
+    
+ ## Module: Impairments Schema
      
      
     
