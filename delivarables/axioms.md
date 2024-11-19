@@ -1,6 +1,7 @@
 # Road Crashes Ontology
 
- 
+![image](https://github.com/user-attachments/assets/8f0dfebb-c632-4451-a281-a0e7c32b2156)
+
 ## Module: Driver Condition Schema
  
 ### 1. Driver → hasDrivingHistory → DrivingHistory
