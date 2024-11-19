@@ -5,689 +5,519 @@
 ## Module: Driver Condition Schema
  ![image](https://github.com/user-attachments/assets/da6e9d93-7b22-4b86-bbb9-625886d4990e)
 
-### 1. Driver → hasDrivingHistory → DrivingHistory
-     Axiom 3: Global Domain
-     
+
      hasDrivingHistory some owl:Thing SubClassOf Driver
      If something has a driving history, it must be a driver.
-     
-     Axiom 5: Global Range
      
      Driver SubClassOf hasDrivingHistory only DrivingHistory
      The range of the relationship hasDrivingHistory must be DrivingHistory.
      
-     Axiom 7: Existential
-     
      Driver SubClassOf hasDrivingHistory some DrivingHistory
      Every driver must have a driving history.
  
-### 2. Driver → hasImpairments → Impairments
-•	Axiom 3: Global Domain
-Manchester Syntax:
+
 hasImpairments some owl:Thing SubClassOf Driver
-Natural Language Description:
+
 If something has impairments, it must be a driver.
-•	Axiom 5: Global Range
-Manchester Syntax:
+
 Driver SubClassOf hasImpairments only Impairments
-Natural Language Description:
+
 The range of the relationship hasImpairments must be Impairments.
-•	Axiom 7: Existential
-Manchester Syntax:
+
 Driver SubClassOf hasImpairments some Impairments
-Natural Language Description:
+
 A driver may have impairments.
  
-### 3. DrivingHistory → hasTrafficViolation → TrafficViolation
-•	Axiom 3: Global Domain
-Manchester Syntax:
+
 hasTrafficViolation some owl:Thing SubClassOf DrivingHistory
-Natural Language Description:
+
 If something has traffic violations, it must belong to a driving history.
-•	Axiom 5: Global Range
-Manchester Syntax:
+
 DrivingHistory SubClassOf hasTrafficViolation only TrafficViolation
-Natural Language Description:
+
 The range of the relationship hasTrafficViolation must be TrafficViolation.
-•	Axiom 7: Existential
-Manchester Syntax:
+
 DrivingHistory SubClassOf hasTrafficViolation some TrafficViolation
-Natural Language Description:
+
 A driving history may include at least one traffic violation.
  
-### 4. DrivingHistory → hasDrivingExperience → DrivingExperience
-•	Axiom 3: Global Domain
-Manchester Syntax:
+
 hasDrivingExperience some owl:Thing SubClassOf DrivingHistory
-Natural Language Description:
+
 If something has driving experience, it must belong to a driving history.
-•	Axiom 5: Global Range
-Manchester Syntax:
+
 DrivingHistory SubClassOf hasDrivingExperience only DrivingExperience
-Natural Language Description:
+
 The range of the relationship hasDrivingExperience must be DrivingExperience.
-•	Axiom 7: Existential
-Manchester Syntax:
+
 DrivingHistory SubClassOf hasDrivingExperience some DrivingExperience
-Natural Language Description:
+
 A driving history must include at least one driving experience.
  
-### 5. TrafficViolation → licenseSuspension → xsd
-•	Axiom 7: Existential
-Manchester Syntax:
+
 TrafficViolation SubClassOf licenseSuspension some xsd:string
-Natural Language Description:
+
 A traffic violation may result in a license suspension. If there is a suspension, it is captured as a string.
-•	Axiom 10: Qualified Functionality
-Manchester Syntax:
+
 TrafficViolation SubClassOf licenseSuspension max 1 xsd:string
-Natural Language Description:
+
 A traffic violation can have at most one associated license suspension, ensuring no ambiguity.
  
-### 6. TrafficViolation → violationType → xsd
-•	Axiom 10: Qualified Functionality
-Manchester Syntax:
+
 TrafficViolation SubClassOf violationType max 1 xsd:string
-Natural Language Description:
+
 A traffic violation has at most one type.
-•	Axiom 12: Qualified Scoped Functionality
-Manchester Syntax:
+
 TrafficViolation SubClassOf violationType exactly 1 xsd:string
-Natural Language Description:
+
 Each traffic violation must have exactly one type.
  
-###7. TrafficViolation → violationDate → TemporalExtent
-•	Axiom 7: Existential
-Manchester Syntax:
+
 TrafficViolation SubClassOf violationDate some TemporalExtent
-Natural Language Description:
+
 Every traffic violation is associated with a date (temporal extent).
  
-###8. DrivingExperience → totalYearsOfDriving → TemporalExtent
-•	Axiom 7: Existential
-Manchester Syntax:
+
 DrivingExperience SubClassOf totalYearsOfDriving some TemporalExtent
-Natural Language Description:
+
 A driving experience must include total years of driving.
  
-###9. DrivingExperience → experienceLevel → ExperienceLevel
-•	Axiom 5: Global Range
-Manchester Syntax:
+
 DrivingExperience SubClassOf experienceLevel only ExperienceLevel
-Natural Language Description:
+
 The range of the relationship experienceLevel must be one of the predefined experience levels (novice, intermediate, experienced).
-•	Axiom 7: Existential
-Manchester Syntax:
+
 DrivingExperience SubClassOf experienceLevel some ExperienceLevel
-Natural Language Description:
+
 Every driving experience must have at least one experience level.
  
-###10. Driver → hasLicenseStatus → xsd
-•	Axiom 10: Qualified Functionality
-Manchester Syntax:
+
 Driver SubClassOf hasLicenseStatus max 1 xsd:string
-Natural Language Description:
+
 A driver has at most one license status.
-•	Axiom 12: Qualified Scoped Functionality
-Manchester Syntax:
+
 Driver SubClassOf hasLicenseStatus exactly 1 xsd:string
-Natural Language Description:
+
 Each driver must have exactly one license status.
 
 
 Module: Emergency Medical Service Schema
  
-1. EmergencyMedicalService → hasNotificationTime → TemporalExtent
-•	Axiom 3: Global Domain
-Manchester Syntax:
+
 hasNotificationTime some owl:Thing SubClassOf EmergencyMedicalService
-Natural Language Description:
+
 If an entity has a notification time, it must be an emergency medical service.
-•	Axiom 5: Global Range
-Manchester Syntax:
+
 EmergencyMedicalService SubClassOf hasNotificationTime only TemporalExtent
-Natural Language Description:
+
 The range of the property hasNotificationTime must be a temporal extent.
-•	Axiom 12: Qualified Scoped Functionality
-Manchester Syntax:
+
 EmergencyMedicalService SubClassOf hasNotificationTime exactly 1 TemporalExtent
-Natural Language Description:
+
 Every emergency medical service must have exactly one notification time.
  
-2. EmergencyMedicalService → hasArrivalTimeToCrash → TemporalExtent
-•	Axiom 3: Global Domain
-Manchester Syntax:
+
 hasArrivalTimeToCrash some owl:Thing SubClassOf EmergencyMedicalService
-Natural Language Description:
+
 If an entity has an arrival time to crash, it must be an emergency medical service.
-•	Axiom 5: Global Range
-Manchester Syntax:
+
 EmergencyMedicalService SubClassOf hasArrivalTimeToCrash only TemporalExtent
-Natural Language Description:
+
 The range of the property hasArrivalTimeToCrash must be a temporal extent.
-•	Axiom 12: Qualified Scoped Functionality
-Manchester Syntax:
+
 EmergencyMedicalService SubClassOf hasArrivalTimeToCrash exactly 1 TemporalExtent
-Natural Language Description:
+
 Every emergency medical service must have exactly one arrival time to the crash site.
  
-3. EmergencyMedicalService → hasArrivalTimeToHospital → TemporalExtent
-•	Axiom 3: Global Domain
-Manchester Syntax:
+
 hasArrivalTimeToHospital some owl:Thing SubClassOf EmergencyMedicalService
-Natural Language Description:
+
 If an entity has an arrival time to hospital, it must be an emergency medical service.
-•	Axiom 5: Global Range
-Manchester Syntax:
+
 EmergencyMedicalService SubClassOf hasArrivalTimeToHospital only TemporalExtent
-Natural Language Description:
+
 The range of the property hasArrivalTimeToHospital must be a temporal extent.
-•	Axiom 12: Qualified Scoped Functionality
-Manchester Syntax:
+
 EmergencyMedicalService SubClassOf hasArrivalTimeToHospital exactly 1 TemporalExtent
-Natural Language Description:
+
 Every emergency medical service must have exactly one arrival time to the hospital.
 Module: Impairments Schema
  
  
-Relationships and Axioms
-1. Impairments → impairmentsAsString → xsd
-•	Axiom 10: Qualified Functionality
-Manchester Syntax:
+
 Impairments SubClassOf impairmentsAsString max 1 xsd:string
-Natural Language Description:
+
 Each impairment can have at most one associated string description.
-•	Axiom 12: Qualified Scoped Functionality
-Manchester Syntax:
+
 Impairments SubClassOf impairmentsAsString exactly 1 xsd:string
-Natural Language Description:
+
 Every impairment must have exactly one associated string description.
  
-2. Impairments → substanceImpairments
-•	Axiom 1: Subclass
-Manchester Syntax:
+
 substanceImpairments SubClassOf Impairments
-Natural Language Description:
+
 All substance impairments are a type of impairment.
-•	Axiom 5: Global Range
-Manchester Syntax:
+
 Impairments SubClassOf substanceImpairments only substanceImpairments
-Natural Language Description:
+
 The range of the substanceImpairments property must belong to the substanceImpairments class.
-•	Axiom 7: Existential
-Manchester Syntax:
+
 Impairments SubClassOf substanceImpairments some substanceImpairments
-Natural Language Description:
+
 Every impairment may involve at least one substance impairment.
  
-3. Impairments → distraction
-•	Axiom 1: Subclass
-Manchester Syntax:
+
 distraction SubClassOf Impairments
-Natural Language Description:
+
 All distractions are a type of impairment.
-•	Axiom 5: Global Range
-Manchester Syntax:
+
 Impairments SubClassOf distraction only distraction
-Natural Language Description:
+
 The range of the distraction property must belong to the distraction class.
-•	Axiom 7: Existential
-Manchester Syntax:
+
 Impairments SubClassOf distraction some distraction
-Natural Language Description:
+
 Every impairment may involve at least one distraction.
 
 Module: Person Schema
  
  
-1. Person → hasRace → xsd
-•	Axiom 10: Qualified Functionality
-Manchester Syntax:
+
 Person SubClassOf hasRace max 1 xsd:string
-Natural Language Description:
+
 A person can have at most one associated race.
-•	Axiom 12: Qualified Scoped Functionality
-Manchester Syntax:
+
 Person SubClassOf hasRace exactly 1 xsd:string
-Natural Language Description:
+
 Every person must have exactly one associated race.
  
-2. Person → hasGender → xsd
-•	Axiom 10: Qualified Functionality
-Manchester Syntax:
+
 Person SubClassOf hasGender max 1 xsd:string
-Natural Language Description:
+
 A person can have at most one associated gender.
-•	Axiom 12: Qualified Scoped Functionality
-Manchester Syntax:
+
 Person SubClassOf hasGender exactly 1 xsd:string
-Natural Language Description:
+
 Every person must have exactly one associated gender.
  
-3. Person → hasAge → xsd
-•	Axiom 10: Qualified Functionality
-Manchester Syntax:
+
 Person SubClassOf hasAge max 1 xsd:integer
-Natural Language Description:
+
 A person can have at most one associated age.
-•	Axiom 12: Qualified Scoped Functionality
-Manchester Syntax:
+
 Person SubClassOf hasAge exactly 1 xsd:integer
-Natural Language Description:
+
 Every person must have exactly one associated age.
  
-4. Person → performsRole → PersonInCrash
-•	Axiom 5: Global Range
-Manchester Syntax:
+
 Person SubClassOf performsRole only PersonInCrash
-Natural Language Description:
+
 The range of the property performsRole must belong to the class PersonInCrash.
-•	Axiom 7: Existential
-Manchester Syntax:
+
 Person SubClassOf performsRole some PersonInCrash
-Natural Language Description:
+
 Every person must perform at least one role in the context of a crash.
  
-5. PersonInCrash → providesRole → Crash
-•	Axiom 3: Global Domain
-Manchester Syntax:
+
 providesRole some owl:Thing SubClassOf PersonInCrash
-Natural Language Description:
+
 If something has a providesRole property, it must belong to PersonInCrash.
-•	Axiom 5: Global Range
-Manchester Syntax:
+
 PersonInCrash SubClassOf providesRole only Crash
-Natural Language Description:
+
 The range of the property providesRole must belong to the class Crash.
-•	Axiom 7: Existential
-Manchester Syntax:
+
 PersonInCrash SubClassOf providesRole some Crash
-Natural Language Description:
+
 Every person in a crash must provide at least one role in the context of a crash.
  
-6. PersonInCrash → hasInjurySeverity → InjurySeverity
-•	Axiom 5: Global Range
-Manchester Syntax:
+
 PersonInCrash SubClassOf hasInjurySeverity only InjurySeverity
-Natural Language Description:
+
 The range of the property hasInjurySeverity must belong to the InjurySeverity class.
-•	Axiom 7: Existential
-Manchester Syntax:
+
 PersonInCrash SubClassOf hasInjurySeverity some InjurySeverity
-Natural Language Description:
+
 Every person in a crash must have at least one associated injury severity.
  
-8. PersonInCrash → isFatal → Fatality
-•	Axiom 5: Global Range
-Manchester Syntax:
+
 PersonInCrash SubClassOf isFatal only Fatality
-Natural Language Description:
+
 The range of the isFatal property must belong to the class Fatality.
-•	Axiom 7: Existential
-Manchester Syntax:
+
 PersonInCrash SubClassOf isFatal some Fatality
-Natural Language Description:
+
 Every person in a crash who is fatal must have an associated Fatality record.
  
-9. Fatality → isFatal → Boolean
-•	Axiom 10: Qualified Functionality
-Manchester Syntax:
+
 Fatality SubClassOf isFatal exactly 1 xsd:boolean
-Natural Language Description:
+
 A fatality must have exactly one associated boolean value indicating if it is fatal.
  
-Fatality → hasLagTime → TemporalExtent
-11. Fatality → hasLagTime → TemporalExtent
-•	Axiom 5: Global Range
-Manchester Syntax:
+
 Fatality SubClassOf hasLagTime only TemporalExtent
-Natural Language Description:
+
 The range of the property hasLagTime must belong to the class TemporalExtent.
-•	Axiom 7: Existential
-Manchester Syntax:
+
 Fatality SubClassOf hasLagTime some TemporalExtent
-Natural Language Description:
+
 Every fatality must have at least one associated TemporalExtent for the lag time, representing the time between the crash and the fatality.
 
-10. PersonInCrash → isNonOccupant → NonOccupant
-•	Axiom 5: Global Range
-Manchester Syntax:
+
 PersonInCrash SubClassOf isNonOccupant only NonOccupant
-Natural Language Description:
+
 The range of the isNonOccupant property must belong to the class NonOccupant.
-•	Axiom 7: Existential
-Manchester Syntax:
+
 PersonInCrash SubClassOf isNonOccupant some NonOccupant
-Natural Language Description:
+
 Every person in a crash who is a non-occupant must be associated with at least one NonOccupant record.
  
-11. PersonInCrash → isOccupant → Occupant
-•	Axiom 5: Global Range
-Manchester Syntax:
+
 PersonInCrash SubClassOf isOccupant only Occupant
-Natural Language Description:
+
 The range of the isOccupant property must belong to the class Occupant.
-•	Axiom 7: Existential
-Manchester Syntax:
+
 PersonInCrash SubClassOf isOccupant some Occupant
-Natural Language Description:
+
 Every person in a crash who is an occupant must be associated with at least one Occupant record.
  
-NonOccupant → locationDuringCrash → xsd
-•	Axiom 10: Qualified Functionality
-Manchester Syntax:
+
 NonOccupant SubClassOf locationDuringCrash max 1 xsd:string
-Natural Language Description:
+
 A non-occupant can have at most one associated location during the crash.
-•	Axiom 12: Qualified Scoped Functionality
-Manchester Syntax:
+
 NonOccupant SubClassOf locationDuringCrash exactly 1 xsd:string
-Natural Language Description:
+
 Every non-occupant must have exactly one associated location during the crash.
  
-2. NonOccupant → hasImpairment → Impairments
-•	Axiom 5: Global Range
-Manchester Syntax:
+
 NonOccupant SubClassOf hasImpairment only Impairments
-Natural Language Description:
+
 The range of the property hasImpairment must belong to the class Impairments.
-•	Axiom 7: Existential
-Manchester Syntax:
+
 NonOccupant SubClassOf hasImpairment some Impairments
-Natural Language Description:
+
 Every non-occupant must have at least one associated impairment.
  
-3. NonOccupant → isPedestrian → Pedestrian
-•	Axiom 5: Global Range
-Manchester Syntax:
+
 NonOccupant SubClassOf isPedestrian only Pedestrian
-Natural Language Description:
+
 The range of the property isPedestrian must belong to the class Pedestrian.
-•	Axiom 7: Existential
-Manchester Syntax:
+
 NonOccupant SubClassOf isPedestrian some Pedestrian
-Natural Language Description:
+
 Every non-occupant who is a pedestrian must have an associated record in the class Pedestrian.
  
-4. NonOccupant → isCyclist → Cyclist
-•	Axiom 5: Global Range
-Manchester Syntax:
+
 NonOccupant SubClassOf isCyclist only Cyclist
-Natural Language Description:
+
 The range of the property isCyclist must belong to the class Cyclist.
-•	Axiom 7: Existential
-Manchester Syntax:
+
+
 NonOccupant SubClassOf isCyclist some Cyclist
-Natural Language Description:
+
 Every non-occupant who is a cyclist must have an associated record in the class Cyclist.
  
-Occupant
-5. Occupant → seatPosition → xsd
-•	Axiom 10: Qualified Functionality
-Manchester Syntax:
+
 Occupant SubClassOf seatPosition max 1 xsd:string
-Natural Language Description:
+
 An occupant can have at most one associated seat position.
-•	Axiom 12: Qualified Scoped Functionality
-Manchester Syntax:
+
 Occupant SubClassOf seatPosition exactly 1 xsd:string
-Natural Language Description:
+
 Every occupant must have exactly one associated seat position.
  
-6. Occupant → safetyRestraintUsed → xsd
-•	Axiom 10: Qualified Functionality
-Manchester Syntax:
+
 Occupant SubClassOf safetyRestraintUsed max 1 xsd:string
-Natural Language Description:
+
 An occupant can have at most one associated safety restraint used.
-•	Axiom 12: Qualified Scoped Functionality
-Manchester Syntax:
+
 Occupant SubClassOf safetyRestraintUsed exactly 1 xsd:string
-Natural Language Description:
+
 Every occupant must have exactly one associated safety restraint used.
  
-7. Occupant → hasAirbagDeployed → xsd
-•	Axiom 10: Qualified Functionality
-Manchester Syntax:
+
 Occupant SubClassOf hasAirbagDeployed max 1 xsd:boolean
-Natural Language Description:
+
 An occupant can have at most one associated boolean value indicating whether an airbag was deployed.
-•	Axiom 12: Qualified Scoped Functionality
-Manchester Syntax:
+
 Occupant SubClassOf hasAirbagDeployed exactly 1 xsd:boolean
-Natural Language Description:
+
 Every occupant must have exactly one associated boolean value indicating whether an airbag was deployed.
  
-8. Occupant → isDriver → Driver
-•	Axiom 5: Global Range
-Manchester Syntax:
+
 Occupant SubClassOf isDriver only Driver
-Natural Language Description:
+
 The range of the property isDriver must belong to the class Driver.
-•	Axiom 7: Existential
-Manchester Syntax:
+
 Occupant SubClassOf isDriver some Driver
-Natural Language Description:
+
 Every occupant who is a driver must have an associated record in the class Driver.
  
-9. Occupant → isPassenger → Passenger
-•	Axiom 5: Global Range
-Manchester Syntax:
+
 Occupant SubClassOf isPassenger only Passenger
-Natural Language Description:
+
 The range of the property isPassenger must belong to the class Passenger.
-•	Axiom 7: Existential
-Manchester Syntax:
+
 Occupant SubClassOf isPassenger some Passenger
-Natural Language Description:
+
 Every occupant who is a passenger must have an associated record in the class Passenger.
  
-PersonInCrash → TemporalExtent
-10. PersonInCrash → TemporalExtent
-•	Axiom 5: Global Range
-Manchester Syntax:
+
 PersonInCrash SubClassOf someTemporalAspect only TemporalExtent
-Natural Language Description:
+
 The range of the relationship between PersonInCrash and its temporal aspects must belong to the class TemporalExtent.
-•	Axiom 7: Existential
-Manchester Syntax:
+
 PersonInCrash SubClassOf someTemporalAspect some TemporalExtent
-Natural Language Description:
+
 Every PersonInCrash must have at least one associated TemporalExtent, representing some time-related information about their crash involvement.
 Module: Time Schema
  
  
-1. PointInTime → TemporalExtent
-•	Axiom 1: Subclass Relationship
-Manchester Syntax:
+
 PointInTime SubClassOf TemporalExtent
-Natural Language Description:
+
 Every PointInTime is a specific instance of TemporalExtent, implying that all PointInTime instances are part of the broader TemporalExtent class.
  
-2. TimeInterval → TemporalExtent
-•	Axiom 1: Subclass Relationship
-Manchester Syntax:
+
 TimeInterval SubClassOf TemporalExtent
-Natural Language Description:
+
 Every TimeInterval is a subclass of TemporalExtent, representing a span or interval of time within the broader temporal framework.
  
-3. PointInTime → hasTimeOfTheDay → TimeOfDay
-•	Axiom 5: Global Range
-Manchester Syntax:
+
 PointInTime SubClassOf hasTimeOfTheDay only TimeOfDay
-Natural Language Description:
+
 The range of the hasTimeOfTheDay property must belong to the class TimeOfDay.
-•	Axiom 7: Existential
-Manchester Syntax:
+
 PointInTime SubClassOf hasTimeOfTheDay some TimeOfDay
-Natural Language Description:
+
 Every PointInTime must have at least one associated TimeOfDay.
  
-4. PointInTime → hasDayOfTheWeek → DayOfTheWeek
-•	Axiom 5: Global Range
-Manchester Syntax:
+
 PointInTime SubClassOf hasDayOfTheWeek only DayOfTheWeek
-Natural Language Description:
+
 The range of the hasDayOfTheWeek property must belong to the class DayOfTheWeek.
-•	Axiom 7: Existential
-Manchester Syntax:
+
 PointInTime SubClassOf hasDayOfTheWeek some DayOfTheWeek
-Natural Language Description:
+
 Every PointInTime must have at least one associated DayOfTheWeek.
  
-5. PointInTime → hasSeason → Season
-•	Axiom 5: Global Range
-Manchester Syntax:
+
 PointInTime SubClassOf hasSeason only Season
-Natural Language Description:
+
 The range of the hasSeason property must belong to the class Season.
-•	Axiom 7: Existential
-Manchester Syntax:
+
 PointInTime SubClassOf hasSeason some Season
-Natural Language Description:
+
 Every PointInTime must have at least one associated Season.
  
-6. PointInTime → hasValue → xsd
-•	Axiom 10: Qualified Functionality
-Manchester Syntax:
+
 PointInTime SubClassOf hasValue max 1 xsd:datetime
-Natural Language Description:
+
 A PointInTime can have at most one associated xsd:datetime value.
-•	Axiom 12: Qualified Scoped Functionality
-Manchester Syntax:
+
 PointInTime SubClassOf hasValue exactly 1 xsd:datetime
-Natural Language Description:
+
 Every PointInTime must have exactly one associated xsd:datetime value.
  
-7. TimeInterval → startsAt → PointInTime
-•	Axiom 5: Global Range
-Manchester Syntax:
+
 TimeInterval SubClassOf startsAt only PointInTime
-Natural Language Description:
+
 The range of the startsAt property must belong to the class PointInTime.
-•	Axiom 7: Existential
-Manchester Syntax:
+
 TimeInterval SubClassOf startsAt some PointInTime
-Natural Language Description:
+
 Every TimeInterval must start at a specific PointInTime.
  
-8. TimeInterval → endsAt → PointInTime
-•	Axiom 5: Global Range
-Manchester Syntax:
+
 TimeInterval SubClassOf endsAt only PointInTime
-Natural Language Description:
+
 The range of the endsAt property must belong to the class PointInTime.
-•	Axiom 7: Existential
-Manchester Syntax:
+
 TimeInterval SubClassOf endsAt some PointInTime
-Natural Language Description:
+
 Every TimeInterval must end at a specific PointInTime.
  
 Crash
  
-1. Crash → hasMannerOfCollision → MannerOfCollision
-•	Axiom 3: Global Domain
-Manchester Syntax:
+
 hasMannerOfCollision some owl:Thing SubClassOf Crash
-Natural Language Description:
+
 If an entity has a manner of collision, it must be a Crash.
-•	Axiom 5: Global Range
-Manchester Syntax:
+
 Crash SubClassOf hasMannerOfCollision only MannerOfCollision
-Natural Language Description:
+
 The range of the property hasMannerOfCollision must be a MannerOfCollision.
-•	Axiom 12: Qualified Scoped Functionality
-Manchester Syntax:
+
 Crash SubClassOf hasMannerOfCollision exactly 1 MannerOfCollision
-Natural Language Description:
+
 Every Crash must have exactly one manner of collision.
  
-2. Crash → hasTemporalExtent → TemporalExtent
-•	Axiom 3: Global Domain
-Manchester Syntax:
+
 hasTemporalExtent some owl:Thing SubClassOf Crash
-Natural Language Description:
+
 If an entity has a temporal extent, it must be a Crash.
-•	Axiom 5: Global Range
-Manchester Syntax:
+
 Crash SubClassOf hasTemporalExtent only TemporalExtent
-Natural Language Description:
+
 The range of the property hasTemporalExtent must be a TemporalExtent.
-•	Axiom 12: Qualified Scoped Functionality
-Manchester Syntax:
+
 Crash SubClassOf hasTemporalExtent exactly 1 TemporalExtent
-Natural Language Description:
+
 Every Crash must have exactly one temporal extent.
  
-3. Crash → occurredAt → Location
-•	Axiom 3: Global Domain
-Manchester Syntax:
+
 occurredAt some owl:Thing SubClassOf Crash
-Natural Language Description:
+
 If an entity occurred at a location, it must be a Crash.
-•	Axiom 5: Global Range
-Manchester Syntax:
+
 Crash SubClassOf occurredAt only Location
-Natural Language Description:
+
 The range of the property occurredAt must be a Location.
-•	Axiom 12: Qualified Scoped Functionality
-Manchester Syntax:
+
 Crash SubClassOf occurredAt exactly 1 Location
-Natural Language Description:
+
 Every Crash must occur at exactly one location.
  
-4. Crash → hasTotalFatalities → xsd
-•	Axiom 3: Global Domain
-Manchester Syntax:
+
 hasTotalFatalities some owl:Thing SubClassOf Crash
-Natural Language Description:
+
 If an entity has total fatalities, it must be a Crash.
-•	Axiom 5: Global Range
-Manchester Syntax:
+
 Crash SubClassOf hasTotalFatalities only xsd:integer
-Natural Language Description:
+
 The range of the property hasTotalFatalities must be an integer value.
-•	Axiom 12: Qualified Scoped Functionality
-Manchester Syntax:
+
 Crash SubClassOf hasTotalFatalities exactly 1 xsd:integer
-Natural Language Description:
+
 Every Crash must have exactly one integer value representing total fatalities.
  
-5. Crash → hasParticipant → Participant
-•	Axiom 3: Global Domain
-Manchester Syntax:
+
 hasParticipant some owl:Thing SubClassOf Crash
-Natural Language Description:
+
 If an entity has participants, it must be a Crash.
-•	Axiom 5: Global Range
-Manchester Syntax:
+
 Crash SubClassOf hasParticipant only Participant
-Natural Language Description:
+
 The range of the property hasParticipant must be a Participant.
-•	Axiom 17: Structural Tautology
-Manchester Syntax:
+
 Crash SubClassOf hasParticipant min 0 Participant
-Natural Language Description:
+
 A Crash may have zero or more Participants.
  
-6. Participant Subclass Relationships
-Participant → Person
-•	Axiom 1: Subclass Relationship
-Manchester Syntax:
+
 Person SubClassOf Participant
-Natural Language Description:
+
 Every Person is a subclass of Participant.
-Participant → Vehicle
-•	Axiom 1: Subclass Relationship
-Manchester Syntax:
+
+
+
 Vehicle SubClassOf Participant
-Natural Language Description:
+
 Every Vehicle is a subclass of Participant.
-Participant → EMS
-•	Axiom 1: Subclass Relationship
-Manchester Syntax:
+
 EMS SubClassOf Participant
-Natural Language Description:
+
 Every EMS (Emergency Medical Service) is a subclass of Participant.
 Location
  
