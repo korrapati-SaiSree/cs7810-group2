@@ -112,37 +112,27 @@
 
     
     Impairments SubClassOf impairmentsAsString max 1 xsd:string
-    
     Each impairment can have at most one associated string description.
     
     Impairments SubClassOf impairmentsAsString exactly 1 xsd:string
-    
     Every impairment must have exactly one associated string description.
      
-    
     substanceImpairments SubClassOf Impairments
-    
     All substance impairments are a type of impairment.
     
     Impairments SubClassOf substanceImpairments only substanceImpairments
-    
     The range of the substanceImpairments property must belong to the substanceImpairments class.
     
     Impairments SubClassOf substanceImpairments some substanceImpairments
-    
     Every impairment may involve at least one substance impairment.
      
-    
     distraction SubClassOf Impairments
-    
     All distractions are a type of impairment.
     
     Impairments SubClassOf distraction only distraction
-    
     The range of the distraction property must belong to the distraction class.
     
     Impairments SubClassOf distraction some distraction
-    
     Every impairment may involve at least one distraction.
     
     Module: Person Schema
