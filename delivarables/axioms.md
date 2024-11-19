@@ -4,6 +4,9 @@
 
  
 Module: Driver Condition Schema
+
+![image](https://github.com/user-attachments/assets/cf6bf403-7717-400a-b18b-3ac1ff81447d)
+
  
 1. Driver → hasDrivingHistory → DrivingHistory
 •	Axiom 3: Global Domain
