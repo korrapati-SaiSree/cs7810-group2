@@ -331,7 +331,7 @@
 
 ## Vehicle
 
-![Road Crashes all together](https://github.com/korrapati-SaiSree/cs7810-group2/blob/main/delivarables/scehmaDiagrams_Final/vehicle/Vehicle.png)
+![Vehicle](https://github.com/korrapati-SaiSree/cs7810-group2/blob/main/delivarables/scehmaDiagrams_Final/vehicle/Vehicle.png)
 
 ### Axioms
 
@@ -351,7 +351,7 @@
     Every vehicle has exactly one weight associated with it.
 
 6. Vehicle SubClassOf hasWeight only Weight
-    Every vehicle must have at least one weight specified.
+    The weight of every vehicle must be of type Weight.
 
 7. Vehicle SubClassOf hasWeight some Weight
     Every vehicle must have at least one weight specified.
@@ -401,22 +401,104 @@
 22. Vehicle SubClassOf hasVehicleType Exactly 1 xsd:string
     Every Vehicle must have exactly one VehicleType, represented as a string
 
-23. Vehicle SubClassOf hasVehicleMake Exactly 1 xsd:string
+24. hasVehicleMake some xsd:string SubClassOf Vehicle
+    Anything that has a VehicleMake is classified as a Vehicle.
+
+25. Vehicle SubClassOf hasVehicleMake Exactly 1 xsd:string
     Every Vehicle must have exactly one VehicleMake, represented as a string.
 
-24. Vehicle SubClassOf hasVehicleModel Exactly 1 xsd:string
+26. hasVehicleModel some xsd:string SubClassOf Vehicle
+    Anything that has a VehicleModel is classified as a Vehicle.
+
+27. Vehicle SubClassOf hasVehicleModel Exactly 1 xsd:string
     Every Vehicle must have exactly one VehicleModel, represented as a string.
 
-25. Vehicle SubClassOf hasVehicleManufacturingYear Exactly 1 xsd:string
+28. hasVehicleManufacturingYear some xsd:string SubClassOf Vehicle
+    Anything that has a VehicleManufacturingYear is classified as a Vehicle.
+
+29. Vehicle SubClassOf hasVehicleManufacturingYear Exactly 1 xsd:string
     Every Vehicle must have exactly one VehicleManufacturingYear, represented as a string.
 
-26. OWL.Thing SubClassOf rangeFrom only xsd:integer
+30. OWL.Thing SubClassOf rangeFrom only xsd:integer
+    Everything in the ontology can only have rangeFrom values of type xsd:integer.
 
-26. OWL.Thing SubClassOf rangeTo only xsd:integer
+31. OWL.Thing SubClassOf rangeTo only xsd:integer
+    Everything in the ontology can only have rangeTo values of type xsd:integer.
 
 
 ## Impairment
+![Impairment](https://github.com/korrapati-SaiSree/cs7810-group2/tree/main/delivarables/scehmaDiagrams_Final/Impairment)
+
+### Axioms
+
+1. SubstanceImairments SubClassOf Impairments
+    Every SubstanceImairments is SubstanceImairments
+
+2. SubstanceImairments SubClassOf {"Test Not Given", "Tested, No Drugs Found/Negative", "Not Reported", "Narcotic Analgesics", "Depressants", "Hallucinogens", "Cannabinoids", "Stimulants", "Dissociative Anesthetics", "Anabolic Steroids ", "Inhalants","Non-Psychoactive/Other Drugs","Non-Psychoactive/Other Drugs", "Other Drug (Specify:)", "Tested for Drugs, Drugs Found, Type Unknown/Positive", "Tested for Drugs, Results Unknown",
+}
+   SubstanceImairments can only be one of the enumerated types.
+
+3. Distraction SubClassOf Impairments
+    Every SubstanceImairments is SubstanceImairments
+
+4. Distraction SubClassOf {"Not Distracted", "By Other Occupant(s)", "By a Moving Object in Vehicle", "While Talking or Listening to Mobile Phone", "While Adjusting Audio or Climate Controls", "While Using Other Component/Controls Integral to Vehicle", "While Using or Reaching for Device/Object Brought Into Vehicle", "Distracted by Outside Person, Object or Event", "Eating or Drinking", "Smoking Related", "No Driver Present/Unknown if Driver Present","Distraction/Inattention", "Other Mobile Phone Related ", "Distraction/Careless", "Careless/Inattentive", "Lost in Thought/Daydreaming", "Other Distraction","Distraction (Distracted), Details Unknown", "Inattention (Inattentive), Details Unknown ",
+}
+   Distraction can only be one of the enumerated types.
 
 ## SocioEconomic Condition
+![SocioEconomic Condition](https://github.com/korrapati-SaiSree/cs7810-group2/blob/main/delivarables/scehmaDiagrams_Final/socioeconomic_Factors/socioEconomicCondition.png)
+
+### Axioms
+
+1. Location SubClassOf hasSocioEconomicCondition only SocioEconomicCondition
+    The socioeconomic condition of any location must be of type SocioEconomicCondition.
+
+2. IncomeHouseHoldMedium SubClassOf SocioEconomicCondition
+    Every IncomeHouseHoldMedium is SocioEconomicCondition
+
+3. OWL.Things SubClassOf incomeHouseHoldMediumAsString only xsd:string
+    Everything in the ontology can only have incomeHouseHoldMediumAsString values of type xsd:string.
+
+4. EmploymentRate SubClassOf SocioEconomicCondition
+    Every EmploymentRate is SocioEconomicCondition
+
+5. OWL.Things SubClassOf employmentRateAsString only xsd:string
+    Everything in the ontology can only have employmentRateAsString values of type xsd:string.
+
+6. PopulationDensity SubClassOf SocioEconomicCondition
+    Every PopulationDensity is SocioEconomicCondition
+
+7. OWL.Things SubClassOf populationDensityAsString only xsd:string
+    Everything in the ontology can only have populationDensityAsString values of type xsd:string.
+
+8. EducationLevel SubClassOf SocioEconomicCondition
+    Every EducationLevel is SocioEconomicCondition
+
+9. EducationLevel SubClassOf {"Less than high school graduate", "High school graduate", "Some college or associate's degree", "Bachelor's degree or higher"}
+   EducationLevel can only be one of the enumerated types.
+
 
 ## Weather
+
+### Axioms
+
+1. Location SubClassOf hasWeatherCondition only Weather Condition
+    The weather condition of any Location must be of type WeatherCondition.
+
+2. OWL.Things SubClassOf weatherConditionAsString only xsd:string
+    Everything in the ontology can only have weatherConditionAsString values of type xsd:string.
+
+3. WeatherCondition SubClassOf hasPrecipitation Exactly 1 Precipitation
+    Every weather condition must have exactly one precipitation value associated with it
+
+4. WeatherCondition SubClassOf hasTemperature only Temperature
+    The Temperature of every WeatherCondition must be of type Temperature.
+
+5. WeatherCondition SubClassOf hasTemperature some Temperature
+    Every WeatherCondition must have at least one Temperature specified.
+
+6. Temperature SubClassOf inCelcius only xsd:decimal
+    The temperature in Celsius must always be represented as a decimal value.
+
+7. Temperature SubClassOf inFarenheit only xsd:decimal
+    The temperature inFarenheit must always be represented as a decimal value.
