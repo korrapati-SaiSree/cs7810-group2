@@ -93,9 +93,10 @@ Module: Driver Condition Schema
        * Natural Language Description:
               A driving history must include at least one driving experience.
  
-6. TrafficViolation → licenseSuspension → xsd
-•	Axiom 7: Existential
-Manchester Syntax:
+5. TrafficViolation → licenseSuspension → xsd
+
+      i) Axiom 7: Existential
+* Manchester Syntax:
 TrafficViolation SubClassOf licenseSuspension some xsd:string
 Natural Language Description:
 A traffic violation may result in a license suspension. If there is a suspension, it is captured as a string.
