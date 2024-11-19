@@ -3,7 +3,7 @@ Module: Driver Condition Schema
  
 1. Driver → hasDrivingHistory → DrivingHistory
 
-       Axiom 3: Global Domain
+       **** Axiom 3: Global Domain
 
        Manchester Syntax:
        hasDrivingHistory some owl:Thing SubClassOf Driver
