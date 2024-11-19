@@ -10,112 +10,57 @@ Module: Driver Condition Schema
 
              hasDrivingHistory some owl:Thing SubClassOf Driver
              If something has a driving history, it must be a driver.
+             
              Driver SubClassOf hasDrivingHistory only DrivingHistory
              The range of the relationship hasDrivingHistory must be DrivingHistory.
+             
              Driver SubClassOf hasDrivingHistory some DrivingHistory
              Every driver must have a driving history.
  
-2. Driver → hasImpairments → Impairments
-
-      i) Axiom 3: Global Domain
-
-       * Manchester Syntax:
               hasImpairments some owl:Thing SubClassOf Driver
-       * Natural Language Description:
               If something has impairments, it must be a driver.
-     ii) Axiom 5: Global Range
-
-       * Manchester Syntax:
+     
               Driver SubClassOf hasImpairments only Impairments
-       * Natural Language Description:
               The range of the relationship hasImpairments must be Impairments.
-     iii) Axiom 7: Existential
-
-       * Manchester Syntax:
+   
               Driver SubClassOf hasImpairments some Impairments
-       * Natural Language Description:
               A driver may have impairments.
  
-3. DrivingHistory → hasTrafficViolation → TrafficViolation
-
-      i) Axiom 3: Global Domain
-
-       * Manchester Syntax:
               hasTrafficViolation some owl:Thing SubClassOf DrivingHistory
-       * Natural Language Description:
               If something has traffic violations, it must belong to a driving history.
-     ii)	Axiom 5: Global Range
-  
-       * Manchester Syntax:
+   
               DrivingHistory SubClassOf hasTrafficViolation only TrafficViolation
-       * Natural Language Description:
               The range of the relationship hasTrafficViolation must be TrafficViolation.
-     iii) Axiom 7: Existential
-
-       * Manchester Syntax:
+   
               DrivingHistory SubClassOf hasTrafficViolation some TrafficViolation
-       * Natural Language Description:
               A driving history may include at least one traffic violation.
  
-4. DrivingHistory → hasDrivingExperience → DrivingExperience
-
-      i) Axiom 3: Global Domain
-      
-       * Manchester Syntax:
               hasDrivingExperience some owl:Thing SubClassOf DrivingHistory
-       * Natural Language Description:
               If something has driving experience, it must belong to a driving history.
-      ii) Axiom 5: Global Range
-
-       * Manchester Syntax:
+    
               DrivingHistory SubClassOf hasDrivingExperience only DrivingExperience
-       * Natural Language Description:
               The range of the relationship hasDrivingExperience must be DrivingExperience.
-      iii) Axiom 7: Existential
-
-       * Manchester Syntax:
+    
               DrivingHistory SubClassOf hasDrivingExperience some DrivingExperience
-       * Natural Language Description:
               A driving history must include at least one driving experience.
  
-5. TrafficViolation → licenseSuspension → xsd
+              TrafficViolation SubClassOf licenseSuspension some xsd:string
+              A traffic violation may result in a license suspension. If there is a suspension, it is captured as a string.
 
-      i) Axiom 7: Existential
-* Manchester Syntax:
-TrafficViolation SubClassOf licenseSuspension some xsd:string
-Natural Language Description:
-A traffic violation may result in a license suspension. If there is a suspension, it is captured as a string.
-•	Axiom 10: Qualified Functionality
-Manchester Syntax:
-TrafficViolation SubClassOf licenseSuspension max 1 xsd:string
-Natural Language Description:
-A traffic violation can have at most one associated license suspension, ensuring no ambiguity.
+              TrafficViolation SubClassOf licenseSuspension max 1 xsd:string
+              A traffic violation can have at most one associated license suspension, ensuring no ambiguity.
  
-7. TrafficViolation → violationType → xsd
-•	Axiom 10: Qualified Functionality
-Manchester Syntax:
-TrafficViolation SubClassOf violationType max 1 xsd:string
-Natural Language Description:
-A traffic violation has at most one type.
-•	Axiom 12: Qualified Scoped Functionality
-Manchester Syntax:
-TrafficViolation SubClassOf violationType exactly 1 xsd:string
-Natural Language Description:
-Each traffic violation must have exactly one type.
+              TrafficViolation SubClassOf violationType max 1 xsd:string
+              A traffic violation has at most one type.
+
+              TrafficViolation SubClassOf violationType exactly 1 xsd:string
+              Each traffic violation must have exactly one type.
  
-8. TrafficViolation → violationDate → TemporalExtent
-•	Axiom 7: Existential
-Manchester Syntax:
-TrafficViolation SubClassOf violationDate some TemporalExtent
-Natural Language Description:
-Every traffic violation is associated with a date (temporal extent).
+              TrafficViolation SubClassOf violationDate some TemporalExtent
+              Every traffic violation is associated with a date (temporal extent).
  
-9. DrivingExperience → totalYearsOfDriving → TemporalExtent
-•	Axiom 7: Existential
-Manchester Syntax:
-DrivingExperience SubClassOf totalYearsOfDriving some TemporalExtent
-Natural Language Description:
-A driving experience must include total years of driving.
+              DrivingExperience SubClassOf totalYearsOfDriving some TemporalExtent
+              A driving experience must include total years of driving.
  
 10. DrivingExperience → experienceLevel → ExperienceLevel
 •	Axiom 5: Global Range
