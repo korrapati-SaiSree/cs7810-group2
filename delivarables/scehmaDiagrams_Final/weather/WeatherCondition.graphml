@@ -90,6 +90,7 @@
 			<port name="p3"/>
 			<port name="p4"/>
 			<port name="p5"/>
+			<port name="p6"/>
 		</node>
 		<node id="n1">
 			<data key="d0">1</data>
@@ -115,6 +116,7 @@
 				<yjs:ShapeNodeStyle stroke="{y:GraphMLReference 2}" fill="{y:GraphMLReference 1}" shape="ROUND_RECTANGLE"/>
 			</data>
 			<port name="p0"/>
+			<port name="p1"/>
 		</node>
 		<node id="n2">
 			<data key="d0">2</data>
@@ -239,7 +241,7 @@
 			<data key="d4">
 				<x:List>
 					<y:Label LayoutParameter="{x:Static y:InteriorStretchLabelModel.Center}">
-						<y:Label.Text>xsd:string</y:Label.Text>
+						<y:Label.Text>xsd:decimal</y:Label.Text>
 						<y:Label.Style>
 							<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" textWrappingShape="ELLIPSE" font="{y:GraphMLReference 8}" autoFlip="false" textFill="{y:GraphMLReference 7}"/>
 						</y:Label.Style>
@@ -261,7 +263,7 @@
 			<data key="d4">
 				<x:List>
 					<y:Label LayoutParameter="{x:Static y:InteriorStretchLabelModel.Center}">
-						<y:Label.Text>xsd:string</y:Label.Text>
+						<y:Label.Text>xsd:decimal</y:Label.Text>
 						<y:Label.Style>
 							<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" textWrappingShape="ELLIPSE" font="{y:GraphMLReference 8}" autoFlip="false" textFill="{y:GraphMLReference 7}"/>
 						</y:Label.Style>
@@ -335,7 +337,7 @@
 			<data key="d11">
 				<x:List>
 					<y:Label>
-						<y:Label.Text>label</y:Label.Text>
+						<y:Label.Text>weatherConditionAsString</y:Label.Text>
 						<y:Label.LayoutParameter>
 							<y:FreeEdgeLabelModelParameter Ratio="0.48563506747080337" Distance="-2.4415766648380917"/>
 						</y:Label.LayoutParameter>
@@ -360,12 +362,12 @@
 				</yjs:PolylineEdgeStyle>
 			</data>
 		</edge>
-		<edge id="e3" source="n0" target="n1" sourceport="p3" targetport="p0">
+		<edge id="e3" source="n1" target="n0" sourceport="p1" targetport="p6">
 			<data key="d10"><![CDATA[]]></data>
 			<data key="d11">
 				<x:List>
 					<y:Label>
-						<y:Label.Text>occuredAt</y:Label.Text>
+						<y:Label.Text>hasWeatherCondition</y:Label.Text>
 						<y:Label.LayoutParameter>
 							<y:FreeEdgeLabelModelParameter Ratio="0.49611577350472824" Distance="-0.08423343067554649"/>
 						</y:Label.LayoutParameter>
