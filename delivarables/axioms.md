@@ -315,92 +315,72 @@
     TimeInterval SubClassOf endsAt some PointInTime
     Every TimeInterval must end at a specific PointInTime.
      
-    Crash
-     
+    
+ ## Module: Crash
+
+     ![Crash (1)](https://github.com/user-attachments/assets/2588afb7-5aa8-4793-b9e9-d542d1e0ac91)
+
     
     hasMannerOfCollision some owl:Thing SubClassOf Crash
-    
     If an entity has a manner of collision, it must be a Crash.
     
     Crash SubClassOf hasMannerOfCollision only MannerOfCollision
-    
     The range of the property hasMannerOfCollision must be a MannerOfCollision.
     
     Crash SubClassOf hasMannerOfCollision exactly 1 MannerOfCollision
-    
     Every Crash must have exactly one manner of collision.
      
-    
     hasTemporalExtent some owl:Thing SubClassOf Crash
-    
     If an entity has a temporal extent, it must be a Crash.
     
     Crash SubClassOf hasTemporalExtent only TemporalExtent
-    
     The range of the property hasTemporalExtent must be a TemporalExtent.
     
     Crash SubClassOf hasTemporalExtent exactly 1 TemporalExtent
-    
     Every Crash must have exactly one temporal extent.
      
-    
     occurredAt some owl:Thing SubClassOf Crash
-    
     If an entity occurred at a location, it must be a Crash.
     
     Crash SubClassOf occurredAt only Location
-    
     The range of the property occurredAt must be a Location.
     
     Crash SubClassOf occurredAt exactly 1 Location
-    
     Every Crash must occur at exactly one location.
      
-    
     hasTotalFatalities some owl:Thing SubClassOf Crash
-    
     If an entity has total fatalities, it must be a Crash.
     
     Crash SubClassOf hasTotalFatalities only xsd:integer
-    
     The range of the property hasTotalFatalities must be an integer value.
     
     Crash SubClassOf hasTotalFatalities exactly 1 xsd:integer
-    
     Every Crash must have exactly one integer value representing total fatalities.
      
-    
     hasParticipant some owl:Thing SubClassOf Crash
-    
     If an entity has participants, it must be a Crash.
     
     Crash SubClassOf hasParticipant only Participant
-    
     The range of the property hasParticipant must be a Participant.
     
     Crash SubClassOf hasParticipant min 0 Participant
-    
     A Crash may have zero or more Participants.
      
-    
     Person SubClassOf Participant
-    
     Every Person is a subclass of Participant.
     
-    
-    
     Vehicle SubClassOf Participant
-    
     Every Vehicle is a subclass of Participant.
     
     EMS SubClassOf Participant
-    
     Every EMS (Emergency Medical Service) is a subclass of Participant.
-    Location
+    
  
+## Module: Location
  
-hasWorkZone some owl:Thing SubClassOf Location
+ ![Location (1)](https://github.com/user-attachments/assets/0988d8e9-d36e-4cde-8870-2b41047e731b)
 
+hasWorkZone some owl:Thing SubClassOf Location
 If an entity has a work zone, it must be a Location.
 
 Location SubClassOf hasWorkZone only WorkZone
