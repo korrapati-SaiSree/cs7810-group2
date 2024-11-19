@@ -11,19 +11,21 @@ Module: Driver Condition Schema
        Natural Language Description:
        If something has a driving history, it must be a driver.
 
-•	Axiom 5: Global Range
+       Axiom 5: Global Range
 
-Manchester Syntax:
-Driver SubClassOf hasDrivingHistory only DrivingHistory
-Natural Language Description:
-The range of the relationship hasDrivingHistory must be DrivingHistory.
+       Manchester Syntax:
+       Driver SubClassOf hasDrivingHistory only DrivingHistory
 
-•	Axiom 7: Existential
+       Natural Language Description:
+       The range of the relationship hasDrivingHistory must be DrivingHistory.
 
-Manchester Syntax:
-Driver SubClassOf hasDrivingHistory some DrivingHistory
-Natural Language Description:
-Every driver must have a driving history.
+       Axiom 7: Existential
+
+       Manchester Syntax:
+       Driver SubClassOf hasDrivingHistory some DrivingHistory
+
+       Natural Language Description:
+       Every driver must have a driving history.
  
 2. Driver → hasImpairments → Impairments
 •	Axiom 3: Global Domain
