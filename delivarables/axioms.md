@@ -16,510 +16,510 @@
      Every driver must have a driving history.
  
 
-hasImpairments some owl:Thing SubClassOf Driver
-
-If something has impairments, it must be a driver.
-
-Driver SubClassOf hasImpairments only Impairments
-
-The range of the relationship hasImpairments must be Impairments.
-
-Driver SubClassOf hasImpairments some Impairments
-
-A driver may have impairments.
- 
-
-hasTrafficViolation some owl:Thing SubClassOf DrivingHistory
-
-If something has traffic violations, it must belong to a driving history.
-
-DrivingHistory SubClassOf hasTrafficViolation only TrafficViolation
-
-The range of the relationship hasTrafficViolation must be TrafficViolation.
-
-DrivingHistory SubClassOf hasTrafficViolation some TrafficViolation
-
-A driving history may include at least one traffic violation.
- 
-
-hasDrivingExperience some owl:Thing SubClassOf DrivingHistory
-
-If something has driving experience, it must belong to a driving history.
-
-DrivingHistory SubClassOf hasDrivingExperience only DrivingExperience
-
-The range of the relationship hasDrivingExperience must be DrivingExperience.
-
-DrivingHistory SubClassOf hasDrivingExperience some DrivingExperience
-
-A driving history must include at least one driving experience.
- 
-
-TrafficViolation SubClassOf licenseSuspension some xsd:string
-
-A traffic violation may result in a license suspension. If there is a suspension, it is captured as a string.
-
-TrafficViolation SubClassOf licenseSuspension max 1 xsd:string
-
-A traffic violation can have at most one associated license suspension, ensuring no ambiguity.
- 
-
-TrafficViolation SubClassOf violationType max 1 xsd:string
-
-A traffic violation has at most one type.
-
-TrafficViolation SubClassOf violationType exactly 1 xsd:string
-
-Each traffic violation must have exactly one type.
- 
-
-TrafficViolation SubClassOf violationDate some TemporalExtent
-
-Every traffic violation is associated with a date (temporal extent).
- 
-
-DrivingExperience SubClassOf totalYearsOfDriving some TemporalExtent
-
-A driving experience must include total years of driving.
- 
-
-DrivingExperience SubClassOf experienceLevel only ExperienceLevel
-
-The range of the relationship experienceLevel must be one of the predefined experience levels (novice, intermediate, experienced).
-
-DrivingExperience SubClassOf experienceLevel some ExperienceLevel
-
-Every driving experience must have at least one experience level.
- 
-
-Driver SubClassOf hasLicenseStatus max 1 xsd:string
-
-A driver has at most one license status.
-
-Driver SubClassOf hasLicenseStatus exactly 1 xsd:string
-
-Each driver must have exactly one license status.
-
-
-Module: Emergency Medical Service Schema
- 
-
-hasNotificationTime some owl:Thing SubClassOf EmergencyMedicalService
-
-If an entity has a notification time, it must be an emergency medical service.
-
-EmergencyMedicalService SubClassOf hasNotificationTime only TemporalExtent
-
-The range of the property hasNotificationTime must be a temporal extent.
-
-EmergencyMedicalService SubClassOf hasNotificationTime exactly 1 TemporalExtent
-
-Every emergency medical service must have exactly one notification time.
- 
-
-hasArrivalTimeToCrash some owl:Thing SubClassOf EmergencyMedicalService
-
-If an entity has an arrival time to crash, it must be an emergency medical service.
-
-EmergencyMedicalService SubClassOf hasArrivalTimeToCrash only TemporalExtent
-
-The range of the property hasArrivalTimeToCrash must be a temporal extent.
-
-EmergencyMedicalService SubClassOf hasArrivalTimeToCrash exactly 1 TemporalExtent
-
-Every emergency medical service must have exactly one arrival time to the crash site.
- 
-
-hasArrivalTimeToHospital some owl:Thing SubClassOf EmergencyMedicalService
-
-If an entity has an arrival time to hospital, it must be an emergency medical service.
-
-EmergencyMedicalService SubClassOf hasArrivalTimeToHospital only TemporalExtent
-
-The range of the property hasArrivalTimeToHospital must be a temporal extent.
-
-EmergencyMedicalService SubClassOf hasArrivalTimeToHospital exactly 1 TemporalExtent
-
-Every emergency medical service must have exactly one arrival time to the hospital.
-Module: Impairments Schema
- 
- 
-
-Impairments SubClassOf impairmentsAsString max 1 xsd:string
-
-Each impairment can have at most one associated string description.
-
-Impairments SubClassOf impairmentsAsString exactly 1 xsd:string
-
-Every impairment must have exactly one associated string description.
- 
-
-substanceImpairments SubClassOf Impairments
-
-All substance impairments are a type of impairment.
-
-Impairments SubClassOf substanceImpairments only substanceImpairments
-
-The range of the substanceImpairments property must belong to the substanceImpairments class.
-
-Impairments SubClassOf substanceImpairments some substanceImpairments
-
-Every impairment may involve at least one substance impairment.
- 
-
-distraction SubClassOf Impairments
-
-All distractions are a type of impairment.
-
-Impairments SubClassOf distraction only distraction
-
-The range of the distraction property must belong to the distraction class.
-
-Impairments SubClassOf distraction some distraction
-
-Every impairment may involve at least one distraction.
-
-Module: Person Schema
- 
- 
-
-Person SubClassOf hasRace max 1 xsd:string
-
-A person can have at most one associated race.
-
-Person SubClassOf hasRace exactly 1 xsd:string
-
-Every person must have exactly one associated race.
- 
-
-Person SubClassOf hasGender max 1 xsd:string
-
-A person can have at most one associated gender.
-
-Person SubClassOf hasGender exactly 1 xsd:string
-
-Every person must have exactly one associated gender.
- 
-
-Person SubClassOf hasAge max 1 xsd:integer
-
-A person can have at most one associated age.
-
-Person SubClassOf hasAge exactly 1 xsd:integer
-
-Every person must have exactly one associated age.
- 
-
-Person SubClassOf performsRole only PersonInCrash
-
-The range of the property performsRole must belong to the class PersonInCrash.
-
-Person SubClassOf performsRole some PersonInCrash
-
-Every person must perform at least one role in the context of a crash.
- 
-
-providesRole some owl:Thing SubClassOf PersonInCrash
-
-If something has a providesRole property, it must belong to PersonInCrash.
-
-PersonInCrash SubClassOf providesRole only Crash
-
-The range of the property providesRole must belong to the class Crash.
-
-PersonInCrash SubClassOf providesRole some Crash
-
-Every person in a crash must provide at least one role in the context of a crash.
- 
-
-PersonInCrash SubClassOf hasInjurySeverity only InjurySeverity
-
-The range of the property hasInjurySeverity must belong to the InjurySeverity class.
-
-PersonInCrash SubClassOf hasInjurySeverity some InjurySeverity
-
-Every person in a crash must have at least one associated injury severity.
- 
-
-PersonInCrash SubClassOf isFatal only Fatality
-
-The range of the isFatal property must belong to the class Fatality.
-
-PersonInCrash SubClassOf isFatal some Fatality
-
-Every person in a crash who is fatal must have an associated Fatality record.
- 
-
-Fatality SubClassOf isFatal exactly 1 xsd:boolean
-
-A fatality must have exactly one associated boolean value indicating if it is fatal.
- 
-
-Fatality SubClassOf hasLagTime only TemporalExtent
-
-The range of the property hasLagTime must belong to the class TemporalExtent.
-
-Fatality SubClassOf hasLagTime some TemporalExtent
-
-Every fatality must have at least one associated TemporalExtent for the lag time, representing the time between the crash and the fatality.
-
-
-PersonInCrash SubClassOf isNonOccupant only NonOccupant
-
-The range of the isNonOccupant property must belong to the class NonOccupant.
-
-PersonInCrash SubClassOf isNonOccupant some NonOccupant
-
-Every person in a crash who is a non-occupant must be associated with at least one NonOccupant record.
- 
-
-PersonInCrash SubClassOf isOccupant only Occupant
-
-The range of the isOccupant property must belong to the class Occupant.
-
-PersonInCrash SubClassOf isOccupant some Occupant
-
-Every person in a crash who is an occupant must be associated with at least one Occupant record.
- 
-
-NonOccupant SubClassOf locationDuringCrash max 1 xsd:string
-
-A non-occupant can have at most one associated location during the crash.
-
-NonOccupant SubClassOf locationDuringCrash exactly 1 xsd:string
-
-Every non-occupant must have exactly one associated location during the crash.
- 
-
-NonOccupant SubClassOf hasImpairment only Impairments
-
-The range of the property hasImpairment must belong to the class Impairments.
-
-NonOccupant SubClassOf hasImpairment some Impairments
-
-Every non-occupant must have at least one associated impairment.
- 
-
-NonOccupant SubClassOf isPedestrian only Pedestrian
-
-The range of the property isPedestrian must belong to the class Pedestrian.
-
-NonOccupant SubClassOf isPedestrian some Pedestrian
-
-Every non-occupant who is a pedestrian must have an associated record in the class Pedestrian.
- 
-
-NonOccupant SubClassOf isCyclist only Cyclist
-
-The range of the property isCyclist must belong to the class Cyclist.
-
-
-NonOccupant SubClassOf isCyclist some Cyclist
-
-Every non-occupant who is a cyclist must have an associated record in the class Cyclist.
- 
-
-Occupant SubClassOf seatPosition max 1 xsd:string
-
-An occupant can have at most one associated seat position.
-
-Occupant SubClassOf seatPosition exactly 1 xsd:string
-
-Every occupant must have exactly one associated seat position.
- 
-
-Occupant SubClassOf safetyRestraintUsed max 1 xsd:string
-
-An occupant can have at most one associated safety restraint used.
-
-Occupant SubClassOf safetyRestraintUsed exactly 1 xsd:string
-
-Every occupant must have exactly one associated safety restraint used.
- 
-
-Occupant SubClassOf hasAirbagDeployed max 1 xsd:boolean
-
-An occupant can have at most one associated boolean value indicating whether an airbag was deployed.
-
-Occupant SubClassOf hasAirbagDeployed exactly 1 xsd:boolean
-
-Every occupant must have exactly one associated boolean value indicating whether an airbag was deployed.
- 
-
-Occupant SubClassOf isDriver only Driver
-
-The range of the property isDriver must belong to the class Driver.
-
-Occupant SubClassOf isDriver some Driver
-
-Every occupant who is a driver must have an associated record in the class Driver.
- 
-
-Occupant SubClassOf isPassenger only Passenger
-
-The range of the property isPassenger must belong to the class Passenger.
-
-Occupant SubClassOf isPassenger some Passenger
-
-Every occupant who is a passenger must have an associated record in the class Passenger.
- 
-
-PersonInCrash SubClassOf someTemporalAspect only TemporalExtent
-
-The range of the relationship between PersonInCrash and its temporal aspects must belong to the class TemporalExtent.
-
-PersonInCrash SubClassOf someTemporalAspect some TemporalExtent
-
-Every PersonInCrash must have at least one associated TemporalExtent, representing some time-related information about their crash involvement.
-Module: Time Schema
- 
- 
-
-PointInTime SubClassOf TemporalExtent
-
-Every PointInTime is a specific instance of TemporalExtent, implying that all PointInTime instances are part of the broader TemporalExtent class.
- 
-
-TimeInterval SubClassOf TemporalExtent
-
-Every TimeInterval is a subclass of TemporalExtent, representing a span or interval of time within the broader temporal framework.
- 
-
-PointInTime SubClassOf hasTimeOfTheDay only TimeOfDay
-
-The range of the hasTimeOfTheDay property must belong to the class TimeOfDay.
-
-PointInTime SubClassOf hasTimeOfTheDay some TimeOfDay
-
-Every PointInTime must have at least one associated TimeOfDay.
- 
-
-PointInTime SubClassOf hasDayOfTheWeek only DayOfTheWeek
-
-The range of the hasDayOfTheWeek property must belong to the class DayOfTheWeek.
-
-PointInTime SubClassOf hasDayOfTheWeek some DayOfTheWeek
-
-Every PointInTime must have at least one associated DayOfTheWeek.
- 
-
-PointInTime SubClassOf hasSeason only Season
-
-The range of the hasSeason property must belong to the class Season.
-
-PointInTime SubClassOf hasSeason some Season
-
-Every PointInTime must have at least one associated Season.
- 
-
-PointInTime SubClassOf hasValue max 1 xsd:datetime
-
-A PointInTime can have at most one associated xsd:datetime value.
-
-PointInTime SubClassOf hasValue exactly 1 xsd:datetime
-
-Every PointInTime must have exactly one associated xsd:datetime value.
- 
-
-TimeInterval SubClassOf startsAt only PointInTime
-
-The range of the startsAt property must belong to the class PointInTime.
-
-TimeInterval SubClassOf startsAt some PointInTime
-
-Every TimeInterval must start at a specific PointInTime.
- 
-
-TimeInterval SubClassOf endsAt only PointInTime
-
-The range of the endsAt property must belong to the class PointInTime.
-
-TimeInterval SubClassOf endsAt some PointInTime
-
-Every TimeInterval must end at a specific PointInTime.
- 
-Crash
- 
-
-hasMannerOfCollision some owl:Thing SubClassOf Crash
-
-If an entity has a manner of collision, it must be a Crash.
-
-Crash SubClassOf hasMannerOfCollision only MannerOfCollision
-
-The range of the property hasMannerOfCollision must be a MannerOfCollision.
-
-Crash SubClassOf hasMannerOfCollision exactly 1 MannerOfCollision
-
-Every Crash must have exactly one manner of collision.
- 
-
-hasTemporalExtent some owl:Thing SubClassOf Crash
-
-If an entity has a temporal extent, it must be a Crash.
-
-Crash SubClassOf hasTemporalExtent only TemporalExtent
-
-The range of the property hasTemporalExtent must be a TemporalExtent.
-
-Crash SubClassOf hasTemporalExtent exactly 1 TemporalExtent
-
-Every Crash must have exactly one temporal extent.
- 
-
-occurredAt some owl:Thing SubClassOf Crash
-
-If an entity occurred at a location, it must be a Crash.
-
-Crash SubClassOf occurredAt only Location
-
-The range of the property occurredAt must be a Location.
-
-Crash SubClassOf occurredAt exactly 1 Location
-
-Every Crash must occur at exactly one location.
- 
-
-hasTotalFatalities some owl:Thing SubClassOf Crash
-
-If an entity has total fatalities, it must be a Crash.
-
-Crash SubClassOf hasTotalFatalities only xsd:integer
-
-The range of the property hasTotalFatalities must be an integer value.
-
-Crash SubClassOf hasTotalFatalities exactly 1 xsd:integer
-
-Every Crash must have exactly one integer value representing total fatalities.
- 
-
-hasParticipant some owl:Thing SubClassOf Crash
-
-If an entity has participants, it must be a Crash.
-
-Crash SubClassOf hasParticipant only Participant
-
-The range of the property hasParticipant must be a Participant.
-
-Crash SubClassOf hasParticipant min 0 Participant
-
-A Crash may have zero or more Participants.
- 
-
-Person SubClassOf Participant
-
-Every Person is a subclass of Participant.
-
-
-
-Vehicle SubClassOf Participant
-
-Every Vehicle is a subclass of Participant.
-
-EMS SubClassOf Participant
-
-Every EMS (Emergency Medical Service) is a subclass of Participant.
-Location
+    hasImpairments some owl:Thing SubClassOf Driver
+    
+    If something has impairments, it must be a driver.
+    
+    Driver SubClassOf hasImpairments only Impairments
+    
+    The range of the relationship hasImpairments must be Impairments.
+    
+    Driver SubClassOf hasImpairments some Impairments
+    
+    A driver may have impairments.
+     
+    
+    hasTrafficViolation some owl:Thing SubClassOf DrivingHistory
+    
+    If something has traffic violations, it must belong to a driving history.
+    
+    DrivingHistory SubClassOf hasTrafficViolation only TrafficViolation
+    
+    The range of the relationship hasTrafficViolation must be TrafficViolation.
+    
+    DrivingHistory SubClassOf hasTrafficViolation some TrafficViolation
+    
+    A driving history may include at least one traffic violation.
+     
+    
+    hasDrivingExperience some owl:Thing SubClassOf DrivingHistory
+    
+    If something has driving experience, it must belong to a driving history.
+    
+    DrivingHistory SubClassOf hasDrivingExperience only DrivingExperience
+    
+    The range of the relationship hasDrivingExperience must be DrivingExperience.
+    
+    DrivingHistory SubClassOf hasDrivingExperience some DrivingExperience
+    
+    A driving history must include at least one driving experience.
+     
+    
+    TrafficViolation SubClassOf licenseSuspension some xsd:string
+    
+    A traffic violation may result in a license suspension. If there is a suspension, it is captured as a string.
+    
+    TrafficViolation SubClassOf licenseSuspension max 1 xsd:string
+    
+    A traffic violation can have at most one associated license suspension, ensuring no ambiguity.
+     
+    
+    TrafficViolation SubClassOf violationType max 1 xsd:string
+    
+    A traffic violation has at most one type.
+    
+    TrafficViolation SubClassOf violationType exactly 1 xsd:string
+    
+    Each traffic violation must have exactly one type.
+     
+    
+    TrafficViolation SubClassOf violationDate some TemporalExtent
+    
+    Every traffic violation is associated with a date (temporal extent).
+     
+    
+    DrivingExperience SubClassOf totalYearsOfDriving some TemporalExtent
+    
+    A driving experience must include total years of driving.
+     
+    
+    DrivingExperience SubClassOf experienceLevel only ExperienceLevel
+    
+    The range of the relationship experienceLevel must be one of the predefined experience levels (novice, intermediate, experienced).
+    
+    DrivingExperience SubClassOf experienceLevel some ExperienceLevel
+    
+    Every driving experience must have at least one experience level.
+     
+    
+    Driver SubClassOf hasLicenseStatus max 1 xsd:string
+    
+    A driver has at most one license status.
+    
+    Driver SubClassOf hasLicenseStatus exactly 1 xsd:string
+    
+    Each driver must have exactly one license status.
+    
+    
+    Module: Emergency Medical Service Schema
+     
+    
+    hasNotificationTime some owl:Thing SubClassOf EmergencyMedicalService
+    
+    If an entity has a notification time, it must be an emergency medical service.
+    
+    EmergencyMedicalService SubClassOf hasNotificationTime only TemporalExtent
+    
+    The range of the property hasNotificationTime must be a temporal extent.
+    
+    EmergencyMedicalService SubClassOf hasNotificationTime exactly 1 TemporalExtent
+    
+    Every emergency medical service must have exactly one notification time.
+     
+    
+    hasArrivalTimeToCrash some owl:Thing SubClassOf EmergencyMedicalService
+    
+    If an entity has an arrival time to crash, it must be an emergency medical service.
+    
+    EmergencyMedicalService SubClassOf hasArrivalTimeToCrash only TemporalExtent
+    
+    The range of the property hasArrivalTimeToCrash must be a temporal extent.
+    
+    EmergencyMedicalService SubClassOf hasArrivalTimeToCrash exactly 1 TemporalExtent
+    
+    Every emergency medical service must have exactly one arrival time to the crash site.
+     
+    
+    hasArrivalTimeToHospital some owl:Thing SubClassOf EmergencyMedicalService
+    
+    If an entity has an arrival time to hospital, it must be an emergency medical service.
+    
+    EmergencyMedicalService SubClassOf hasArrivalTimeToHospital only TemporalExtent
+    
+    The range of the property hasArrivalTimeToHospital must be a temporal extent.
+    
+    EmergencyMedicalService SubClassOf hasArrivalTimeToHospital exactly 1 TemporalExtent
+    
+    Every emergency medical service must have exactly one arrival time to the hospital.
+    Module: Impairments Schema
+     
+     
+    
+    Impairments SubClassOf impairmentsAsString max 1 xsd:string
+    
+    Each impairment can have at most one associated string description.
+    
+    Impairments SubClassOf impairmentsAsString exactly 1 xsd:string
+    
+    Every impairment must have exactly one associated string description.
+     
+    
+    substanceImpairments SubClassOf Impairments
+    
+    All substance impairments are a type of impairment.
+    
+    Impairments SubClassOf substanceImpairments only substanceImpairments
+    
+    The range of the substanceImpairments property must belong to the substanceImpairments class.
+    
+    Impairments SubClassOf substanceImpairments some substanceImpairments
+    
+    Every impairment may involve at least one substance impairment.
+     
+    
+    distraction SubClassOf Impairments
+    
+    All distractions are a type of impairment.
+    
+    Impairments SubClassOf distraction only distraction
+    
+    The range of the distraction property must belong to the distraction class.
+    
+    Impairments SubClassOf distraction some distraction
+    
+    Every impairment may involve at least one distraction.
+    
+    Module: Person Schema
+     
+     
+    
+    Person SubClassOf hasRace max 1 xsd:string
+    
+    A person can have at most one associated race.
+    
+    Person SubClassOf hasRace exactly 1 xsd:string
+    
+    Every person must have exactly one associated race.
+     
+    
+    Person SubClassOf hasGender max 1 xsd:string
+    
+    A person can have at most one associated gender.
+    
+    Person SubClassOf hasGender exactly 1 xsd:string
+    
+    Every person must have exactly one associated gender.
+     
+    
+    Person SubClassOf hasAge max 1 xsd:integer
+    
+    A person can have at most one associated age.
+    
+    Person SubClassOf hasAge exactly 1 xsd:integer
+    
+    Every person must have exactly one associated age.
+     
+    
+    Person SubClassOf performsRole only PersonInCrash
+    
+    The range of the property performsRole must belong to the class PersonInCrash.
+    
+    Person SubClassOf performsRole some PersonInCrash
+    
+    Every person must perform at least one role in the context of a crash.
+     
+    
+    providesRole some owl:Thing SubClassOf PersonInCrash
+    
+    If something has a providesRole property, it must belong to PersonInCrash.
+    
+    PersonInCrash SubClassOf providesRole only Crash
+    
+    The range of the property providesRole must belong to the class Crash.
+    
+    PersonInCrash SubClassOf providesRole some Crash
+    
+    Every person in a crash must provide at least one role in the context of a crash.
+     
+    
+    PersonInCrash SubClassOf hasInjurySeverity only InjurySeverity
+    
+    The range of the property hasInjurySeverity must belong to the InjurySeverity class.
+    
+    PersonInCrash SubClassOf hasInjurySeverity some InjurySeverity
+    
+    Every person in a crash must have at least one associated injury severity.
+     
+    
+    PersonInCrash SubClassOf isFatal only Fatality
+    
+    The range of the isFatal property must belong to the class Fatality.
+    
+    PersonInCrash SubClassOf isFatal some Fatality
+    
+    Every person in a crash who is fatal must have an associated Fatality record.
+     
+    
+    Fatality SubClassOf isFatal exactly 1 xsd:boolean
+    
+    A fatality must have exactly one associated boolean value indicating if it is fatal.
+     
+    
+    Fatality SubClassOf hasLagTime only TemporalExtent
+    
+    The range of the property hasLagTime must belong to the class TemporalExtent.
+    
+    Fatality SubClassOf hasLagTime some TemporalExtent
+    
+    Every fatality must have at least one associated TemporalExtent for the lag time, representing the time between the crash and the fatality.
+    
+    
+    PersonInCrash SubClassOf isNonOccupant only NonOccupant
+    
+    The range of the isNonOccupant property must belong to the class NonOccupant.
+    
+    PersonInCrash SubClassOf isNonOccupant some NonOccupant
+    
+    Every person in a crash who is a non-occupant must be associated with at least one NonOccupant record.
+     
+    
+    PersonInCrash SubClassOf isOccupant only Occupant
+    
+    The range of the isOccupant property must belong to the class Occupant.
+    
+    PersonInCrash SubClassOf isOccupant some Occupant
+    
+    Every person in a crash who is an occupant must be associated with at least one Occupant record.
+     
+    
+    NonOccupant SubClassOf locationDuringCrash max 1 xsd:string
+    
+    A non-occupant can have at most one associated location during the crash.
+    
+    NonOccupant SubClassOf locationDuringCrash exactly 1 xsd:string
+    
+    Every non-occupant must have exactly one associated location during the crash.
+     
+    
+    NonOccupant SubClassOf hasImpairment only Impairments
+    
+    The range of the property hasImpairment must belong to the class Impairments.
+    
+    NonOccupant SubClassOf hasImpairment some Impairments
+    
+    Every non-occupant must have at least one associated impairment.
+     
+    
+    NonOccupant SubClassOf isPedestrian only Pedestrian
+    
+    The range of the property isPedestrian must belong to the class Pedestrian.
+    
+    NonOccupant SubClassOf isPedestrian some Pedestrian
+    
+    Every non-occupant who is a pedestrian must have an associated record in the class Pedestrian.
+     
+    
+    NonOccupant SubClassOf isCyclist only Cyclist
+    
+    The range of the property isCyclist must belong to the class Cyclist.
+    
+    
+    NonOccupant SubClassOf isCyclist some Cyclist
+    
+    Every non-occupant who is a cyclist must have an associated record in the class Cyclist.
+     
+    
+    Occupant SubClassOf seatPosition max 1 xsd:string
+    
+    An occupant can have at most one associated seat position.
+    
+    Occupant SubClassOf seatPosition exactly 1 xsd:string
+    
+    Every occupant must have exactly one associated seat position.
+     
+    
+    Occupant SubClassOf safetyRestraintUsed max 1 xsd:string
+    
+    An occupant can have at most one associated safety restraint used.
+    
+    Occupant SubClassOf safetyRestraintUsed exactly 1 xsd:string
+    
+    Every occupant must have exactly one associated safety restraint used.
+     
+    
+    Occupant SubClassOf hasAirbagDeployed max 1 xsd:boolean
+    
+    An occupant can have at most one associated boolean value indicating whether an airbag was deployed.
+    
+    Occupant SubClassOf hasAirbagDeployed exactly 1 xsd:boolean
+    
+    Every occupant must have exactly one associated boolean value indicating whether an airbag was deployed.
+     
+    
+    Occupant SubClassOf isDriver only Driver
+    
+    The range of the property isDriver must belong to the class Driver.
+    
+    Occupant SubClassOf isDriver some Driver
+    
+    Every occupant who is a driver must have an associated record in the class Driver.
+     
+    
+    Occupant SubClassOf isPassenger only Passenger
+    
+    The range of the property isPassenger must belong to the class Passenger.
+    
+    Occupant SubClassOf isPassenger some Passenger
+    
+    Every occupant who is a passenger must have an associated record in the class Passenger.
+     
+    
+    PersonInCrash SubClassOf someTemporalAspect only TemporalExtent
+    
+    The range of the relationship between PersonInCrash and its temporal aspects must belong to the class TemporalExtent.
+    
+    PersonInCrash SubClassOf someTemporalAspect some TemporalExtent
+    
+    Every PersonInCrash must have at least one associated TemporalExtent, representing some time-related information about their crash involvement.
+    Module: Time Schema
+     
+     
+    
+    PointInTime SubClassOf TemporalExtent
+    
+    Every PointInTime is a specific instance of TemporalExtent, implying that all PointInTime instances are part of the broader TemporalExtent class.
+     
+    
+    TimeInterval SubClassOf TemporalExtent
+    
+    Every TimeInterval is a subclass of TemporalExtent, representing a span or interval of time within the broader temporal framework.
+     
+    
+    PointInTime SubClassOf hasTimeOfTheDay only TimeOfDay
+    
+    The range of the hasTimeOfTheDay property must belong to the class TimeOfDay.
+    
+    PointInTime SubClassOf hasTimeOfTheDay some TimeOfDay
+    
+    Every PointInTime must have at least one associated TimeOfDay.
+     
+    
+    PointInTime SubClassOf hasDayOfTheWeek only DayOfTheWeek
+    
+    The range of the hasDayOfTheWeek property must belong to the class DayOfTheWeek.
+    
+    PointInTime SubClassOf hasDayOfTheWeek some DayOfTheWeek
+    
+    Every PointInTime must have at least one associated DayOfTheWeek.
+     
+    
+    PointInTime SubClassOf hasSeason only Season
+    
+    The range of the hasSeason property must belong to the class Season.
+    
+    PointInTime SubClassOf hasSeason some Season
+    
+    Every PointInTime must have at least one associated Season.
+     
+    
+    PointInTime SubClassOf hasValue max 1 xsd:datetime
+    
+    A PointInTime can have at most one associated xsd:datetime value.
+    
+    PointInTime SubClassOf hasValue exactly 1 xsd:datetime
+    
+    Every PointInTime must have exactly one associated xsd:datetime value.
+     
+    
+    TimeInterval SubClassOf startsAt only PointInTime
+    
+    The range of the startsAt property must belong to the class PointInTime.
+    
+    TimeInterval SubClassOf startsAt some PointInTime
+    
+    Every TimeInterval must start at a specific PointInTime.
+     
+    
+    TimeInterval SubClassOf endsAt only PointInTime
+    
+    The range of the endsAt property must belong to the class PointInTime.
+    
+    TimeInterval SubClassOf endsAt some PointInTime
+    
+    Every TimeInterval must end at a specific PointInTime.
+     
+    Crash
+     
+    
+    hasMannerOfCollision some owl:Thing SubClassOf Crash
+    
+    If an entity has a manner of collision, it must be a Crash.
+    
+    Crash SubClassOf hasMannerOfCollision only MannerOfCollision
+    
+    The range of the property hasMannerOfCollision must be a MannerOfCollision.
+    
+    Crash SubClassOf hasMannerOfCollision exactly 1 MannerOfCollision
+    
+    Every Crash must have exactly one manner of collision.
+     
+    
+    hasTemporalExtent some owl:Thing SubClassOf Crash
+    
+    If an entity has a temporal extent, it must be a Crash.
+    
+    Crash SubClassOf hasTemporalExtent only TemporalExtent
+    
+    The range of the property hasTemporalExtent must be a TemporalExtent.
+    
+    Crash SubClassOf hasTemporalExtent exactly 1 TemporalExtent
+    
+    Every Crash must have exactly one temporal extent.
+     
+    
+    occurredAt some owl:Thing SubClassOf Crash
+    
+    If an entity occurred at a location, it must be a Crash.
+    
+    Crash SubClassOf occurredAt only Location
+    
+    The range of the property occurredAt must be a Location.
+    
+    Crash SubClassOf occurredAt exactly 1 Location
+    
+    Every Crash must occur at exactly one location.
+     
+    
+    hasTotalFatalities some owl:Thing SubClassOf Crash
+    
+    If an entity has total fatalities, it must be a Crash.
+    
+    Crash SubClassOf hasTotalFatalities only xsd:integer
+    
+    The range of the property hasTotalFatalities must be an integer value.
+    
+    Crash SubClassOf hasTotalFatalities exactly 1 xsd:integer
+    
+    Every Crash must have exactly one integer value representing total fatalities.
+     
+    
+    hasParticipant some owl:Thing SubClassOf Crash
+    
+    If an entity has participants, it must be a Crash.
+    
+    Crash SubClassOf hasParticipant only Participant
+    
+    The range of the property hasParticipant must be a Participant.
+    
+    Crash SubClassOf hasParticipant min 0 Participant
+    
+    A Crash may have zero or more Participants.
+     
+    
+    Person SubClassOf Participant
+    
+    Every Person is a subclass of Participant.
+    
+    
+    
+    Vehicle SubClassOf Participant
+    
+    Every Vehicle is a subclass of Participant.
+    
+    EMS SubClassOf Participant
+    
+    Every EMS (Emergency Medical Service) is a subclass of Participant.
+    Location
  
 1. Location → hasWorkZone → WorkZone
 •	Axiom 3: Global Domain
