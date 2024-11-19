@@ -106,6 +106,7 @@
     EmergencyMedicalService SubClassOf hasArrivalTimeToHospital exactly 1 TemporalExtent
     Every emergency medical service must have exactly one arrival time to the hospital.
     
+ 
  ## Module: Impairments Schema
      
  ![Impairment (1)](https://github.com/user-attachments/assets/ec5cfd68-fe68-435f-a614-b846c3bdedc6)
@@ -135,263 +136,183 @@
     Impairments SubClassOf distraction some distraction
     Every impairment may involve at least one distraction.
     
-    Module: Person Schema
+ 
+## Module: Person 
      
-     
+   ![Person (1)](https://github.com/user-attachments/assets/c4d3e379-9f91-41ef-8a2b-b7b186eddd1d)
+ 
     
     Person SubClassOf hasRace max 1 xsd:string
-    
     A person can have at most one associated race.
     
     Person SubClassOf hasRace exactly 1 xsd:string
-    
     Every person must have exactly one associated race.
      
-    
     Person SubClassOf hasGender max 1 xsd:string
-    
     A person can have at most one associated gender.
     
     Person SubClassOf hasGender exactly 1 xsd:string
-    
     Every person must have exactly one associated gender.
      
-    
     Person SubClassOf hasAge max 1 xsd:integer
-    
     A person can have at most one associated age.
     
     Person SubClassOf hasAge exactly 1 xsd:integer
-    
     Every person must have exactly one associated age.
      
-    
     Person SubClassOf performsRole only PersonInCrash
-    
     The range of the property performsRole must belong to the class PersonInCrash.
     
     Person SubClassOf performsRole some PersonInCrash
-    
     Every person must perform at least one role in the context of a crash.
      
-    
     providesRole some owl:Thing SubClassOf PersonInCrash
-    
     If something has a providesRole property, it must belong to PersonInCrash.
     
     PersonInCrash SubClassOf providesRole only Crash
-    
     The range of the property providesRole must belong to the class Crash.
     
     PersonInCrash SubClassOf providesRole some Crash
-    
     Every person in a crash must provide at least one role in the context of a crash.
      
-    
     PersonInCrash SubClassOf hasInjurySeverity only InjurySeverity
-    
     The range of the property hasInjurySeverity must belong to the InjurySeverity class.
     
     PersonInCrash SubClassOf hasInjurySeverity some InjurySeverity
-    
     Every person in a crash must have at least one associated injury severity.
      
-    
     PersonInCrash SubClassOf isFatal only Fatality
-    
     The range of the isFatal property must belong to the class Fatality.
     
     PersonInCrash SubClassOf isFatal some Fatality
-    
     Every person in a crash who is fatal must have an associated Fatality record.
      
-    
     Fatality SubClassOf isFatal exactly 1 xsd:boolean
-    
     A fatality must have exactly one associated boolean value indicating if it is fatal.
      
-    
     Fatality SubClassOf hasLagTime only TemporalExtent
-    
     The range of the property hasLagTime must belong to the class TemporalExtent.
     
     Fatality SubClassOf hasLagTime some TemporalExtent
-    
     Every fatality must have at least one associated TemporalExtent for the lag time, representing the time between the crash and the fatality.
     
-    
     PersonInCrash SubClassOf isNonOccupant only NonOccupant
-    
     The range of the isNonOccupant property must belong to the class NonOccupant.
     
     PersonInCrash SubClassOf isNonOccupant some NonOccupant
-    
     Every person in a crash who is a non-occupant must be associated with at least one NonOccupant record.
      
-    
     PersonInCrash SubClassOf isOccupant only Occupant
-    
     The range of the isOccupant property must belong to the class Occupant.
     
     PersonInCrash SubClassOf isOccupant some Occupant
-    
     Every person in a crash who is an occupant must be associated with at least one Occupant record.
      
-    
     NonOccupant SubClassOf locationDuringCrash max 1 xsd:string
-    
     A non-occupant can have at most one associated location during the crash.
     
     NonOccupant SubClassOf locationDuringCrash exactly 1 xsd:string
-    
     Every non-occupant must have exactly one associated location during the crash.
      
-    
     NonOccupant SubClassOf hasImpairment only Impairments
-    
     The range of the property hasImpairment must belong to the class Impairments.
     
     NonOccupant SubClassOf hasImpairment some Impairments
-    
     Every non-occupant must have at least one associated impairment.
      
-    
     NonOccupant SubClassOf isPedestrian only Pedestrian
-    
     The range of the property isPedestrian must belong to the class Pedestrian.
     
     NonOccupant SubClassOf isPedestrian some Pedestrian
-    
     Every non-occupant who is a pedestrian must have an associated record in the class Pedestrian.
      
-    
     NonOccupant SubClassOf isCyclist only Cyclist
-    
     The range of the property isCyclist must belong to the class Cyclist.
     
-    
     NonOccupant SubClassOf isCyclist some Cyclist
-    
     Every non-occupant who is a cyclist must have an associated record in the class Cyclist.
      
-    
     Occupant SubClassOf seatPosition max 1 xsd:string
-    
     An occupant can have at most one associated seat position.
     
     Occupant SubClassOf seatPosition exactly 1 xsd:string
-    
     Every occupant must have exactly one associated seat position.
      
-    
     Occupant SubClassOf safetyRestraintUsed max 1 xsd:string
-    
     An occupant can have at most one associated safety restraint used.
     
     Occupant SubClassOf safetyRestraintUsed exactly 1 xsd:string
-    
     Every occupant must have exactly one associated safety restraint used.
      
-    
     Occupant SubClassOf hasAirbagDeployed max 1 xsd:boolean
-    
     An occupant can have at most one associated boolean value indicating whether an airbag was deployed.
     
     Occupant SubClassOf hasAirbagDeployed exactly 1 xsd:boolean
-    
     Every occupant must have exactly one associated boolean value indicating whether an airbag was deployed.
      
-    
     Occupant SubClassOf isDriver only Driver
-    
     The range of the property isDriver must belong to the class Driver.
     
     Occupant SubClassOf isDriver some Driver
-    
     Every occupant who is a driver must have an associated record in the class Driver.
      
-    
     Occupant SubClassOf isPassenger only Passenger
-    
     The range of the property isPassenger must belong to the class Passenger.
     
     Occupant SubClassOf isPassenger some Passenger
-    
     Every occupant who is a passenger must have an associated record in the class Passenger.
      
-    
     PersonInCrash SubClassOf someTemporalAspect only TemporalExtent
-    
     The range of the relationship between PersonInCrash and its temporal aspects must belong to the class TemporalExtent.
     
     PersonInCrash SubClassOf someTemporalAspect some TemporalExtent
-    
     Every PersonInCrash must have at least one associated TemporalExtent, representing some time-related information about their crash involvement.
-    Module: Time Schema
-     
-     
     
+ ## Module: Time Schema
+
+      ![image](https://github.com/user-attachments/assets/71ff0145-9cfb-453d-baf8-cb4369f2e70e)
+
+     
     PointInTime SubClassOf TemporalExtent
-    
-    Every PointInTime is a specific instance of TemporalExtent, implying that all PointInTime instances are part of the broader TemporalExtent class.
+    Every PointInTime is a specific instance of TemporalExtent, implying that all PointInTime instances are part of the broader TemporalExtent      class.
      
-    
     TimeInterval SubClassOf TemporalExtent
-    
     Every TimeInterval is a subclass of TemporalExtent, representing a span or interval of time within the broader temporal framework.
      
-    
     PointInTime SubClassOf hasTimeOfTheDay only TimeOfDay
-    
     The range of the hasTimeOfTheDay property must belong to the class TimeOfDay.
     
     PointInTime SubClassOf hasTimeOfTheDay some TimeOfDay
-    
     Every PointInTime must have at least one associated TimeOfDay.
      
-    
     PointInTime SubClassOf hasDayOfTheWeek only DayOfTheWeek
-    
     The range of the hasDayOfTheWeek property must belong to the class DayOfTheWeek.
     
     PointInTime SubClassOf hasDayOfTheWeek some DayOfTheWeek
-    
     Every PointInTime must have at least one associated DayOfTheWeek.
      
-    
     PointInTime SubClassOf hasSeason only Season
-    
     The range of the hasSeason property must belong to the class Season.
     
     PointInTime SubClassOf hasSeason some Season
-    
     Every PointInTime must have at least one associated Season.
      
-    
     PointInTime SubClassOf hasValue max 1 xsd:datetime
-    
     A PointInTime can have at most one associated xsd:datetime value.
     
     PointInTime SubClassOf hasValue exactly 1 xsd:datetime
-    
     Every PointInTime must have exactly one associated xsd:datetime value.
      
-    
     TimeInterval SubClassOf startsAt only PointInTime
-    
     The range of the startsAt property must belong to the class PointInTime.
     
     TimeInterval SubClassOf startsAt some PointInTime
-    
     Every TimeInterval must start at a specific PointInTime.
      
-    
     TimeInterval SubClassOf endsAt only PointInTime
-    
     The range of the endsAt property must belong to the class PointInTime.
     
     TimeInterval SubClassOf endsAt some PointInTime
-    
     Every TimeInterval must end at a specific PointInTime.
      
     Crash
