@@ -321,7 +321,8 @@
     
  ## Module: Crash
 
-    ![Crash (1)](https://github.com/user-attachments/assets/dbb3b961-ac2a-46f4-90fb-c111af7f28ac)
+    ![image](https://github.com/user-attachments/assets/5ca419cf-d56a-4641-bbf5-05fef4977598)
+
 
 
 
@@ -611,7 +612,7 @@
  
  ## Module: Vehicle
  
-    ![Vehicle (2)](https://github.com/user-attachments/assets/9d7fde93-1f25-4290-b9ea-ca172f0c35b2)
+    ![image](https://github.com/user-attachments/assets/41ec843e-7f52-4635-b386-ebd18e3899c7)
 
 
     hasVehicleType some owl:Thing SubClassOf Vehicle
