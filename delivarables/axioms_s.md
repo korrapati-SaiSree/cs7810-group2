@@ -6,7 +6,7 @@
  ![image](https://github.com/user-attachments/assets/da6e9d93-7b22-4b86-bbb9-625886d4990e)
 
 
-    * `hasDrivingHistory some owl:Thing SubClassOf Driver` <br />
+     hasDrivingHistory some owl:Thing SubClassOf Driver
      If something has a driving history, it must be a driver  
      
      Driver SubClassOf hasDrivingHistory only DrivingHistory
