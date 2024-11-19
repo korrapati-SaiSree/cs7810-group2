@@ -380,557 +380,395 @@
  
  ![Location (1)](https://github.com/user-attachments/assets/0988d8e9-d36e-4cde-8870-2b41047e731b)
 
-hasWorkZone some owl:Thing SubClassOf Location
-If an entity has a work zone, it must be a Location.
+    hasWorkZone some owl:Thing SubClassOf Location
+    If an entity has a work zone, it must be a Location.
+    
+    Location SubClassOf hasWorkZone only WorkZone
+    The range of the property hasWorkZone must be a WorkZone.
+    
+    Location SubClassOf hasWorkZone some WorkZone
+    Every Location must have at least one WorkZone.
+     
+    hasIntersection some owl:Thing SubClassOf Location
+    If an entity has an intersection, it must be a Location.
+    
+    Location SubClassOf hasIntersection only Intersection
+    The range of the property hasIntersection must be an Intersection.
+    
+    Location SubClassOf hasIntersection exactly 1 Intersection
+    Every Location must have exactly one intersection type.
+     
+    hasCoordinates some owl:Thing SubClassOf Location
+    If an entity has coordinates, it must be a Location.
+    
+    Location SubClassOf hasCoordinates only Coordinates
+    The range of the property hasCoordinates must be Coordinates.
+    
+    Location SubClassOf hasCoordinates exactly 1 Coordinates
+    Every Location must have exactly one set of coordinates.
+     
+    hasLatitude some owl:Thing SubClassOf Coordinates
+    If an entity has a latitude, it must be a set of Coordinates.
+    
+    Coordinates SubClassOf hasLatitude only xsd:float
+    The range of the property hasLatitude must be a float value.
+    
+    Coordinates SubClassOf hasLatitude exactly 1 xsd:float
+    Every set of Coordinates must have exactly one latitude value.
+     
+    hasLongitude some owl:Thing SubClassOf Coordinates
+    If an entity has a longitude, it must be a set of Coordinates.
+    
+    Coordinates SubClassOf hasLongitude only xsd:float
+    The range of the property hasLongitude must be a float value.
+    
+    Coordinates SubClassOf hasLongitude exactly 1 xsd:float
+    Every set of Coordinates must have exactly one longitude value.
+     
+    hasState some owl:Thing SubClassOf Location
+    If an entity has a state, it must be a Location.
+    
+    Location SubClassOf hasState only State
+    The range of the property hasState must be a State.
+    
+    Location SubClassOf hasState exactly 1 State
+    Every Location must have exactly one state.
+     
+    hasStateName some owl:Thing SubClassOf State
+    If an entity has a state name, it must be a State.
+    
+    State SubClassOf hasStateName only xsd:string
+    The range of the property hasStateName must be a string value.
+    
+    State SubClassOf hasStateName exactly 1 xsd:string
+    Every State must have exactly one state name.
+     
+    hasCity some owl:Thing SubClassOf State
+    If an entity has a city, it must be a State.
+    
+    State SubClassOf hasCity only City
+    The range of the property hasCity must be a City.
+    
+    State SubClassOf hasCity some City
+    Every State must have at least one City.
+     
+    hasCityName some owl:Thing SubClassOf City
+    If an entity has a city name, it must be a City.
+    
+    City SubClassOf hasCityName only xsd:string
+    The range of the property hasCityName must be a string value.
+    
+    City SubClassOf hasCityName exactly 1 xsd:string
+    Every City must have exactly one city name.
+     
+    hasZipCode some owl:Thing SubClassOf City
+    If an entity has a zip code, it must be a City.
+    
+    City SubClassOf hasZipCode only xsd:string
+    The range of the property hasZipCode must be a string value.
+    
+    City SubClassOf hasZipCode some xsd:string
+    Every City must have at least one zip code.
+     
+    hasCounty some owl:Thing SubClassOf City
+    If an entity has a county, it must be a City.
+    
+    City SubClassOf hasCounty only County
+    The range of the property hasCounty must be a County.
+    
+    City SubClassOf hasCounty some County
+    Every City must be associated with at least one County.
+    
+    hasCountyName some owl:Thing SubClassOf County
+    If an entity has a county name, it must be a County.
+    
+    County SubClassOf hasCountyName only xsd:string
+    The range of the property hasCountyName must be a string value.
+    
+    County SubClassOf hasCountyName exactly 1 xsd:string
+    Every County must have exactly one county name.
+     
+    hasZipCode some owl:Thing SubClassOf County
+    If an entity has a zip code, it must be a County.
+    
+    County SubClassOf hasZipCode only xsd:string
+    The range of the property hasZipCode must be a string value.
+    
+    County SubClassOf hasZipCode some xsd:string
+    Every County must have at least one zip code.
+     
+    hasStreet some owl:Thing SubClassOf County
+    If an entity has a street, it must be a County.
+    
+    County SubClassOf hasStreet only Street
+    The range of the property hasStreet must be a Street.
+    
+    County SubClassOf hasStreet some Street
+    Every County must have at least one Street.
+     
+    hasStreetName some owl:Thing SubClassOf Street
+    If an entity has a street name, it must be a Street.
+  
+    Street SubClassOf hasStreetName only xsd:string
+    The range of the property hasStreetName must be a string value.
+    
+    Street SubClassOf hasStreetName exactly 1 xsd:string
+    Every Street must have exactly one street name.
 
-Location SubClassOf hasWorkZone only WorkZone
 
-The range of the property hasWorkZone must be a WorkZone.
-
-Location SubClassOf hasWorkZone some WorkZone
-
-Every Location must have at least one WorkZone.
+## Module: Socioeconomic Factors
  
 
-hasIntersection some owl:Thing SubClassOf Location
-
-If an entity has an intersection, it must be a Location.
-
-Location SubClassOf hasIntersection only Intersection
-
-The range of the property hasIntersection must be an Intersection.
-
-Location SubClassOf hasIntersection exactly 1 Intersection
-
-Every Location must have exactly one intersection type.
+    hasSocioEconomicCondition some owl:Thing SubClassOf Location
+    If an entity has a socio-economic condition, it must be a Location.
+    
+    Location SubClassOf hasSocioEconomicCondition only SocioEconomicCondition
+    The range of the property hasSocioEconomicCondition must be a SocioEconomicCondition.
+    
+    Location SubClassOf hasSocioEconomicCondition some SocioEconomicCondition
+    Every Location must have at least one SocioEconomicCondition.
+     
+    hasTemporalExtent some owl:Thing SubClassOf SocioEconomicCondition
+    If an entity has a temporal extent, it must be a SocioEconomicCondition.
+    
+    SocioEconomicCondition SubClassOf hasTemporalExtent only TemporalExtent
+    The range of the property hasTemporalExtent must be a TemporalExtent.
+    
+    SocioEconomicCondition SubClassOf hasTemporalExtent some TemporalExtent
+    Every SocioEconomicCondition must be associated with at least one TemporalExtent.
+     
+    hasIncomeHouseholdMedian some owl:Thing SubClassOf SocioEconomicCondition
+    If an entity has a median household income, it must be a SocioEconomicCondition.
+    
+    SocioEconomicCondition SubClassOf hasIncomeHouseholdMedian only IncomeHouseholdMedian
+    The range of the property hasIncomeHouseholdMedian must be an IncomeHouseholdMedian.
+    
+    SocioEconomicCondition SubClassOf hasIncomeHouseholdMedian some IncomeHouseholdMedian
+    Every SocioEconomicCondition must have at least one IncomeHouseholdMedian.
+     
+    incomeHouseholdMedianAsDecimal some owl:Thing SubClassOf IncomeHouseholdMedian
+    If an entity has a median household income as a decimal, it must be an IncomeHouseholdMedian.
+    
+    IncomeHouseholdMedian SubClassOf incomeHouseholdMedianAsDecimal only xsd:decimal
+    The range of the property incomeHouseholdMedianAsDecimal must be a decimal value.
+    
+    IncomeHouseholdMedian SubClassOf incomeHouseholdMedianAsDecimal exactly 1 xsd:decimal
+    Every IncomeHouseholdMedian must have exactly one decimal value representing its median household income.
+     
+    hasEmploymentRate some owl:Thing SubClassOf SocioEconomicCondition
+    If an entity has an employment rate, it must be a SocioEconomicCondition.
+    
+    SocioEconomicCondition SubClassOf hasEmploymentRate only EmploymentRate
+    The range of the property hasEmploymentRate must be an EmploymentRate.
+    
+    SocioEconomicCondition SubClassOf hasEmploymentRate some EmploymentRate
+    Every SocioEconomicCondition must have at least one EmploymentRate.
+     
+    employmentRateAsDecimal some owl:Thing SubClassOf EmploymentRate
+    If an entity has an employment rate as a decimal, it must be an EmploymentRate.
+    
+    EmploymentRate SubClassOf employmentRateAsDecimal only xsd:decimal
+    The range of the property employmentRateAsDecimal must be a decimal value.
+    
+    EmploymentRate SubClassOf employmentRateAsDecimal exactly 1 xsd:decimal
+    Every EmploymentRate must have exactly one decimal value representing its employment rate.
+     
+    hasPopulationDensity some owl:Thing SubClassOf SocioEconomicCondition
+    If an entity has a population density, it must be a SocioEconomicCondition.
+    
+    SocioEconomicCondition SubClassOf hasPopulationDensity only PopulationDensity
+    The range of the property hasPopulationDensity must be a PopulationDensity.
+    
+    SocioEconomicCondition SubClassOf hasPopulationDensity some PopulationDensity
+    Every SocioEconomicCondition must have at least one PopulationDensity.
+     
+    populationDensityAsDecimal some owl:Thing SubClassOf PopulationDensity
+    If an entity has a population density as a decimal, it must be a PopulationDensity.
+    
+    PopulationDensity SubClassOf populationDensityAsDecimal only xsd:decimal
+    The range of the property populationDensityAsDecimal must be a decimal value.
+    
+    PopulationDensity SubClassOf populationDensityAsDecimal exactly 1 xsd:decimal
+    Every PopulationDensity must have exactly one decimal value representing its population density.
+     
+    hasEducationLevel some owl:Thing SubClassOf SocioEconomicCondition
+    If an entity has an education level, it must be a SocioEconomicCondition.
+    
+    SocioEconomicCondition SubClassOf hasEducationLevel only EducationLevel
+    The range of the property hasEducationLevel must be an EducationLevel.
+    
+    SocioEconomicCondition SubClassOf hasEducationLevel some EducationLevel
+    Every SocioEconomicCondition must have at least one EducationLevel.
+    
  
-
-hasCoordinates some owl:Thing SubClassOf Location
-
-If an entity has coordinates, it must be a Location.
-
-Location SubClassOf hasCoordinates only Coordinates
-
-The range of the property hasCoordinates must be Coordinates.
-
-Location SubClassOf hasCoordinates exactly 1 Coordinates
-
-Every Location must have exactly one set of coordinates.
- 
-
-hasLatitude some owl:Thing SubClassOf Coordinates
-
-If an entity has a latitude, it must be a set of Coordinates.
-
-Coordinates SubClassOf hasLatitude only xsd:float
-
-The range of the property hasLatitude must be a float value.
-
-Coordinates SubClassOf hasLatitude exactly 1 xsd:float
-
-Every set of Coordinates must have exactly one latitude value.
- 
-
-hasLongitude some owl:Thing SubClassOf Coordinates
-
-If an entity has a longitude, it must be a set of Coordinates.
-
-Coordinates SubClassOf hasLongitude only xsd:float
-
-The range of the property hasLongitude must be a float value.
-
-Coordinates SubClassOf hasLongitude exactly 1 xsd:float
-
-Every set of Coordinates must have exactly one longitude value.
- 
-
-hasState some owl:Thing SubClassOf Location
-
-If an entity has a state, it must be a Location.
-
-Location SubClassOf hasState only State
-
-The range of the property hasState must be a State.
-
-Location SubClassOf hasState exactly 1 State
-
-Every Location must have exactly one state.
- 
-
-hasStateName some owl:Thing SubClassOf State
-
-If an entity has a state name, it must be a State.
-
-State SubClassOf hasStateName only xsd:string
-
-The range of the property hasStateName must be a string value.
-
-State SubClassOf hasStateName exactly 1 xsd:string
-
-Every State must have exactly one state name.
- 
-
-hasCity some owl:Thing SubClassOf State
-
-If an entity has a city, it must be a State.
-
-State SubClassOf hasCity only City
-
-The range of the property hasCity must be a City.
-
-State SubClassOf hasCity some City
-
-Every State must have at least one City.
- 
-
-hasCityName some owl:Thing SubClassOf City
-
-If an entity has a city name, it must be a City.
-
-
-City SubClassOf hasCityName only xsd:string
-
-The range of the property hasCityName must be a string value.
-
-City SubClassOf hasCityName exactly 1 xsd:string
-
-Every City must have exactly one city name.
- 
-
-hasZipCode some owl:Thing SubClassOf City
-
-If an entity has a zip code, it must be a City.
-
-City SubClassOf hasZipCode only xsd:string
-
-The range of the property hasZipCode must be a string value.
-
-City SubClassOf hasZipCode some xsd:string
-
-Every City must have at least one zip code.
- 
-
-hasCounty some owl:Thing SubClassOf City
-
-If an entity has a county, it must be a City.
-
-City SubClassOf hasCounty only County
-
-The range of the property hasCounty must be a County.
-
-City SubClassOf hasCounty some County
-
-Every City must be associated with at least one County.
-
-hasCountyName some owl:Thing SubClassOf County
-
-If an entity has a county name, it must be a County.
-
-County SubClassOf hasCountyName only xsd:string
-
-The range of the property hasCountyName must be a string value.
-
-County SubClassOf hasCountyName exactly 1 xsd:string
-
-Every County must have exactly one county name.
- 
-
-hasZipCode some owl:Thing SubClassOf County
-
-If an entity has a zip code, it must be a County.
-
-County SubClassOf hasZipCode only xsd:string
-
-The range of the property hasZipCode must be a string value.
-
-County SubClassOf hasZipCode some xsd:string
-
-Every County must have at least one zip code.
- 
-
-hasStreet some owl:Thing SubClassOf County
-
-If an entity has a street, it must be a County.
-
-County SubClassOf hasStreet only Street
-
-The range of the property hasStreet must be a Street.
-
-County SubClassOf hasStreet some Street
-
-Every County must have at least one Street.
- 
-
-hasStreetName some owl:Thing SubClassOf Street
-
-If an entity has a street name, it must be a Street.
-
-Street SubClassOf hasStreetName only xsd:string
-
-The range of the property hasStreetName must be a string value.
-
-Street SubClassOf hasStreetName exactly 1 xsd:string
-
-Every Street must have exactly one street name.
-Socioeconomic Factors
- 
-
-hasSocioEconomicCondition some owl:Thing SubClassOf Location
-
-If an entity has a socio-economic condition, it must be a Location.
-
-Location SubClassOf hasSocioEconomicCondition only SocioEconomicCondition
-
-The range of the property hasSocioEconomicCondition must be a SocioEconomicCondition.
-
-Location SubClassOf hasSocioEconomicCondition some SocioEconomicCondition
-
-Every Location must have at least one SocioEconomicCondition.
- 
-
-hasTemporalExtent some owl:Thing SubClassOf SocioEconomicCondition
-
-If an entity has a temporal extent, it must be a SocioEconomicCondition.
-
-SocioEconomicCondition SubClassOf hasTemporalExtent only TemporalExtent
-
-The range of the property hasTemporalExtent must be a TemporalExtent.
-
-SocioEconomicCondition SubClassOf hasTemporalExtent some TemporalExtent
-
-Every SocioEconomicCondition must be associated with at least one TemporalExtent.
- 
-
-hasIncomeHouseholdMedian some owl:Thing SubClassOf SocioEconomicCondition
-
-If an entity has a median household income, it must be a SocioEconomicCondition.
-
-SocioEconomicCondition SubClassOf hasIncomeHouseholdMedian only IncomeHouseholdMedian
-
-The range of the property hasIncomeHouseholdMedian must be an IncomeHouseholdMedian.
-
-SocioEconomicCondition SubClassOf hasIncomeHouseholdMedian some IncomeHouseholdMedian
-
-Every SocioEconomicCondition must have at least one IncomeHouseholdMedian.
- 
-
-incomeHouseholdMedianAsDecimal some owl:Thing SubClassOf IncomeHouseholdMedian
-
-If an entity has a median household income as a decimal, it must be an IncomeHouseholdMedian.
-
-IncomeHouseholdMedian SubClassOf incomeHouseholdMedianAsDecimal only xsd:decimal
-
-The range of the property incomeHouseholdMedianAsDecimal must be a decimal value.
-
-IncomeHouseholdMedian SubClassOf incomeHouseholdMedianAsDecimal exactly 1 xsd:decimal
-
-Every IncomeHouseholdMedian must have exactly one decimal value representing its median household income.
- 
-
-hasEmploymentRate some owl:Thing SubClassOf SocioEconomicCondition
-
-If an entity has an employment rate, it must be a SocioEconomicCondition.
-
-SocioEconomicCondition SubClassOf hasEmploymentRate only EmploymentRate
-
-The range of the property hasEmploymentRate must be an EmploymentRate.
-
-SocioEconomicCondition SubClassOf hasEmploymentRate some EmploymentRate
-
-Every SocioEconomicCondition must have at least one EmploymentRate.
- 
-
-employmentRateAsDecimal some owl:Thing SubClassOf EmploymentRate
-
-If an entity has an employment rate as a decimal, it must be an EmploymentRate.
-
-EmploymentRate SubClassOf employmentRateAsDecimal only xsd:decimal
-
-The range of the property employmentRateAsDecimal must be a decimal value.
-
-EmploymentRate SubClassOf employmentRateAsDecimal exactly 1 xsd:decimal
-
-Every EmploymentRate must have exactly one decimal value representing its employment rate.
- 
-
-hasPopulationDensity some owl:Thing SubClassOf SocioEconomicCondition
-
-If an entity has a population density, it must be a SocioEconomicCondition.
-
-SocioEconomicCondition SubClassOf hasPopulationDensity only PopulationDensity
-
-The range of the property hasPopulationDensity must be a PopulationDensity.
-
-SocioEconomicCondition SubClassOf hasPopulationDensity some PopulationDensity
-
-Every SocioEconomicCondition must have at least one PopulationDensity.
- 
-
-populationDensityAsDecimal some owl:Thing SubClassOf PopulationDensity
-
-If an entity has a population density as a decimal, it must be a PopulationDensity.
-
-PopulationDensity SubClassOf populationDensityAsDecimal only xsd:decimal
-
-The range of the property populationDensityAsDecimal must be a decimal value.
-
-PopulationDensity SubClassOf populationDensityAsDecimal exactly 1 xsd:decimal
-
-Every PopulationDensity must have exactly one decimal value representing its population density.
- 
-
-hasEducationLevel some owl:Thing SubClassOf SocioEconomicCondition
-
-If an entity has an education level, it must be a SocioEconomicCondition.
-
-SocioEconomicCondition SubClassOf hasEducationLevel only EducationLevel
-
-The range of the property hasEducationLevel must be an EducationLevel.
-
-SocioEconomicCondition SubClassOf hasEducationLevel some EducationLevel
-
-Every SocioEconomicCondition must have at least one EducationLevel.
-
-Vehicle
+ ## Module: Vehicle
  
 
 
-hasVehicleType some owl:Thing SubClassOf Vehicle
+    hasVehicleType some owl:Thing SubClassOf Vehicle
+    If an entity has a vehicle type, it must be a Vehicle.
+    
+    Vehicle SubClassOf hasVehicleType only xsd:string
+    The range of the property hasVehicleType must be a string value.
+    
+    Vehicle SubClassOf hasVehicleType exactly 1 xsd:string
+    Every Vehicle must have exactly one vehicle type.
+     
+    hasVehicleModel some owl:Thing SubClassOf Vehicle
+    If an entity has a vehicle model, it must be a Vehicle.
+    
+    Vehicle SubClassOf hasVehicleModel only xsd:string
+    The range of the property hasVehicleModel must be a string value.
+    
+    Vehicle SubClassOf hasVehicleModel exactly 1 xsd:string
+    Every Vehicle must have exactly one vehicle model.
+     
+    hasVehicleMake some owl:Thing SubClassOf Vehicle
+    If an entity has a vehicle make, it must be a Vehicle.
+    
+    Vehicle SubClassOf hasVehicleMake only xsd:string
+    The range of the property hasVehicleMake must be a string value.
+    
+    Vehicle SubClassOf hasVehicleMake exactly 1 xsd:string
+    Every Vehicle must have exactly one vehicle make.
+     
+    hasVehicleManufacturingYear some owl:Thing SubClassOf Vehicle
+    If an entity has a manufacturing year, it must be a Vehicle.
+    
+    Vehicle SubClassOf hasVehicleManufacturingYear only xsd:integer
+    The range of the property hasVehicleManufacturingYear must be an integer value.
+    
+    Vehicle SubClassOf hasVehicleManufacturingYear exactly 1 xsd:integer
+    Every Vehicle must have exactly one manufacturing year.
+     
+    hasWeight some owl:Thing SubClassOf Vehicle
+    If an entity has a weight, it must be a Vehicle.
+    
+    Vehicle SubClassOf hasWeight only Weight
+    The range of the property hasWeight must be a Weight.
+    
+    Vehicle SubClassOf hasWeight some Weight
+    Every Vehicle must have at least one Weight.
+     
+    rangeFrom some owl:Thing SubClassOf Weight
+    If an entity has a weight range starting value, it must be a Weight.
+    
+    Weight SubClassOf rangeFrom only xsd:integer
+    The range of the property rangeFrom must be an integer value.
+    
+    Weight SubClassOf rangeFrom exactly 1 xsd:integer
+    Every Weight must have exactly one starting value for the weight range.
+     
+    rangeTo some owl:Thing SubClassOf Weight
+    If an entity has a weight range ending value, it must be a Weight.
+    
+    Weight SubClassOf rangeTo only xsd:integer
+    The range of the property rangeTo must be an integer value.
+    
+    Weight SubClassOf rangeTo exactly 1 xsd:integer
+    Every Weight must have exactly one ending value for the weight range.
+     
+    performsRole some owl:Thing SubClassOf VehicleInAccident
+    If an entity performs a role, it must be a VehicleInAccident.
+    
+    VehicleInAccident SubClassOf performsRole only Vehicle
+    The range of the property performsRole must be a Vehicle.
+     
+    providesRole some owl:Thing SubClassOf VehicleInAccident
+    If an entity provides a role, it must be a VehicleInAccident.
+    
+    VehicleInAccident SubClassOf providesRole only Crash
+    The range of the property providesRole must be a Crash.
+     
+    hasSpeed some owl:Thing SubClassOf VehicleInAccident
+    If an entity has a speed, it must be a VehicleInAccident.
+    
+    VehicleInAccident SubClassOf hasSpeed only xsd:integer
+    The range of the property hasSpeed must be an integer value.
+     
+    hasMileage some owl:Thing SubClassOf VehicleInAccident
+    If an entity has mileage, it must be a VehicleInAccident.
+    
+    VehicleInAccident SubClassOf hasMileage only xsd:float
+    The range of the property hasMileage must be a float value.
+     
+    involvedInHitAndRun some owl:Thing SubClassOf VehicleInAccident
+    If an entity is involved in a hit-and-run, it must be a VehicleInAccident.
+    
+    VehicleInAccident SubClassOf involvedInHitAndRun only xsd:boolean
+    The range of the property involvedInHitAndRun must be a boolean value.
+     
+    hasTemporalExtent some owl:Thing SubClassOf VehicleInAccident
+    If an entity has a temporal extent, it must be a VehicleInAccident.
+    
+    VehicleInAccident SubClassOf hasTemporalExtent only TemporalExtent
+    The range of the property hasTemporalExtent must be a TemporalExtent.
 
-If an entity has a vehicle type, it must be a Vehicle.
-
-Vehicle SubClassOf hasVehicleType only xsd:string
-
-The range of the property hasVehicleType must be a string value.
-
-Vehicle SubClassOf hasVehicleType exactly 1 xsd:string
-
-Every Vehicle must have exactly one vehicle type.
+## Module: Weather Condition
  
 
-hasVehicleModel some owl:Thing SubClassOf Vehicle
-
-If an entity has a vehicle model, it must be a Vehicle.
-
-Vehicle SubClassOf hasVehicleModel only xsd:string
-
-The range of the property hasVehicleModel must be a string value.
-
-Vehicle SubClassOf hasVehicleModel exactly 1 xsd:string
-
-Every Vehicle must have exactly one vehicle model.
- 
-
-hasVehicleMake some owl:Thing SubClassOf Vehicle
-
-If an entity has a vehicle make, it must be a Vehicle.
-
-Vehicle SubClassOf hasVehicleMake only xsd:string
-
-The range of the property hasVehicleMake must be a string value.
-
-Vehicle SubClassOf hasVehicleMake exactly 1 xsd:string
-
-Every Vehicle must have exactly one vehicle make.
- 
-
-hasVehicleManufacturingYear some owl:Thing SubClassOf Vehicle
-
-If an entity has a manufacturing year, it must be a Vehicle.
-
-Vehicle SubClassOf hasVehicleManufacturingYear only xsd:integer
-
-The range of the property hasVehicleManufacturingYear must be an integer value.
-
-Vehicle SubClassOf hasVehicleManufacturingYear exactly 1 xsd:integer
-
-Every Vehicle must have exactly one manufacturing year.
- 
-
-hasWeight some owl:Thing SubClassOf Vehicle
-
-If an entity has a weight, it must be a Vehicle.
-
-Vehicle SubClassOf hasWeight only Weight
-
-The range of the property hasWeight must be a Weight.
-
-Vehicle SubClassOf hasWeight some Weight
-
-Every Vehicle must have at least one Weight.
- 
-
-rangeFrom some owl:Thing SubClassOf Weight
-
-If an entity has a weight range starting value, it must be a Weight.
-
-Weight SubClassOf rangeFrom only xsd:integer
-
-The range of the property rangeFrom must be an integer value.
-
-Weight SubClassOf rangeFrom exactly 1 xsd:integer
-
-Every Weight must have exactly one starting value for the weight range.
- 
-
-rangeTo some owl:Thing SubClassOf Weight
-
-If an entity has a weight range ending value, it must be a Weight.
-
-Weight SubClassOf rangeTo only xsd:integer
-
-The range of the property rangeTo must be an integer value.
-
-Weight SubClassOf rangeTo exactly 1 xsd:integer
-
-Every Weight must have exactly one ending value for the weight range.
- 
-
-performsRole some owl:Thing SubClassOf VehicleInAccident
-
-If an entity performs a role, it must be a VehicleInAccident.
-
-VehicleInAccident SubClassOf performsRole only Vehicle
-
-The range of the property performsRole must be a Vehicle.
- 
-
-providesRole some owl:Thing SubClassOf VehicleInAccident
-
-If an entity provides a role, it must be a VehicleInAccident.
-
-VehicleInAccident SubClassOf providesRole only Crash
-
-The range of the property providesRole must be a Crash.
- 
-
-hasSpeed some owl:Thing SubClassOf VehicleInAccident
-
-If an entity has a speed, it must be a VehicleInAccident.
-
-VehicleInAccident SubClassOf hasSpeed only xsd:integer
-
-The range of the property hasSpeed must be an integer value.
- 
-
-hasMileage some owl:Thing SubClassOf VehicleInAccident
-
-If an entity has mileage, it must be a VehicleInAccident.
-
-VehicleInAccident SubClassOf hasMileage only xsd:float
-
-The range of the property hasMileage must be a float value.
- 
-
-involvedInHitAndRun some owl:Thing SubClassOf VehicleInAccident
-
-If an entity is involved in a hit-and-run, it must be a VehicleInAccident.
-
-VehicleInAccident SubClassOf involvedInHitAndRun only xsd:boolean
-
-The range of the property involvedInHitAndRun must be a boolean value.
- 
-
-hasTemporalExtent some owl:Thing SubClassOf VehicleInAccident
-
-If an entity has a temporal extent, it must be a VehicleInAccident.
-
-VehicleInAccident SubClassOf hasTemporalExtent only TemporalExtent
-
-The range of the property hasTemporalExtent must be a TemporalExtent.
-Weather Condition
- 
-
-hasWeatherCondition some owl:Thing SubClassOf Location
-
-If an entity has a weather condition, it must be a Location.
-
-Location SubClassOf hasWeatherCondition only WeatherCondition
-
-The range of the property hasWeatherCondition must be a WeatherCondition.
-
-Location SubClassOf hasWeatherCondition some WeatherCondition
-
-Every Location must have at least one WeatherCondition.
- 
-
-hasTemperature some owl:Thing SubClassOf WeatherCondition
-
-If an entity has a temperature, it must be a WeatherCondition.
-
-WeatherCondition SubClassOf hasTemperature only Temperature
-
-The range of the property hasTemperature must be a Temperature.
-
-WeatherCondition SubClassOf hasTemperature some Temperature
-
-Every WeatherCondition must have at least one Temperature.
- 
-
-hasPrecipitation some owl:Thing SubClassOf WeatherCondition
-
-If an entity has precipitation, it must be a WeatherCondition.
-
-WeatherCondition SubClassOf hasPrecipitation only Precipitation
-
-The range of the property hasPrecipitation must be a Precipitation.
-
-WeatherCondition SubClassOf hasPrecipitation min 0 Precipitation
-
-A WeatherCondition may have zero or more Precipitation instances.
- 
-
-hasTemporalExtent some owl:Thing SubClassOf WeatherCondition
-
-If an entity has a temporal extent, it must be a WeatherCondition.
-
-WeatherCondition SubClassOf hasTemporalExtent only TemporalExtent
-
-The range of the property hasTemporalExtent must be a TemporalExtent.
-
-WeatherCondition SubClassOf hasTemporalExtent some TemporalExtent
-
-Every WeatherCondition must have at least one TemporalExtent.
- 
-
-weatherConditionAsString some owl:Thing SubClassOf WeatherCondition
-
-If an entity has a weather condition as a string, it must be a WeatherCondition.
-
-WeatherCondition SubClassOf weatherConditionAsString only xsd:string
-
-The range of the property weatherConditionAsString must be a string value.
-
-WeatherCondition SubClassOf weatherConditionAsString exactly 1 xsd:string
-
-Every WeatherCondition must have exactly one string representing its description.
- 
-
-inCelsius some owl:Thing SubClassOf Temperature
-
-If an entity has a temperature in Celsius, it must be a Temperature.
-
-Temperature SubClassOf inCelsius only xsd:decimal
-
-The range of the property inCelsius must be a decimal value.
-
-Temperature SubClassOf inCelsius exactly 1 xsd:decimal
-
-Every Temperature must have exactly one value in Celsius.
- 
-
-inFahrenheit some owl:Thing SubClassOf Temperature
-
-If an entity has a temperature in Fahrenheit, it must be a Temperature.
-
-
-Temperature SubClassOf inFahrenheit only xsd:decimal
-
-The range of the property inFahrenheit must be a decimal value.
-
-Temperature SubClassOf inFahrenheit exactly 1 xsd:decimal
-
-Every Temperature must have exactly one value in Fahrenheit.
-
-
+    hasWeatherCondition some owl:Thing SubClassOf Location
+    If an entity has a weather condition, it must be a Location.
+    
+    Location SubClassOf hasWeatherCondition only WeatherCondition
+    The range of the property hasWeatherCondition must be a WeatherCondition.
+    
+    Location SubClassOf hasWeatherCondition some WeatherCondition
+    Every Location must have at least one WeatherCondition.
+     
+    hasTemperature some owl:Thing SubClassOf WeatherCondition
+    If an entity has a temperature, it must be a WeatherCondition.
+    
+    WeatherCondition SubClassOf hasTemperature only Temperature
+    The range of the property hasTemperature must be a Temperature.
+    
+    WeatherCondition SubClassOf hasTemperature some Temperature
+    Every WeatherCondition must have at least one Temperature.
+     
+    hasPrecipitation some owl:Thing SubClassOf WeatherCondition
+    If an entity has precipitation, it must be a WeatherCondition.
+    
+    WeatherCondition SubClassOf hasPrecipitation only Precipitation
+    The range of the property hasPrecipitation must be a Precipitation.
+    
+    WeatherCondition SubClassOf hasPrecipitation min 0 Precipitation
+    A WeatherCondition may have zero or more Precipitation instances.
+     
+    hasTemporalExtent some owl:Thing SubClassOf WeatherCondition
+    If an entity has a temporal extent, it must be a WeatherCondition.
+    
+    WeatherCondition SubClassOf hasTemporalExtent only TemporalExtent
+    The range of the property hasTemporalExtent must be a TemporalExtent.
+    
+    WeatherCondition SubClassOf hasTemporalExtent some TemporalExtent
+    Every WeatherCondition must have at least one TemporalExtent.
+     
+    weatherConditionAsString some owl:Thing SubClassOf WeatherCondition
+    If an entity has a weather condition as a string, it must be a WeatherCondition.
+    
+    WeatherCondition SubClassOf weatherConditionAsString only xsd:string
+    The range of the property weatherConditionAsString must be a string value.
+    
+    WeatherCondition SubClassOf weatherConditionAsString exactly 1 xsd:string
+    Every WeatherCondition must have exactly one string representing its description.
+     
+    inCelsius some owl:Thing SubClassOf Temperature
+    If an entity has a temperature in Celsius, it must be a Temperature.
+   
+    Temperature SubClassOf inCelsius only xsd:decimal
+    The range of the property inCelsius must be a decimal value.
+    
+    Temperature SubClassOf inCelsius exactly 1 xsd:decimal
+    Every Temperature must have exactly one value in Celsius.
+     
+    inFahrenheit some owl:Thing SubClassOf Temperature
+    If an entity has a temperature in Fahrenheit, it must be a Temperature.
+    
+    Temperature SubClassOf inFahrenheit only xsd:decimal
+    The range of the property inFahrenheit must be a decimal value.
+    
+    Temperature SubClassOf inFahrenheit exactly 1 xsd:decimal
+    Every Temperature must have exactly one value in Fahrenheit.
+    
+    
 
