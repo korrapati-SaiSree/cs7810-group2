@@ -3,15 +3,13 @@ Module: Driver Condition Schema
  
 1. Driver → hasDrivingHistory → DrivingHistory
 
-       <u> Axiom 3: Global Domain <u>
-
+       Axiom 3: Global Domain 
        Manchester Syntax:
        hasDrivingHistory some owl:Thing SubClassOf Driver
-
        Natural Language Description:
        If something has a driving history, it must be a driver.
 
-       <u> Axiom 5: Global Range <u>
+       Axiom 5: Global Range 
 
        Manchester Syntax:
        Driver SubClassOf hasDrivingHistory only DrivingHistory
@@ -19,7 +17,7 @@ Module: Driver Condition Schema
        Natural Language Description:
        The range of the relationship hasDrivingHistory must be DrivingHistory.
 
-       <u>Axiom 7: Existential <u>
+       Axiom 7: Existential 
 
        Manchester Syntax:
        Driver SubClassOf hasDrivingHistory some DrivingHistory
