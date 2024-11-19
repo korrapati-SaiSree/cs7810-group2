@@ -270,7 +270,9 @@
     
  ## Module: Time Schema
 
-     ![image](https://github.com/user-attachments/assets/9afa1e68-cca3-4515-92c2-02098193f190)
+   ![Time (2)](https://github.com/user-attachments/assets/0e1d82d0-820b-42d2-bc42-a1eaea31e7d0)
+
+     
 
 
      
@@ -319,7 +321,8 @@
     
  ## Module: Crash
 
-     ![image](https://github.com/user-attachments/assets/cfe8c6fa-6c5d-4a06-91d9-7c1616abcffa)
+     ![Crash (2)](https://github.com/user-attachments/assets/acede91a-ca06-4ed6-815a-5d68fa3f849c)
+
 
 
     
@@ -380,7 +383,8 @@
  
 ## Module: Location
  
- ![Location (1)](https://github.com/user-attachments/assets/0988d8e9-d36e-4cde-8870-2b41047e731b)
+ ![Location (2)](https://github.com/user-attachments/assets/f4294eca-1746-48fa-964f-dbba1c04daa3)
+
 
     hasWorkZone some owl:Thing SubClassOf Location
     If an entity has a work zone, it must be a Location.
@@ -520,6 +524,7 @@
 
 ## Module: Socioeconomic Factors
  
+   ![socioEconomicCondition (2)](https://github.com/user-attachments/assets/2bcbbfc7-a72d-4aa7-a31d-77ad6c6f1252)
 
     hasSocioEconomicCondition some owl:Thing SubClassOf Location
     If an entity has a socio-economic condition, it must be a Location.
@@ -605,6 +610,7 @@
  
  ## Module: Vehicle
  
+    ![Vehicle (2)](https://github.com/user-attachments/assets/9d7fde93-1f25-4290-b9ea-ca172f0c35b2)
 
 
     hasVehicleType some owl:Thing SubClassOf Vehicle
@@ -707,7 +713,8 @@
     The range of the property hasTemporalExtent must be a TemporalExtent.
 
 ## Module: Weather Condition
- 
+ ![WeatherCondition](https://github.com/user-attachments/assets/e5c70cca-08b4-4205-b50a-1bb0ac1c95f6)
+
 
     hasWeatherCondition some owl:Thing SubClassOf Location
     If an entity has a weather condition, it must be a Location.
