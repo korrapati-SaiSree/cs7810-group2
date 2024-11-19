@@ -7,7 +7,7 @@
 
 
      hasDrivingHistory some owl:Thing SubClassOf Driver
-     If something has a driving history, it must be a driver.
+     If something has a driving history, it must be a driver  
      
      Driver SubClassOf hasDrivingHistory only DrivingHistory
      The range of the relationship hasDrivingHistory must be DrivingHistory.
