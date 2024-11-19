@@ -108,7 +108,7 @@
     
  ## Module: Impairments Schema
      
-     ![Impairment (1)](https://github.com/user-attachments/assets/30aeded2-8400-47a9-b582-51509dca8aa4)
+ ![Impairment (1)](https://github.com/user-attachments/assets/ec5cfd68-fe68-435f-a614-b846c3bdedc6)
 
     
     Impairments SubClassOf impairmentsAsString max 1 xsd:string
