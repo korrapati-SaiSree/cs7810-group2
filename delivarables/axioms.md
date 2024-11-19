@@ -1416,7 +1416,7 @@ Temperature SubClassOf inFahrenheit exactly 1 xsd:decimal
 Natural Language Description:
 Every Temperature must have exactly one value in Fahrenheit.
 
-![image](https://github.com/user-attachments/assets/c1ae88f7-2bef-42d5-a026-bbb907fdf9c4)
+
 
 
 
