@@ -270,7 +270,8 @@
     
  ## Module: Time Schema
 
-      ![image](https://github.com/user-attachments/assets/71ff0145-9cfb-453d-baf8-cb4369f2e70e)
+     ![image](https://github.com/user-attachments/assets/9afa1e68-cca3-4515-92c2-02098193f190)
+
 
      
     PointInTime SubClassOf TemporalExtent
