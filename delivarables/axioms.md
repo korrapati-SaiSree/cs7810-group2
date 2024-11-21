@@ -78,7 +78,7 @@
         Every emergency medical service must have at max one arrival time to the hospital.
 
 ## Impairment
-![Impairment](https://github.com/korrapati-SaiSree/cs7810-group2/tree/main/delivarables/scehmaDiagrams_Final/Impairment)
+![Impairment](https://github.com/korrapati-SaiSree/cs7810-group2/blob/main/delivarables/scehmaDiagrams_Final/Impairment/Impairment.png)
 
 ### Axioms
 
