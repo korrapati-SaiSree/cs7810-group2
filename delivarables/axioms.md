@@ -12,44 +12,62 @@
 1. Driver → hasDrivingHistory → DrivingHistory <br />
     * `Driver SubClassOf hasDrivingHistory some DrivingHistory` <br />
         Every driver must have at least one associated driving history.
+    * `Driver SubClassOf hasDrivingHistory only DrivingHistory` <br />
+        Every drivers are associated with a driving history, and if they have any driving history, it must be represented as an instance of the DrivingHistory class
 
 2. Driver → hasImpairments → Impairments <br />
     * `Driver SubClassOf hasImpairments min 0 Impairments` <br />
         A driver may have impairments.
+    * `Driver SubClassOf hasImpairments only Impairments` <br />
+        All drivers can have impairments, and if they do, those impairments must be instances of the Impairments class.
 
 3. DrivingHistory → hasTrafficViolation → TrafficViolation <br />
     * `DrivingHistory SubClassOf hasTrafficViolation min 0 TrafficViolation` <br />
         A driving history may have TrafficViolation.
+    * `DrivingHistory SubClassOf hasTrafficViolation only TrafficViolation` <br />
+        A DrivingHistory can have TrafficViolation, and if they do, those trafficViolations must be instances of TrafficViolation.
 
 4. DrivingHistory → hasDrivingExperience → DrivingExperience <br />
     * `DrivingHistory SubClassOf hasDrivingExperience some DrivingExperience` <br />
         A driving history must include at least one driving experience.
+    * `DrivingHistory SubClassOf hasDrivingExperience only DrivingExperience` <br />
+        A DrivingHistory can have DrivingExperience, and if they do, those DrivingExperience must be instance of DrivingExperience.
 
 5. TrafficViolation → licenseSuspension → xsd <br />
-    * `TrafficViolation SubClassOf licenseSuspension some xsd:string` <br />
-        A traffic violation may result in a license suspension, recorded as a string.
-    * `TrafficViolation SubClassOf licenseSuspension max 1 xsd:string` <br />
-        A traffic violation can have at most one associated license suspension.
+    * `TrafficViolation SubClassOf licenseSuspension only xsd:string` <br />
+        A traffic violation may result in a license suspension, and it has to be recorded as a string.
+    * `TrafficViolation SubClassOf licenseSuspension exactly 1 xsd:string` <br />
+        A traffic violation can have exactly one associated license suspension.
 
 6. TrafficViolation → violationType → xsd <br />
+    * `TrafficViolation SubClassOf violationType only xsd:string` <br />
+        A traffic violation may result in a violationType, and it has to be recorded as a string.
     * `TrafficViolation SubClassOf violationType exactly 1 xsd:string` <br />
         Each traffic violation must have exactly one type.
 
 7. TrafficViolation → violationDate → TemporalExtent <br />
     * `TrafficViolation SubClassOf violationDate some TemporalExtent` <br />
         Every traffic violation is associated with a temporal extent.
+    * `TrafficViolation SubClassOf violationDate only TemporalExtent` <br />
+        Every TrafficViolation is restricted to having only TemporalExtent classified as instances of the TemporalExtent class.
 
 8. DrivingExperience → totalYearsOfDriving → TemporalExtent <br />
     * `DrivingExperience SubClassOf totalYearsOfDriving some TemporalExtent` <br />
         A driving experience must include total years of driving.
+    * `DrivingExperience SubClassOf violationDate only TemporalExtent` <br />
+        Every DrivingExperience is restricted to having only TemporalExtent classified as instances of the TemporalExtent class.
 
 9. DrivingExperience → experienceLevel → ExperienceLevel <br />
     * `DrivingExperience SubClassOf experienceLevel some ExperienceLevel` <br />
         Every driving experience must have at least one experience level.
+    * `DrivingExperience SubClassOf experienceLevel only ExperienceLevel` <br />
+        Every DrivingExperience is restricted to having only experienceLevel classified as instances of the ExperienceLevel class.
 
 10. Driver → hasLicenseStatus → xsd <br />
     * `Driver SubClassOf hasLicenseStatus exactly 1 xsd:string` <br />
         Each driver must have exactly one license status.
+    * `Driver SubClassOf hasLicenseStatus only xsd:string` <br />
+        Every Driver can have licenseStatus, if they do, it must be xsd:string.
 
 
 ## EMS
@@ -64,18 +82,24 @@
         Every emergency medical service must have at least one notification time.  
     * `EmergencyMedicalService SubClassOf hasNotificationTime max 1 TemporalExtent` <br />
         Every emergency medical service must have at max one notification time.
+    * `EmergencyMedicalService SubClassOf hasNotificationTime only TemporalExtent` <br />
+        Every emergency medical service can have notification time, only if its instance of TemporalExtent.  
 
 2. EmergencyMedicalService → hasArrivalTimeToCrash → TemporalExtent <br />
     * `EmergencyMedicalService SubClassOf hasArrivalTimeToCrash some TemporalExtent` <br />
         Every emergency medical service must have at least one arrival time to the crash site.  
     * `EmergencyMedicalService SubClassOf hasArrivalTimeToCrash max 1 TemporalExtent` <br />
         Every emergency medical service must have at max one arrival time to the crash site.
+    * `EmergencyMedicalService SubClassOf hasArrivalTimeToCrash only TemporalExtent` <br />
+        Every emergency medical service can have ArrivalTimeToCrash, only if its instance of TemporalExtent.
 
 3. EmergencyMedicalService → hasArrivalTimeToHospital → TemporalExtent <br />
     * `EmergencyMedicalService SubClassOf hasArrivalTimeToHospital some TemporalExtent` <br />
         Every emergency medical service must have at least one arrival time to the hospital.  
     * `EmergencyMedicalService SubClassOf hasArrivalTimeToHospital max 1 TemporalExtent` <br />
         Every emergency medical service must have at max one arrival time to the hospital.
+    * `EmergencyMedicalService SubClassOf hasArrivalTimeToHospital only TemporalExtent` <br />
+        Every emergency medical service can have arrivalTimeToHospital, only if its instance of TemporalExtent.
 
 ## Impairment
 ![Impairment](https://github.com/korrapati-SaiSree/cs7810-group2/blob/main/delivarables/scehmaDiagrams_Final/Impairment/Impairment.png)
@@ -83,10 +107,8 @@
 ### Axioms
 
 1. Impairments → impairmentsAsString → xsd <br />
-    * `Impairments SubClassOf impairmentsAsString max 1 xsd:string` <br />
-        Each impairment can have at most one associated string description.  
-    * `Impairments SubClassOf impairmentsAsString some xsd:string` <br />
-        Every impairment must have atleast one associated string description.
+    * `Impairments SubClassOf impairmentsAsString exactly 1 xsd:string` <br />
+        Each impairment can have exactly one associated string description.  
 
 2. SubstanceImpairments → Impairments <br />
     * `SubstanceImpairments SubClassOf Impairments` <br />
@@ -103,62 +125,74 @@
 ### Axioms
 
 1. Person → hasRace → xsd <br />
-    * `Person SubClassOf hasRace max 1 xsd:string` <br />
-        A person can have at most one associated race.  
-    * `Person SubClassOf hasRace some xsd:string` <br />
-        Every person must have atleast one associated race.
+    * `Person SubClassOf hasRace exactly 1 xsd:string` <br />
+        A person can have exactly one associated race. 
+    * `Person SubClassOf hasRace only xsd:string` <br />
+        Every Person can have relation hasRace, if it does it has to be of type string. 
 
 2. Person → hasGender → xsd <br />
-    * `Person SubClassOf hasGender max 1 xsd:string` <br />
-        A person can have at most one associated gender.  
-    * `Person SubClassOf hasGender some xsd:string` <br />
-        Every person must have atleast one associated gender.
+    * `Person SubClassOf hasGender exactly 1 xsd:string` <br />
+        A person can have exactly one associated gender.  
+    * `Person SubClassOf hasGender only xsd:string` <br />
+        Every Person can have relation hasGender, if it does it has to be of type string.
 
 3. Person → hasAge → xsd <br />
-    * `Person SubClassOf hasAge max 1 xsd:integer` <br />
-        A person can have at most one associated age.  
-    * `Person SubClassOf hasAge some xsd:integer` <br />
-        Every person must have atleast one associated age.
+    * `Person SubClassOf hasAge exactly 1 xsd:integer` <br />
+        A person can have exactly one associated age.  
+    * `Person SubClassOf hasAge only xsd:integer` <br />
+        Every Person can have relation hasAge, if it does it has to be of type integer.  
+    
+4. Person → performsPersonInCrash → PersonInCrash <br />
+    * `Person SubClassOf performsPersonInCrash some PersonInCrash` <br />
+        Every person must perform at least one PersonInCrash in the context of a crash.
+    * `Person SubClassOf performsPersonInCrash only PersonInCrash` <br />
+        Every Person can have performsPersonInCrash,if they do, it must be instance of class PersonInCrash.
 
-4. Person → performsRole → PersonInCrash <br />
-    * `Person SubClassOf performsRole some PersonInCrash` <br />
-        Every person must perform at least one role in the context of a crash.
-
-5. Crash → providesRole → PersonInCrash <br />
-    * `Crash SubClassOf providesRole some PersonInCrash` <br />
+5. Crash → providesPersonInCrash → PersonInCrash <br />
+    * `Crash SubClassOf providesPersonInCrash some PersonInCrash` <br />
         Every crash must provide at least one PersonInCrash role.
+    * `Crash SubClassOf providesPersonInCrash only PersonInCrash` <br />
+        Every Crash can have providesPersonInCrash,if they do, it must be instance of class PersonInCrash.
 
 6. PersonInCrash → hasInjurySeverity → InjurySeverity <br />
     * `PersonInCrash SubClassOf hasInjurySeverity some InjurySeverity` <br />
         Every person in a crash must have at least one associated injury severity.
+    * `PersonInCrash SubClassOf hasInjurySeverity only InjurySeverity` <br />
+        Every person in a crash can have injury severity, if it does, it must be instance of class InjurySeverity.
 
 7. PersonInCrash → isFatal → Fatality <br />
     * `PersonInCrash SubClassOf isFatal some Fatality` <br />
         Every person in a crash who is fatal must have an associated Fatality record.
+    * `PersonInCrash SubClassOf isFatal only Fatality` <br />
+        Every person in a crash who is fatal must be instance of class Fatality.
 
 8. Fatality → fatalityAsBoolean → xsd <br />
-    * `Fatality SubClassOf fatalityAsBoolean some xsd:boolean` <br />
-        A fatality must have atleast one associated boolean value indicating whether it is fatal.
-    * `Fatality SubClassOf fatalityAsBoolean max 1 xsd:boolean` <br />
-        A fatality must have at max one associated boolean value indicating whether it is fatal.
+    * `Fatality SubClassOf fatalityAsBoolean exactly 1 xsd:boolean` <br />
+        A fatality must have exactly one associated boolean value indicating whether it is fatal.
+    * `Fatality SubClassOf fatalityAsBoolean only xsd:boolean` <br />
+        A fatality may have relation fatalityAsBoolean which must be associated with boolean value.
 
 9. Fatality → hasLagTime → TemporalExtent <br />
-    * `Fatality SubClassOf hasLagTime some TemporalExtent` <br />
-        Every fatality must have at least one associated TemporalExtent for the lag time, representing the time between the crash and the fatality.
-    * `Fatality SubClassOf hasLagTime max 1 TemporalExtent` <br />
-        Every fatality must have at most one associated TemporalExtent for the lag time, representing the time between the crash and the fatality.
+    * `Fatality SubClassOf hasLagTime exactly 1 TemporalExtent` <br />
+        Every fatality must have exactly one associated TemporalExtent for the lag time, representing the time between the crash and the fatality.
+    * `Fatality SubClassOf hasLagTime only TemporalExtent` <br />
+        Every fatality may have lag Time, if it does, it must be instance of TemporalExtent.
 
 10. NonOccupant → PersonInCrash  <br />
     * `NonOccupant SubClassOf PersonInCrash` <br />
         Every NonOccupant is PersonInCrash.
 
-11. NonOccupant → hasImpairment → Impairments <br />
-    * `NonOccupant SubClassOf hasImpairment min 0 Impairments` <br />
+11. NonOccupant → hasImpairments → Impairments <br />
+    * `NonOccupant SubClassOf hasImpairments min 0 Impairments` <br />
         Every non-occupant may have impairment.
+    * `NonOccupant SubClassOf hasImpairments only Impairments` <br />
+        Every non-occupant may have impairment, if it does, it must be instance of class Impairments.
 
 12. NonOccupant → locationDuringCrash → xsd <br />
     * `NonOccupant SubClassOf locationDuringCrash exactly 1 xsd:string` <br />
         Every non-occupant must have exactly one associated location during the crash.
+    * `NonOccupant SubClassOf locationDuringCrash only xsd:string` <br />
+        Every non-occupant may have location during the crash, if it does, it must be of type string.
 
 13. Pedestrian → NonOccupant <br />
     * `Pedestrian SubClassOf NonOccupant` <br />
@@ -175,14 +209,20 @@
 16. Occupant → seatPosition → xsd <br />
     * `Occupant SubClassOf seatPosition exactly 1 xsd:string` <br />
         Every occupant must have exactly one associated seat position.
+    * `Occupant SubClassOf seatPosition only xsd:string` <br />
+        Every occupant may have seat position, if it does it must be of type string.
 
 17. Occupant → safetyRestraintUsed → xsd <br />
     * `Occupant SubClassOf safetyRestraintUsed exactly 1 xsd:string` <br />
         Every occupant must have exactly one associated safety restraint used.
+    * `Occupant SubClassOf safetyRestraintUsed only xsd:string` <br />
+        Every occupant may have safety restraint used, if it does, it must be of type string.
 
 18. Occupant → hasAirbagDeployed → xsd <br />
     * `Occupant SubClassOf hasAirbagDeployed exactly 1 xsd:boolean` <br />
         Every occupant must have exactly one associated boolean value indicating whether an airbag was deployed.
+    * `Occupant SubClassOf hasAirbagDeployed only xsd:boolean` <br />
+        Every occupant may have airbagDeployed, if they do, it must be of type boolean.
 
 19. Driver → Occupant <br />
     * `Driver SubClassOf Occupant` <br />
@@ -193,9 +233,7 @@
         Every Passenger is Occupant.
 
 21. PersonInCrash → hasTemporalExtent → TemporalExtent <br />
-    * `PersonInCrash SubClassOf hasTemporalExtent some TemporalExtent` <br />
-        Every PersonInCrash must have at least one associated TemporalExtent, representing some time-related information about their crash involvement.
-    * `PersonInCrash SubClassOf hasTemporalExtent max 1 TemporalExtent` <br />
+    * `PersonInCrash SubClassOf hasTemporalExtent exactly 1 TemporalExtent` <br />
         Every PersonInCrash must have at most one associated TemporalExtent, representing some time-related information about their crash involvement.
 
 
@@ -222,32 +260,32 @@
 4. PointInTime → hasDayOfTheWeek → DayOfTheWeek <br />
     * `PointInTime SubClassOf hasDayOfTheWeek only DayOfTheWeek` <br />
         The range of the hasDayOfTheWeek property must belong to the class DayOfTheWeek.
-    * `PointInTime SubClassOf hasDayOfTheWeek some DayOfTheWeek` <br />
-        Every PointInTime must have at least one associated DayOfTheWeek.
+    * `PointInTime SubClassOf hasDayOfTheWeek exactly 1 DayOfTheWeek` <br />
+        Every PointInTime must have at max one associated DayOfTheWeek.
 
 5. PointInTime → hasSeason → Season <br />
     * `PointInTime SubClassOf hasSeason only Season` <br />
         The range of the hasSeason property must belong to the class Season.
-    * `PointInTime SubClassOf hasSeason some Season` <br />
+    * `PointInTime SubClassOf hasSeason exactly 1 Season` <br />
         Every PointInTime must have at least one associated Season.
 
-6. PointInTime → hasValue → xsd <br />
-    * `PointInTime SubClassOf hasValue max 1 xsd:datetime` <br />
-        A PointInTime can have at most one associated `xsd:datetime` value.
-    * `PointInTime SubClassOf hasValue exactly 1 xsd:datetime` <br />
-        Every PointInTime must have exactly one associated `xsd:datetime` value.
+6. PointInTime → pointInTimeAsDateTime → xsd <br />
+    * `PointInTime SubClassOf pointInTimeAsDateTime exactly 1 xsd:dateTime` <br />
+        Every PointInTime must have exactly one associated pointInTimeAsDateTime as type xsd:datetime.
+    * `PointInTime SubClassOf pointInTimeAsDateTime only xsd:dateTime` <br />
+        Every PointInTime may have pointInTimeAsDateTime,if they do they must be type as xsd:datetime.
 
 7. TimeInterval → startsAt → PointInTime <br />
     * `TimeInterval SubClassOf startsAt only PointInTime` <br />
         The range of the startsAt property must belong to the class PointInTime.
-    * `TimeInterval SubClassOf startsAt some PointInTime` <br />
-        Every TimeInterval must start at a specific PointInTime.
+    * `TimeInterval SubClassOf startsAt exactly 1 PointInTime` <br />
+        Every TimeInterval must start at a single specific PointInTime.
 
 8. TimeInterval → endsAt → PointInTime <br />
     * `TimeInterval SubClassOf endsAt only PointInTime` <br />
         The range of the endsAt property must belong to the class PointInTime.
-    * `TimeInterval SubClassOf endsAt some PointInTime` <br />
-        Every TimeInterval must end at a specific PointInTime.
+    * `TimeInterval SubClassOf endsAt exactly 1 PointInTime` <br />
+        Every TimeInterval must end at a single specific PointInTime.
 
 ## Crash
 
@@ -259,8 +297,8 @@
 1. Crash → hasMannerOfCollision → MannerOfCollision <br />
     * `Crash SubClassOf hasMannerOfCollision only MannerOfCollision` <br />
         The range of the property hasMannerOfCollision must belong to the class MannerOfCollision.
-    * `Crash SubClassOf hasMannerOfCollision exactly 1 MannerOfCollision` <br />
-        Every Crash must have exactly one associated manner of collision.
+    * `Crash SubClassOf hasMannerOfCollision some MannerOfCollision` <br />
+        Every Crash must have atleast one associated manner of collision.
 
 2. Crash → hasTemporalExtent → TemporalExtent <br />
     * `Crash SubClassOf hasTemporalExtent only TemporalExtent` <br />
@@ -277,8 +315,8 @@
 4. Crash → hasTotalFatalities → xsd <br />
     * `Crash SubClassOf hasTotalFatalities only xsd:integer` <br />
         The range of the property hasTotalFatalities must be an integer.
-    * `Crash SubClassOf hasTotalFatalities exactly 1 xsd:integer` <br />
-        Every Crash must have exactly one associated integer value representing total fatalities.
+    * `Crash SubClassOf hasTotalFatalities min 0 xsd:integer` <br />
+        Every Crash may have associated integer value representing total fatalities.
 
 5. Crash → hasParticipant → Participant <br />
     * `Crash SubClassOf hasParticipant only Participant` <br />
@@ -324,20 +362,20 @@
 4. Coordinates → hasLatitude → xsd <br />
     * `Coordinates SubClassOf hasLatitude only xsd:float` <br />
         The range of the property hasLatitude must be a float value.
-    * `Coordinates SubClassOf hasLatitude exactly 1 xsd:float` <br />
-        Every Coordinates must have exactly one Latitude.
+    * `Coordinates SubClassOf hasLatitude some xsd:float` <br />
+        Every Coordinates must have at least one Latitude.
 
 5. Coordinates → hasLongitude → xsd <br />
     * `Coordinates SubClassOf hasLongitude only xsd:float` <br />
         The range of the property hasLongitude must be a float value.
-    * `Coordinates SubClassOf hasLongitude exactly 1 xsd:float` <br />
-        Every Coordinates must have exactly one Longitude.
+    * `Coordinates SubClassOf hasLongitude some xsd:float` <br />
+        Every Coordinates must have atleast one Longitude.
 
 6. Location → hasState → State <br />
     * `Location SubClassOf hasState only State` <br />
         The range of the property hasState must belong to the class State.
-    * `Location SubClassOf hasState exactly 1 State` <br />
-        Every Location must have exactly one State.
+    * `Location SubClassOf hasState some State` <br />
+        Every Location must have at least one State.
 
 7. State → hasStateName → xsd <br />
     * `State SubClassOf hasStateName only xsd:string` <br />
@@ -360,22 +398,32 @@
 10. City → hasZipCode → xsd <br />
     * `City SubClassOf hasZipCode some xsd:string` <br />
         Every City must have at least one associated ZipCode.
+    * `City SubClassOf hasZipCode only xsd:string` <br />
+        Every City may have associated ZipCode, if it does, it must be of type xsd:string.
 
 11. City → hasCounty → County <br />
     * `City SubClassOf hasCounty some County` <br />
         Every City must be associated with at least one County.
+    * `City SubClassOf hasCounty only County` <br />
+        Every City may be associated with County, if it does, it must be instance of class County.
 
 12. County → hasCountyName → xsd <br />
     * `County SubClassOf hasCountyName exactly 1 xsd:string` <br />
         Every County must have exactly one CountyName.
+    * `County SubClassOf hasCountyName only xsd:string` <br />
+        Every County may have CountyName, if it does, it must be of type xsd:string.
 
 13. County → hasStreet → Street <br />
     * `County SubClassOf hasStreet some Street` <br />
         Every County must have at least one Street.
+    * `County SubClassOf hasStreet only Street` <br />
+        Every County may have Street, if it does, it must be instance of class Street.
 
 14. Street → hasStreetName → xsd <br />
     * `Street SubClassOf hasStreetName exactly 1 xsd:string` <br />
         Every Street must have exactly one StreetName.
+    * `Street SubClassOf hasStreetName only xsd:string` <br />
+        Every Street may have StreetName, if it does, it must be of type xsd:string.
 
 15. County → hasZipCode → xsd <br />
     * `County SubClassOf hasZipCode only xsd:string` <br />
@@ -391,6 +439,8 @@
 1. Location → hasSocioEconomicCondition → SocioEconomicCondition <br />  
     * `Location SubClassOf hasSocioEconomicCondition only SocioEconomicCondition` <br /> 
         The socioeconomic condition of any location must be of type SocioEconomicCondition.
+    * `Location SubClassOf hasSocioEconomicCondition some SocioEconomicCondition` <br /> 
+         Location must have at least one socioeconomic condition.
 
 2. SocioEconomicCondition → hasTemporalExtent → TemporalExtent <br /> 
     * `SocioEconomicCondition SubClassOf hasTemporalExtent only TemporalExtent` <br /> 
@@ -398,13 +448,16 @@
     * `SocioEconomicCondition SubClassOf hasTemporalExtent some TemporalExtent` <br /> 
         Every SocioEconomicCondition must have at least one temporal extent.
 
-3.  IncomeHouseholdMedian → SocioEconomicCondition <br /> 
+3.  IncomeHouseHoldMedian → SocioEconomicCondition <br /> 
     * `IncomeHouseHoldMedium SubClassOf SocioEconomicCondition` <br />
         Every IncomeHouseHoldMedium is SocioEconomicCondition
 
-4. IncomeHouseholdMedian → incomeHouseholdMedianAsDecimal → xsd <br /> 
+4. IncomeHouseHoldMedian → incomeHouseholdMedianAsDecimal → xsd <br /> 
     * `IncomeHouseholdMedian SubClassOf incomeHouseholdMedianAsDecimal only xsd:decimal` <br /> 
-        Every IncomeHouseholdMedian can only have incomeHouseHoldMediumAsString values of type xsd:string
+        Every IncomeHouseholdMedian can only have incomeHouseHoldMediumAsString values of type xsd:decimal
+    * `IncomeHouseholdMedian SubClassOf incomeHouseholdMedianAsDecimal some xsd:decimal` <br /> 
+        Every IncomeHouseholdMedian must have atleast incomeHouseholdMedianAsDecimal values of type xsd:decimal
+    
 
 5. EmploymentRate → SocioEconomicCondition 
     * `EmploymentRate SubClassOf SocioEconomicCondition` <br />
@@ -412,7 +465,9 @@
 
 6. EmploymentRate → employmentRateAsDecimal → xsd  
     * `EmploymentRate SubClassOf employmentRateAsDecimal only xsd:decimal`  
-        Every EmploymentRate can only have employmentRateAsString values of type xsd:string.
+        Every EmploymentRate can only have employmentRateAsString values of type xsd:decimal.
+    * `EmploymentRate SubClassOf employmentRateAsDecimal some xsd:decimal`  
+        Every EmploymentRate must have employmentRateAsString values of type xsd:decimal.
 
 7.  PopulationDensity → SocioEconomicCondition   
     * `PopulationDensity SubClassOf SocioEconomicCondition` <br />
@@ -421,6 +476,8 @@
 8. PopulationDensity → populationDensityAsDecimal → xsd  
     * `PopulationDensity SubClassOf populationDensityAsDecimal only xsd:decimal`  
         Every PopulationDensity can only have populationDensityAsString values of type xsd:string.
+    * `PopulationDensity SubClassOf populationDensityAsDecimal some xsd:decimal`  
+        Every PopulationDensity must have populationDensityAsString values of type xsd:string.
 
 9.  EducationLevel → SocioEconomicCondition  
     * `EducationLevel SubClassOf SocioEconomicCondition` <br />
@@ -435,35 +492,38 @@
 1. Vehicle → hasVehicleType → xsd  
     * `hasVehicleType some xsd:string SubClassOf Vehicle` <br />
         Anything that has a VehicleType is classified as a Vehicle.
-
     * `Vehicle SubClassOf hasVehicleType Exactly 1 xsd:string` <br />
         Every Vehicle must have exactly one VehicleType, represented as a string
+    * `Vehicle SubClassOf hasVehicleType only xsd:string` <br />
+        Every Vehicle may have VehicleType,and it should be represented as a string
 
 2. Vehicle → hasVehicleModel → xsd  
     * `hasVehicleModel some xsd:string SubClassOf Vehicle` <br />
         Anything that has a VehicleModel is classified as a Vehicle.
-
     * `Vehicle SubClassOf hasVehicleModel Exactly 1 xsd:string` <br />
         Every Vehicle must have exactly one VehicleModel, represented as a string
+    * `Vehicle SubClassOf hasVehicleModel only xsd:string` <br />
+        Every Vehicle may have VehicleModel,and it should be represented as a string
 
 3. Vehicle → hasVehicleMake → xsd  
     * `hasVehicleMake some xsd:string SubClassOf Vehicle` <br />
         Anything that has a VehicleMake is classified as a Vehicle.
-
     * `Vehicle SubClassOf hasVehicleMake Exactly 1 xsd:string` <br />
         Every Vehicle must have exactly one VehicleMake, represented as a string
+    * `Vehicle SubClassOf hasVehicleMake only xsd:string` <br />
+        Every Vehicle may have VehicleMake,nad it should be represented as a string
 
 4. Vehicle → hasVehicleManufacturingYear → xsd  
     * `hasVehicleManufacturingYear some xsd:string SubClassOf Vehicle` <br />
         Anything that has a VehicleManufacturingYear is classified as a Vehicle.
-
     * `Vehicle SubClassOf hasVehicleManufacturingYear Exactly 1 xsd:string` <br />
         Every Vehicle must have exactly one VehicleManufacturingYear, represented as a string
+    * `Vehicle SubClassOf hasVehicleManufacturingYear only xsd:string` <br />
+        Every Vehicle may have VehicleManufacturingYear,and it should be represented as a string
 
 5. Vehicle → hasWeight → Weight  
-    * `Vehicle SubClassOf hasWeight only Weight` <br />
-        The weight of every vehicle must be of type Weight.
-
+    * `OWL:Thing SubClassOf hasWeight only Weight` <br />
+        Everything that has a weight is restricted to having only weights classified as instances of the Weight class.
     * `Vehicle SubClassOf hasWeight exactly 1 Weight` <br />
         Every Vehicle must have exactly one weight.
 
@@ -479,21 +539,18 @@
     * `Weight SubClassOf rangeTo exactly 1 xsd:integer`  
         Every weight must have exactly one ending range value as an integer.
 
-8. Vehicle → performsRole → VehicleInAccident  
+8. Vehicle → performsVehicleInAccident → VehicleInAccident  
     * `VehicleInAccident SubClassOf Vehicle` <br />
         Every VehicleInAccident is Vehicle
-
-    * `PerformsRole some VehicleInAccident SubClassOf Vehicle` <br />
+    * `PerformsVehicleInAccident some VehicleInAccident SubClassOf Vehicle` <br />
         Anything that performs a role in a vehicle accident is a type of vehicle.
-
-    * `Vehicle SubClassOf PerformsRole some VehicleInAccident` <br />
+    * `Vehicle SubClassOf PerformsVehicleInAccident some VehicleInAccident` <br />
         Every vehicle performs at least one role in a vehicle accident.
-    
-    * `VehicleInAccident SubClassOf PerformsRole- some Vehicle` <br />
+    * `VehicleInAccident SubClassOf PerformsVehicleInAccident- some Vehicle` <br />
         Every vehicle involved in an accident is the object of a role performed by some vehicle.
 
-9. Crash → providesRole → VehicleInAccident
-    * `Crash SubClassOf providesRole some VehicleInAccident` <br />
+9. Crash → providesVehicleInAccident → VehicleInAccident
+    * `Crash SubClassOf providesVehicleInAccident some VehicleInAccident` <br />
         Every crash must provide at least one VehicleInAccident role.
 
 10. VehicleInAccident → hasSpeed → xsd  
@@ -547,11 +604,11 @@
     * `WeatherCondition SubClassOf hasTemperature some Temperature` <br />
         Every WeatherCondition must have at least one Temperature.  
 
-3. WeatherCondition → hasPrecipitation → Precipitation  
-    * `WeatherCondition SubClassOf hasPrecipitation only Precipitation` <br />
+3. WeatherCondition → hasPercipitation → Percipitation  
+    * `WeatherCondition SubClassOf hasPrecipitation only Percipitation` <br />
         The Precipitation of every WeatherCondition must be of type Precipitation.  
 
-    * `WeatherCondition SubClassOf hasPrecipitation Exactly 1 Precipitation` <br />
+    * `WeatherCondition SubClassOf hasPercipitation Exactly 1 Percipitation` <br />
         Every weather condition must have exactly one precipitation value associated with it
 
 4. WeatherCondition → hasTemporalExtent → TemporalExtent  
