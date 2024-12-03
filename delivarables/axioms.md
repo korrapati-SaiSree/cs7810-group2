@@ -353,99 +353,65 @@
 
 ## Location
 
-![Location](https://github.com/korrapati-SaiSree/cs7810-group2/blob/axioms/delivarables/scehmaDiagrams_Final/location/Location.png)
+![image](https://github.com/user-attachments/assets/eb561592-1ad2-4ef6-b733-d4b43a165f40)
+
 
 ### Axioms
 
-1. Location → hasWorkZone → WorkZone <br />
-    * `Location SubClassOf hasWorkZone only WorkZone` <br />
-        The range of the property hasWorkZone must belong to the class WorkZone.
-    * `Location SubClassOf hasWorkZone some WorkZone` <br />
-        Every Location must have at least one WorkZone.
-
-2. Location → hasIntersection → Intersection <br />
-    * `Location SubClassOf hasIntersection only Intersection` <br />
-        The range of the property hasIntersection must belong to the class Intersection.
-    * `Location SubClassOf hasIntersection exactly 1 Intersection` <br />
-        Every Location must have exactly one Intersection.
-
-3. Location → hasCoordinates → Coordinates <br />
+1. Location → hasCoordinates → Coordinates <br />
     * `Location SubClassOf hasCoordinates only Coordinates` <br />
         The range of the property hasCoordinates must belong to the class Coordinates.
     * `Location SubClassOf hasCoordinates exactly 1 Coordinates` <br />
         Every Location must have exactly one set of Coordinates.
 
-4. Coordinates → hasLatitude → xsd <br />
+2. Coordinates → hasLatitude → xsd <br />
     * `Coordinates SubClassOf hasLatitude only xsd:float` <br />
         The range of the property hasLatitude must be a float value.
     * `Coordinates SubClassOf hasLatitude some xsd:float` <br />
         Every Coordinates must have at least one Latitude.
 
-5. Coordinates → hasLongitude → xsd <br />
+3. Coordinates → hasLongitude → xsd <br />
     * `Coordinates SubClassOf hasLongitude only xsd:float` <br />
         The range of the property hasLongitude must be a float value.
     * `Coordinates SubClassOf hasLongitude some xsd:float` <br />
         Every Coordinates must have atleast one Longitude.
 
-6. Location → hasState → State <br />
+4. Location → hasState → State <br />
     * `Location SubClassOf hasState only State` <br />
         The range of the property hasState must belong to the class State.
     * `Location SubClassOf hasState some State` <br />
         Every Location must have at least one State.
 
-7. State → hasStateName → xsd <br />
+5. State → hasStateName → xsd <br />
     * `State SubClassOf hasStateName only xsd:string` <br />
         The range of the property hasStateName must be a string value.
     * `State SubClassOf hasStateName exactly 1 xsd:string` <br />
         Every State must have exactly one StateName.
 
-8. State → hasCity → City <br />
+6. State → hasCity → City <br />
     * `State SubClassOf hasCity only City` <br />
         The range of the property `hasCity` must belong to the class City.
     * `State SubClassOf hasCity some City` <br />
         Every State must have at least one City.
 
-9. City → hasCityName → xsd <br />
+7. City → hasCityName → xsd <br />
     * `City SubClassOf hasCityName only xsd:string` <br />
         The range of the property hasCityName must be a string value.
     * `City SubClassOf hasCityName exactly 1 xsd:string` <br />
         Every City must have exactly one CityName.
 
-10. City → hasZipCode → xsd <br />
-    * `City SubClassOf hasZipCode some xsd:string` <br />
-        Every City must have at least one associated ZipCode.
-    * `City SubClassOf hasZipCode only xsd:string` <br />
-        Every City may have associated ZipCode, if it does, it must be of type xsd:string.
-
-11. City → hasCounty → County <br />
+8. City → hasCounty → County <br />
     * `City SubClassOf hasCounty some County` <br />
         Every City must be associated with at least one County.
     * `City SubClassOf hasCounty only County` <br />
         Every City may be associated with County, if it does, it must be instance of class County.
 
-12. County → hasCountyName → xsd <br />
+9. County → hasCountyName → xsd <br />
     * `County SubClassOf hasCountyName exactly 1 xsd:string` <br />
         Every County must have exactly one CountyName.
     * `County SubClassOf hasCountyName only xsd:string` <br />
         Every County may have CountyName, if it does, it must be of type xsd:string.
 
-13. County → hasStreet → Street <br />
-    * `County SubClassOf hasStreet some Street` <br />
-        Every County must have at least one Street.
-    * `County SubClassOf hasStreet only Street` <br />
-        Every County may have Street, if it does, it must be instance of class Street.
-
-14. Street → hasStreetName → xsd <br />
-    * `Street SubClassOf hasStreetName exactly 1 xsd:string` <br />
-        Every Street must have exactly one StreetName.
-    * `Street SubClassOf hasStreetName only xsd:string` <br />
-        Every Street may have StreetName, if it does, it must be of type xsd:string.
-
-15. County → hasZipCode → xsd <br />
-    * `County SubClassOf hasZipCode only xsd:string` <br />
-        The range of the property hasZipCode must be a string value.
-    * `County SubClassOf hasZipCode some xsd:string` <br />
-        Every County must have at least one associated ZipCode.
 
 ## SocioEconomic Condition
 ![SocioEconomic Condition](https://github.com/korrapati-SaiSree/cs7810-group2/blob/main/delivarables/scehmaDiagrams_Final/socioeconomic_Factors/socioEconomicCondition.png)
