@@ -272,42 +272,75 @@
 
 ## Crash
 
-![Crash](https://github.com/korrapati-SaiSree/cs7810-group2/blob/axioms/delivarables/scehmaDiagrams_Final/crash/Crash.png)
+![image](https://github.com/user-attachments/assets/1e6d8bfd-3ee3-4f5c-a9e5-17053fa76e4c)
+
 
 
 ### Axioms
 
-1. Crash → hasMannerOfCollision → MannerOfCollision <br />
-    * `Crash SubClassOf hasMannerOfCollision only MannerOfCollision` <br />
-        The range of the property hasMannerOfCollision must belong to the class MannerOfCollision.
-    * `Crash SubClassOf hasMannerOfCollision some MannerOfCollision` <br />
-        Every Crash must have atleast one associated manner of collision.
-
-2. Crash → hasTemporalExtent → TemporalExtent <br />
+1. Crash → hasTemporalExtent → TemporalExtent <br />
     * `Crash SubClassOf hasTemporalExtent only TemporalExtent` <br />
         The range of the property hasTemporalExtent must belong to the class TemporalExtent.
     * `Crash SubClassOf hasTemporalExtent exactly 1 TemporalExtent` <br />
         Every Crash must have exactly one associated temporal extent.
 
-3. Crash → occurredAt → Location <br />
+2. Crash → occurredAt → Location <br />
     * `Crash SubClassOf occurredAt only Location` <br />
         The range of the property occurredAt must belong to the class Location.
     * `Crash SubClassOf occurredAt exactly 1 Location` <br />
         Every Crash must occur at exactly one location.
 
-4. Crash → hasTotalFatalities → xsd <br />
+3. Location → hasWorkZoneName → WorkZoneName <br />
+    * `Location SubClassOf hasWorkZoneName only WorkZoneName` <br />
+        The range of the property hasWorkZoneName must belong to the class WorkZoneName.
+    * `Location SubClassOf hasWorkZoneName some WorkZoneName` <br />
+        Every Location must have at least one WorkZoneName.
+
+4. Location → hasWeatherCondition → WeatherCondition  
+    * `Location SubClassOf hasWeatherCondition only WeatherCondition` <br />
+        The weather condition of any Location must be of type WeatherCondition.
+
+    * `Location SubClassOf hasWeatherCondition some WeatherCondition` <br />
+        Every Location must have at least one WeatherCondition.
+
+5. Location → hasLightingCondition → LightingCondition  
+    * `Location SubClassOf hasLightingCondition only LightingCondition` <br />
+        The Lighting condition of any Location must be of type LightingCondition.
+
+    * `Location SubClassOf hasLightingCondition some LightingCondition` <br />
+        Every Location must have at least one LightingCondition.  
+
+6. Location → hasIntersectionName → IntersectionName <br />
+    * `Location SubClassOf hasIntersectionName only IntersectionName` <br />
+        The range of the property hasIntersectionName must belong to the class IntersectionName.
+    * `Location SubClassOf hasIntersection exactly 1 Intersection` <br />
+        Every Location must have exactly one IntersectionName.
+
+7. Crash → hasTotalFatalities → xsd <br />
     * `Crash SubClassOf hasTotalFatalities only xsd:integer` <br />
         The range of the property hasTotalFatalities must be an integer.
     * `Crash SubClassOf hasTotalFatalities min 0 xsd:integer` <br />
         Every Crash may have associated integer value representing total fatalities.
+      
+8. Crash → hasTotalParticipants → xsd <br />
+    * `Crash SubClassOf hasTotalParticipants only xsd:integer` <br />
+        The range of the property hasTotalParticipants must be an integer.
+    * `Crash SubClassOf hasTotalFatalities min 0 xsd:integer` <br />
+        Every Crash may have associated integer value representing total number of participants.
 
-5. Crash → hasParticipant → Participant <br />
+9. Crash → hasTotalVehicles → xsd <br />
+    * `Crash SubClassOf hasTotalVehicles only xsd:integer` <br />
+        The range of the property hasTotalVehicles must be an integer.
+    * `Crash SubClassOf hasTotalVehicles min 0 xsd:integer` <br />
+        Every Crash may have associated integer value representing total number of vehicles.
+
+10. Crash → hasParticipant → Participant <br />
     * `Crash SubClassOf hasParticipant only Participant` <br />
         The range of the property hasParticipant must belong to the class Participant.
     * `Crash SubClassOf hasParticipant some Participant` <br />
         Every Crash must have at least one associated Participant.
 
-6. Participant Subclass Relationships <br />
+11. Participant Subclass Relationships <br />
     * Person → Participant <br />
         * `Person SubClassOf Participant` <br />
             Every Person is a subclass of Participant.
