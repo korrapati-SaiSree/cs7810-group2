@@ -29,7 +29,7 @@ for _,row in vehicle_data.iterrows():
 
     #vehicle in accident_uri
     vehicle_in_accident_uri = URIRef(pfs['rc-res'][f"VehicleInAccident_{crash_id}_{row['VEH_NO']}"])
-    graph.add((vehicle_in_accident_uri, a, pfs["rc-ont"]["Vehicle_In_Accident"]))
+    graph.add((vehicle_in_accident_uri, a, pfs["rc-ont"]["VehicleInAccident"]))
     add_literal_property(graph, vehicle_in_accident_uri, pfs['rc-ont']['hasMannerOfCollision'],row['MAN_COLLNAME'],pfs["xsd"].string)
     add_literal_property(graph, vehicle_in_accident_uri, pfs['rc-ont']['involvedInHitAndRun'],row['HIT_RUN'],pfs["xsd"].boolean)
     add_literal_property(graph, vehicle_in_accident_uri, pfs['rc-ont']['hasVehicleMake'],row['MAKENAME'],pfs["xsd"].string)
