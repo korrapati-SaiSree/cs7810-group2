@@ -106,7 +106,7 @@
 
 ### Axioms
 
-1. Impairments → impairmentsAsString → xsd <br />
+1. Impairments → impairmentsAsString → xsd:string <br />
     * `Impairments SubClassOf impairmentsAsString exactly 1 xsd:string` <br />
         Each impairment can have exactly one associated string description.  
 
@@ -124,13 +124,13 @@
 
 ### Axioms
 
-1. Person → hasGender → xsd <br />
+1. Person → hasGender → xsd:integer <br />
     * `Person SubClassOf hasGender exactly 1 xsd:string` <br />
         A person can have exactly one associated gender.  
     * `Person SubClassOf hasGender only xsd:string` <br />
         Every Person can have relation hasGender, if it does it has to be of type string.
 
-2. Person → hasAge → xsd <br />
+2. Person → hasAge → xsd:integer <br />
     * `Person SubClassOf hasAge exactly 1 xsd:integer` <br />
         A person can have exactly one associated age.  
     * `Person SubClassOf hasAge only xsd:integer` <br />
@@ -170,7 +170,7 @@
     * `NonOccupant SubClassOf PersonInCrash` <br />
         Every NonOccupant is PersonInCrash.
 
-9. NonOccupant → locationDuringCrash → xsd <br />
+9. NonOccupant → locationDuringCrash → xsd:string <br />
     * `NonOccupant SubClassOf locationDuringCrash exactly 1 xsd:string` <br />
         Every non-occupant must have exactly one associated location during the crash.
     * `NonOccupant SubClassOf locationDuringCrash only xsd:string` <br />
@@ -188,25 +188,25 @@
     * `Occupant SubClassOf PersonInCrash` <br />
         Every Occupant is PersonInCrash.
 
-13. Occupant → seatPosition → xsd <br />
+13. Occupant → seatPosition → xsd:string <br />
     * `Occupant SubClassOf seatPosition exactly 1 xsd:string` <br />
         Every occupant must have exactly one associated seat position.
     * `Occupant SubClassOf seatPosition only xsd:string` <br />
         Every occupant may have seat position, if it does it must be of type string.
 
-14. Occupant → safetyRestraintUsed → xsd <br />
+14. Occupant → safetyRestraintUsed → xsd:string <br />
     * `Occupant SubClassOf safetyRestraintUsed exactly 1 xsd:string` <br />
         Every occupant must have exactly one associated safety restraint used.
     * `Occupant SubClassOf safetyRestraintUsed only xsd:string` <br />
         Every occupant may have safety restraint used, if it does, it must be of type string.
 
-15. Occupant → hasAirbagDeployed → xsd <br />
+15. Occupant → hasAirbagDeployed → xsd:boolean <br />
     * `Occupant SubClassOf hasAirbagDeployed exactly 1 xsd:boolean` <br />
         Every occupant must have exactly one associated boolean value indicating whether an airbag was deployed.
     * `Occupant SubClassOf hasAirbagDeployed only xsd:boolean` <br />
         Every occupant may have airbagDeployed, if they do, it must be of type boolean.
 
-16. Occupant → hasEjectionStatus → xsd <br />
+16. Occupant → hasEjectionStatus → xsd:string <br />
     * `Occupant SubClassOf hasEjectionStatus exactly 1 xsd:string` <br />
         Every occupant must have exactly one associated ejecetion status.
     * `Occupant SubClassOf hasAirbagDeployed only xsd:boolean` <br />
@@ -252,7 +252,7 @@
     * `PointInTime SubClassOf hasSeason exactly 1 Season` <br />
         Every PointInTime must have at least one associated Season.
 
-6. PointInTime → pointInTimeAsDateTime → xsd <br />
+6. PointInTime → pointInTimeAsDateTime → xsd:dateTime <br />
     * `PointInTime SubClassOf pointInTimeAsDateTime exactly 1 xsd:dateTime` <br />
         Every PointInTime must have exactly one associated pointInTimeAsDateTime as type xsd:datetime.
     * `PointInTime SubClassOf pointInTimeAsDateTime only xsd:dateTime` <br />
@@ -316,19 +316,19 @@
     * `Location SubClassOf hasIntersection exactly 1 Intersection` <br />
         Every Location must have exactly one IntersectionName.
 
-7. Crash → hasTotalFatalities → xsd <br />
+7. Crash → hasTotalFatalities → xsd:integer <br />
     * `Crash SubClassOf hasTotalFatalities only xsd:integer` <br />
         The range of the property hasTotalFatalities must be an integer.
     * `Crash SubClassOf hasTotalFatalities min 0 xsd:integer` <br />
         Every Crash may have associated integer value representing total fatalities.
       
-8. Crash → hasTotalParticipants → xsd <br />
+8. Crash → hasTotalParticipants → xsd:integer <br />
     * `Crash SubClassOf hasTotalParticipants only xsd:integer` <br />
         The range of the property hasTotalParticipants must be an integer.
     * `Crash SubClassOf hasTotalFatalities min 0 xsd:integer` <br />
         Every Crash may have associated integer value representing total number of participants.
 
-9. Crash → hasTotalVehicles → xsd <br />
+9. Crash → hasTotalVehicles → xsd:integer <br />
     * `Crash SubClassOf hasTotalVehicles only xsd:integer` <br />
         The range of the property hasTotalVehicles must be an integer.
     * `Crash SubClassOf hasTotalVehicles min 0 xsd:integer` <br />
@@ -364,13 +364,13 @@
     * `Location SubClassOf hasCoordinates exactly 1 Coordinates` <br />
         Every Location must have exactly one set of Coordinates.
 
-2. Coordinates → hasLatitude → xsd <br />
+2. Coordinates → hasLatitude → xsd:float <br />
     * `Coordinates SubClassOf hasLatitude only xsd:float` <br />
         The range of the property hasLatitude must be a float value.
     * `Coordinates SubClassOf hasLatitude some xsd:float` <br />
         Every Coordinates must have at least one Latitude.
 
-3. Coordinates → hasLongitude → xsd <br />
+3. Coordinates → hasLongitude → xsd:float <br />
     * `Coordinates SubClassOf hasLongitude only xsd:float` <br />
         The range of the property hasLongitude must be a float value.
     * `Coordinates SubClassOf hasLongitude some xsd:float` <br />
@@ -382,7 +382,7 @@
     * `Location SubClassOf hasState some State` <br />
         Every Location must have at least one State.
 
-5. State → hasStateName → xsd <br />
+5. State → hasStateName → xsd:string <br />
     * `State SubClassOf hasStateName only xsd:string` <br />
         The range of the property hasStateName must be a string value.
     * `State SubClassOf hasStateName exactly 1 xsd:string` <br />
@@ -394,7 +394,7 @@
     * `State SubClassOf hasCity some City` <br />
         Every State must have at least one City.
 
-7. City → hasCityName → xsd <br />
+7. City → hasCityName → xsd:string <br />
     * `City SubClassOf hasCityName only xsd:string` <br />
         The range of the property hasCityName must be a string value.
     * `City SubClassOf hasCityName exactly 1 xsd:string` <br />
@@ -406,7 +406,7 @@
     * `City SubClassOf hasCounty only County` <br />
         Every City may be associated with County, if it does, it must be instance of class County.
 
-9. County → hasCountyName → xsd <br />
+9. County → hasCountyName → xsd:string <br />
     * `County SubClassOf hasCountyName exactly 1 xsd:string` <br />
         Every County must have exactly one CountyName.
     * `County SubClassOf hasCountyName only xsd:string` <br />
@@ -467,19 +467,20 @@
 
 ## Vehicle
 
-![Vehicle](https://github.com/korrapati-SaiSree/cs7810-group2/blob/main/delivarables/scehmaDiagrams_Final/vehicle/Vehicle.png)
+![image](https://github.com/user-attachments/assets/cdec94cf-4fad-43c8-a479-d4f18c1a9d11)
+
 
 ### Axioms
 
-1. Vehicle → hasVehicleType → xsd  
-    * `hasVehicleType some xsd:string SubClassOf Vehicle` <br />
-        Anything that has a VehicleType is classified as a Vehicle.
-    * `Vehicle SubClassOf hasVehicleType Exactly 1 xsd:string` <br />
-        Every Vehicle must have exactly one VehicleType, represented as a string
-    * `Vehicle SubClassOf hasVehicleType only xsd:string` <br />
-        Every Vehicle may have VehicleType,and it should be represented as a string
+1. Vehicle → hasBodyType → xsd:string  
+    * `hasBodyType some xsd:string SubClassOf Vehicle` <br />
+        Anything that has a BodyType is classified as a Vehicle.
+    * `Vehicle SubClassOf hasBodyType Exactly 1 xsd:string` <br />
+        Every Vehicle must have exactly one BodyType, represented as a string
+    * `Vehicle SubClassOf hasBodyType only xsd:string` <br />
+        Every Vehicle may have BodyType,and it should be represented as a string
 
-2. Vehicle → hasVehicleModel → xsd  
+2. Vehicle → hasVehicleModel → xsd:string 
     * `hasVehicleModel some xsd:string SubClassOf Vehicle` <br />
         Anything that has a VehicleModel is classified as a Vehicle.
     * `Vehicle SubClassOf hasVehicleModel Exactly 1 xsd:string` <br />
@@ -487,7 +488,7 @@
     * `Vehicle SubClassOf hasVehicleModel only xsd:string` <br />
         Every Vehicle may have VehicleModel,and it should be represented as a string
 
-3. Vehicle → hasVehicleMake → xsd  
+3. Vehicle → hasVehicleMake → xsd:string
     * `hasVehicleMake some xsd:string SubClassOf Vehicle` <br />
         Anything that has a VehicleMake is classified as a Vehicle.
     * `Vehicle SubClassOf hasVehicleMake Exactly 1 xsd:string` <br />
@@ -495,7 +496,7 @@
     * `Vehicle SubClassOf hasVehicleMake only xsd:string` <br />
         Every Vehicle may have VehicleMake,nad it should be represented as a string
 
-4. Vehicle → hasVehicleManufacturingYear → xsd  
+4. Vehicle → hasVehicleManufacturingYear → xsd:string  
     * `hasVehicleManufacturingYear some xsd:string SubClassOf Vehicle` <br />
         Anything that has a VehicleManufacturingYear is classified as a Vehicle.
     * `Vehicle SubClassOf hasVehicleManufacturingYear Exactly 1 xsd:string` <br />
@@ -503,19 +504,19 @@
     * `Vehicle SubClassOf hasVehicleManufacturingYear only xsd:string` <br />
         Every Vehicle may have VehicleManufacturingYear,and it should be represented as a string
 
-5. Vehicle → hasWeight → Weight  
+5. Vehicle → hasWeight → Weight 
     * `OWL:Thing SubClassOf hasWeight only Weight` <br />
         Everything that has a weight is restricted to having only weights classified as instances of the Weight class.
     * `Vehicle SubClassOf hasWeight exactly 1 Weight` <br />
         Every Vehicle must have exactly one weight.
 
-6. Weight → rangeFrom → xsd  
+6. Weight → rangeFrom → xsd:integer  
     * `Weight SubClassOf rangeFrom only xsd:integer` <br />
         Every Weight can only have rangeFrom values of type xsd:integer.  
     * `Weight SubClassOf rangeFrom exactly 1 xsd:integer`  
         Every weight must have exactly one starting range value as an integer.
 
-7. Weight → rangeTo → xsd  
+7. Weight → rangeTo → xsd:integer  
     * `Weight SubClassOf rangeTo only xsd:integer` <br />
         Every Weight can only have rangeTo values of type xsd:integer.  
     * `Weight SubClassOf rangeTo exactly 1 xsd:integer`  
@@ -535,24 +536,21 @@
     * `Crash SubClassOf providesVehicleInAccident some VehicleInAccident` <br />
         Every crash must provide at least one VehicleInAccident role.
 
-10. VehicleInAccident → hasSpeed → xsd  
+10. VehicleInAccident → hasSpeed → xsd:integer 
     * `VehicleInAccident SubClassOf hasSpeed only xsd:integer` <br />
         Every VehicleInAccident can only have speed of type xsd:integer
     
     * `VehicleInAccident SubClassOf hasSpeed min 0 VehicleInAccident` <br />
         Every VehicleInAccident may have Speed of type xsd:integer.
 
-11. VehicleInAccident → hasMileage → xsd  
-    * `VehicleInAccident SubClassOf hasMileage only xsd:float` <br />
-        Every VehicleInAccident can only have Mileage of type xsd:float
+11. VehicleInAccident → hasMannerOfCollision → xsd:string 
+    * `VehicleInAccident SubClassOf hasMannerOfCollision only xsd:string` <br />
+        Every VehicleInAccident can only have manner of collision of type xsd:string
+    
+    * `VehicleInAccident SubClassOf hasMannerOfCollision min 0 VehicleInAccident` <br />
+        Every VehicleInAccident may have manner of collision of type xsd:string.
 
-    * `hasMileage some xsd:integer SubClassOf VehicleInAccident` <br />
-        Anything that hasMileage is classified as a VehicleInAccident
-
-    * `VehicleInAccident SubClassOf hasMileage exactly 1 xsd:float` <br />
-        VehicleInAccident can have exactly one mileage value as a float.
-
-12. VehicleInAccident → involvedInHitAndRun → xsd  
+12. VehicleInAccident → involvedInHitAndRun → xsd:Boolean  
     * `VehicleInAccident SubClassOf involvedInHitAndRun only xsd:Boolean` <br />
         vehicleInAccident involved in hit-and-run must be represented as a boolean value
 
