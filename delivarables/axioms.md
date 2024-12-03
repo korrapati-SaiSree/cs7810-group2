@@ -120,119 +120,107 @@
 
 ## Person
 
-![Person](https://github.com/korrapati-SaiSree/cs7810-group2/blob/axioms/delivarables/scehmaDiagrams_Final/Person/Person.png)
+![image](https://github.com/user-attachments/assets/47d87a0a-8f75-4560-a253-9c1f6bd8aec7)
 
 ### Axioms
 
-1. Person → hasRace → xsd <br />
-    * `Person SubClassOf hasRace exactly 1 xsd:string` <br />
-        A person can have exactly one associated race. 
-    * `Person SubClassOf hasRace only xsd:string` <br />
-        Every Person can have relation hasRace, if it does it has to be of type string. 
-
-2. Person → hasGender → xsd <br />
+1. Person → hasGender → xsd <br />
     * `Person SubClassOf hasGender exactly 1 xsd:string` <br />
         A person can have exactly one associated gender.  
     * `Person SubClassOf hasGender only xsd:string` <br />
         Every Person can have relation hasGender, if it does it has to be of type string.
 
-3. Person → hasAge → xsd <br />
+2. Person → hasAge → xsd <br />
     * `Person SubClassOf hasAge exactly 1 xsd:integer` <br />
         A person can have exactly one associated age.  
     * `Person SubClassOf hasAge only xsd:integer` <br />
         Every Person can have relation hasAge, if it does it has to be of type integer.  
     
-4. Person → performsPersonInCrash → PersonInCrash <br />
+3. Person → performsPersonInCrash → PersonInCrash <br />
     * `Person SubClassOf performsPersonInCrash some PersonInCrash` <br />
         Every person must perform at least one PersonInCrash in the context of a crash.
     * `Person SubClassOf performsPersonInCrash only PersonInCrash` <br />
         Every Person can have performsPersonInCrash,if they do, it must be instance of class PersonInCrash.
 
-5. Crash → providesPersonInCrash → PersonInCrash <br />
+4. Crash → providesPersonInCrash → PersonInCrash <br />
     * `Crash SubClassOf providesPersonInCrash some PersonInCrash` <br />
         Every crash must provide at least one PersonInCrash role.
     * `Crash SubClassOf providesPersonInCrash only PersonInCrash` <br />
         Every Crash can have providesPersonInCrash,if they do, it must be instance of class PersonInCrash.
 
-6. PersonInCrash → hasInjurySeverity → InjurySeverity <br />
+5. PersonInCrash → hasInjurySeverity → InjurySeverity <br />
     * `PersonInCrash SubClassOf hasInjurySeverity some InjurySeverity` <br />
         Every person in a crash must have at least one associated injury severity.
     * `PersonInCrash SubClassOf hasInjurySeverity only InjurySeverity` <br />
         Every person in a crash can have injury severity, if it does, it must be instance of class InjurySeverity.
 
-7. PersonInCrash → isFatal → Fatality <br />
+6. PersonInCrash → isFatal → Fatality <br />
     * `PersonInCrash SubClassOf isFatal some Fatality` <br />
         Every person in a crash who is fatal must have an associated Fatality record.
     * `PersonInCrash SubClassOf isFatal only Fatality` <br />
         Every person in a crash who is fatal must be instance of class Fatality.
 
-8. Fatality → fatalityAsBoolean → xsd <br />
-    * `Fatality SubClassOf fatalityAsBoolean exactly 1 xsd:boolean` <br />
-        A fatality must have exactly one associated boolean value indicating whether it is fatal.
-    * `Fatality SubClassOf fatalityAsBoolean only xsd:boolean` <br />
-        A fatality may have relation fatalityAsBoolean which must be associated with boolean value.
-
-9. Fatality → hasLagTime → TemporalExtent <br />
+7. Fatality → hasLagTime → TemporalExtent <br />
     * `Fatality SubClassOf hasLagTime exactly 1 TemporalExtent` <br />
         Every fatality must have exactly one associated TemporalExtent for the lag time, representing the time between the crash and the fatality.
     * `Fatality SubClassOf hasLagTime only TemporalExtent` <br />
         Every fatality may have lag Time, if it does, it must be instance of TemporalExtent.
 
-10. NonOccupant → PersonInCrash  <br />
+8. NonOccupant → PersonInCrash  <br />
     * `NonOccupant SubClassOf PersonInCrash` <br />
         Every NonOccupant is PersonInCrash.
 
-11. NonOccupant → hasImpairments → Impairments <br />
-    * `NonOccupant SubClassOf hasImpairments min 0 Impairments` <br />
-        Every non-occupant may have impairment.
-    * `NonOccupant SubClassOf hasImpairments only Impairments` <br />
-        Every non-occupant may have impairment, if it does, it must be instance of class Impairments.
-
-12. NonOccupant → locationDuringCrash → xsd <br />
+9. NonOccupant → locationDuringCrash → xsd <br />
     * `NonOccupant SubClassOf locationDuringCrash exactly 1 xsd:string` <br />
         Every non-occupant must have exactly one associated location during the crash.
     * `NonOccupant SubClassOf locationDuringCrash only xsd:string` <br />
         Every non-occupant may have location during the crash, if it does, it must be of type string.
 
-13. Pedestrian → NonOccupant <br />
+10. Pedestrian → NonOccupant <br />
     * `Pedestrian SubClassOf NonOccupant` <br />
         Every Pedestrain is NonOccupant.
 
-14. Cyclist → NonOccupant <br />
+11. Cyclist → NonOccupant <br />
     * `Cyclist SubClassOf NonOccupant` <br />
         Every Cyclist is NonOccupant.
 
-15. Occupant → PersonInCrash <br />
+12. Occupant → PersonInCrash <br />
     * `Occupant SubClassOf PersonInCrash` <br />
         Every Occupant is PersonInCrash.
 
-16. Occupant → seatPosition → xsd <br />
+13. Occupant → seatPosition → xsd <br />
     * `Occupant SubClassOf seatPosition exactly 1 xsd:string` <br />
         Every occupant must have exactly one associated seat position.
     * `Occupant SubClassOf seatPosition only xsd:string` <br />
         Every occupant may have seat position, if it does it must be of type string.
 
-17. Occupant → safetyRestraintUsed → xsd <br />
+14. Occupant → safetyRestraintUsed → xsd <br />
     * `Occupant SubClassOf safetyRestraintUsed exactly 1 xsd:string` <br />
         Every occupant must have exactly one associated safety restraint used.
     * `Occupant SubClassOf safetyRestraintUsed only xsd:string` <br />
         Every occupant may have safety restraint used, if it does, it must be of type string.
 
-18. Occupant → hasAirbagDeployed → xsd <br />
+15. Occupant → hasAirbagDeployed → xsd <br />
     * `Occupant SubClassOf hasAirbagDeployed exactly 1 xsd:boolean` <br />
         Every occupant must have exactly one associated boolean value indicating whether an airbag was deployed.
     * `Occupant SubClassOf hasAirbagDeployed only xsd:boolean` <br />
         Every occupant may have airbagDeployed, if they do, it must be of type boolean.
 
-19. Driver → Occupant <br />
+16. Occupant → hasEjectionStatus → xsd <br />
+    * `Occupant SubClassOf hasEjectionStatus exactly 1 xsd:string` <br />
+        Every occupant must have exactly one associated ejecetion status.
+    * `Occupant SubClassOf hasAirbagDeployed only xsd:boolean` <br />
+        Every occupant may have ejection status, if they do, it must be of type string.
+
+17. Driver → Occupant <br />
     * `Driver SubClassOf Occupant` <br />
         Every Driver is Occupant.
 
-20. Passenger → Occupant <br />
+18. Passenger → Occupant <br />
     * `Passenger SubClassOf Occupant` <br />
         Every Passenger is Occupant.
 
-21. PersonInCrash → hasTemporalExtent → TemporalExtent <br />
+19. PersonInCrash → hasTemporalExtent → TemporalExtent <br />
     * `PersonInCrash SubClassOf hasTemporalExtent exactly 1 TemporalExtent` <br />
         Every PersonInCrash must have at most one associated TemporalExtent, representing some time-related information about their crash involvement.
 
