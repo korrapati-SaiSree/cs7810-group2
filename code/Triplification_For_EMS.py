@@ -1,10 +1,10 @@
 import os
 import pandas as pd
 from rdflib import URIRef
-from helper.init_kg import init_kg, add_literal_property, add_object_property, sanitize_label, pfs
+from helper.init_kg import init_kg, add_literal_property, add_object_property, add_subclass_property, pfs
 
 # Paths
-data_path = "/home/ruman/ruman_v/nexus/wright/intro_to_knowledge_engineering/Project/cs7810-group2/code/data_processing/dataset/"
+data_path = "./code/data_processing/dataset/"
 output_path = "./output/"
 os.makedirs(output_path, exist_ok=True)
 
@@ -20,8 +20,11 @@ for _,row in EMS_data.iterrows():
     crash_id = row["ST_CASE"]
     crash_uri = URIRef(pfs['rc-res'][f'Crash_{crash_id}'])
 
+    participant_uri = URIRef(pfs['rc-res'][f'Participant_{crash_id}'])
+
     EMS_uri = URIRef(pfs['rc-res'][f'EmergencyMedicalService_{crash_id}'])
     graph.add((EMS_uri, a, pfs['rc-ont']['EmergencyMedicalService']))
+    add_subclass_property(graph, EMS_uri,participant_uri)
 
     notification_time_uri = URIRef(pfs['rc-res'][f'NotificationTime_{crash_id}'])
     graph.add((notification_time_uri, a, pfs['rc-ont']['NotificationTime']))
