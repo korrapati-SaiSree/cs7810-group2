@@ -414,7 +414,7 @@
 
 
 ## SocioEconomic Condition
-![SocioEconomic Condition](https://github.com/korrapati-SaiSree/cs7810-group2/blob/main/delivarables/scehmaDiagrams_Final/socioeconomic_Factors/socioEconomicCondition.png)
+![image](https://github.com/user-attachments/assets/e8c60dae-fee2-47ee-abd0-b7f7507d43a0)
 
 ### Axioms
 
@@ -434,11 +434,11 @@
     * `IncomeHouseHoldMedium SubClassOf SocioEconomicCondition` <br />
         Every IncomeHouseHoldMedium is SocioEconomicCondition
 
-4. IncomeHouseHoldMedian → incomeHouseholdMedianAsDecimal → xsd <br /> 
+4. IncomeHouseHoldMedian → HouseholdIncomeAsInteger → xsd <br /> 
     * `IncomeHouseholdMedian SubClassOf incomeHouseholdMedianAsDecimal only xsd:decimal` <br /> 
-        Every IncomeHouseholdMedian can only have incomeHouseHoldMediumAsString values of type xsd:decimal
+        Every IncomeHouseholdMedian can only have HouseholdIncomeAsInteger values of type xsd:integer
     * `IncomeHouseholdMedian SubClassOf incomeHouseholdMedianAsDecimal some xsd:decimal` <br /> 
-        Every IncomeHouseholdMedian must have atleast incomeHouseholdMedianAsDecimal values of type xsd:decimal
+        Every IncomeHouseholdMedian must have atleast HoudeholdIncomeAsInteger values of type xsd:integer
     
 
 5. EmploymentRate → SocioEconomicCondition 
