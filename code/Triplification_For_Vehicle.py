@@ -41,7 +41,8 @@ for _,row in vehicle_data.iterrows():
     add_literal_property(graph, vehicle_in_accident_uri, pfs['rc-ont']['hasSpeed'],row['TRAV_SP'],pfs["xsd"].integer)
 
     #subclass property of vehicle
-    add_subclass_property(graph, vehicle_in_accident_uri,vehicle_uri)
+    add_object_property(graph,vehicle_uri,pfs['rc-ont']['performsVehicleInAccident'],vehicle_in_accident_uri)
+    add_object_property(graph,crash_uri,pfs['rc-ont']['providesVehicleInAccident'],vehicle_in_accident_uri)
 
     #person_uri
     person_uri = URIRef(pfs['rc-res'][f"Person_{crash_id}_{row['VEH_NO']}_1"])
