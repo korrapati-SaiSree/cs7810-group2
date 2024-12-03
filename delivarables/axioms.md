@@ -434,7 +434,7 @@
     * `IncomeHouseHoldMedium SubClassOf SocioEconomicCondition` <br />
         Every IncomeHouseHoldMedium is SocioEconomicCondition
 
-4. IncomeHouseHoldMedian → HouseholdIncomeAsInteger → xsd <br /> 
+4. IncomeHouseHoldMedian → HouseholdIncomeAsInteger → xsd:integer <br /> 
     * `IncomeHouseholdMedian SubClassOf incomeHouseholdMedianAsDecimal only xsd:decimal` <br /> 
         Every IncomeHouseholdMedian can only have HouseholdIncomeAsInteger values of type xsd:integer
     * `IncomeHouseholdMedian SubClassOf incomeHouseholdMedianAsDecimal some xsd:decimal` <br /> 
@@ -445,7 +445,7 @@
     * `EmploymentRate SubClassOf SocioEconomicCondition` <br />
         Every EmploymentRate is SocioEconomicCondition
 
-6. EmploymentRate → employmentRateAsDecimal → xsd  
+6. EmploymentRate → employmentRateAsDecimal → xsd:decimal  
     * `EmploymentRate SubClassOf employmentRateAsDecimal only xsd:decimal`  
         Every EmploymentRate can only have employmentRateAsString values of type xsd:decimal.
     * `EmploymentRate SubClassOf employmentRateAsDecimal some xsd:decimal`  
@@ -455,7 +455,7 @@
     * `PopulationDensity SubClassOf SocioEconomicCondition` <br />
     Every PopulationDensity is SocioEconomicCondition
 
-8. PopulationDensity → populationDensityAsDecimal → xsd  
+8. PopulationDensity → populationDensityAsDecimal → xsd:decimal 
     * `PopulationDensity SubClassOf populationDensityAsDecimal only xsd:decimal`  
         Every PopulationDensity can only have populationDensityAsString values of type xsd:string.
     * `PopulationDensity SubClassOf populationDensityAsDecimal some xsd:decimal`  
