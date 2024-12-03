@@ -220,11 +220,6 @@
     * `Passenger SubClassOf Occupant` <br />
         Every Passenger is Occupant.
 
-19. PersonInCrash → hasTemporalExtent → TemporalExtent <br />
-    * `PersonInCrash SubClassOf hasTemporalExtent exactly 1 TemporalExtent` <br />
-        Every PersonInCrash must have at most one associated TemporalExtent, representing some time-related information about their crash involvement.
-
-
 ## Time
 
 ![Time](https://github.com/korrapati-SaiSree/cs7810-group2/blob/axioms/delivarables/scehmaDiagrams_Final/Time/Time.png)
