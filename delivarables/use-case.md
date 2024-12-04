@@ -40,6 +40,13 @@ Because it incorporates elements that are frequently disregarded in current mode
 7. Socioeconomic and demographic data.
 8. Census data
 
+# Existing Resources
+
+1. Fatality Analysis Reporting System(FARS) : https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars
+2. Highway Safety Information System(HSIS): https://highways.dot.gov/research/safety/hsis
+3. SSN/SOSA Ontology: https://www.w3.org/TR/vocab-ssn/
+
+
 #  Contributors
 * Ruman
 * Suyes
