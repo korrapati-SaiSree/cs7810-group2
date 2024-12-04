@@ -39,7 +39,8 @@
 
   * Rationale: Socioeconomic Factors such as income level, education, and infrastructure investment in a region have a direct impact on road safety. Poorer regions may have older, less safe vehicles and poorly maintained roads, leading to higher accident rates. Understanding the socioeconomic context of crashes helps policymakers target investments and interventions to reduce disparities in road safety across different regions.
 
-  * Connected Pattern: Agent with Provenance Pattern from MODL. This pattern captures the socioeconomic characteristics of regions and their influence on crash events.
+  * Connected Pattern: Description Situation Pattern from MODL
+  * Pattern Source: https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/description-situation/description-situation-pattern.pdf
 
   * Data Source: Census Data
 
@@ -47,7 +48,8 @@
 
   * Rationale: The time from crash reporting to on-scene arrival and transportation to treatment facilities significantly affects the survival result. Capturing the EMS-related data in the graph will allow us to examine the impact of response delays or inefficiencies on fatality rates, providing important information for improving emergency response systems.
  
-  * Connected Pattern: Process Pattern from MODL. This pattern captures temporal and procedural details of EMS interventions.
+  * Connected Pattern: Spatiotemporal-Extent from MODL.
+  * Pattern Source: https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/spatiotemporal-extent/spatiotemporal-extent-pattern.pdf
  
   * Data Source: Fatality Analysis Reporting System (FARS)
 
@@ -63,7 +65,8 @@
 
   * Rationale: A critical part of any crash data includes the persons involved in a collision: drivers, passengers, and pedestrians. Modeling of person-specific data-such as age, gender, and degree of injury-allows analysis of how demographic characteristics affect collision outcomes and hazards.
 
-  * Connected Pattern: Agent Pattern. This pattern represents individuals and their roles in crash events.
+  * Connected Pattern: Agent role Pattern from MODL. This pattern represents individuals and their roles in crash events.
+  * Pattern Source: https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/agent-role/agent-role-pattern.pdf
  
   * Data Source: Fatality Analysis Reporting System (FARS)
  
@@ -71,7 +74,8 @@
 
   * Rationale: Temporal parameters, such as time of day, season, and day of the week, significantly affect the probability of an accident. The modeling of temporal patterns enables targeted preventive actions to be implemented and helps discover tendencies such as crash peak hours or heightened hazards under particular weather conditions.
 
-  * Connected Pattern: Time Interval Pattern from OWL-Time ontology. This pattern models temporal intervals associated with events.
+  * Connected Pattern: Temporal extent pattern from MODL.
+  * Pattern Source: https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/temporal-extent/temporal-extent-pattern.pdf
  
   * Data Source: Fatality Analysis Reporting System (FARS)
 
