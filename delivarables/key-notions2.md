@@ -4,6 +4,7 @@
   * Rationale: The Crash Event is the focal point of the entire knowledge graph. Every piece of data—whether it's about driver behavior, vehicle condition, or road infrastructure—ultimately ties back to the crash event. Modeling a crash event allows us to ask critical questions like "What caused this crash?", "Where and when did it happen?", and "Who was involved?". Understanding each crash as a distinct event with its own unique set of contributing factors is essential to uncover patterns in road accidents, identify high-risk conditions, and develop preventive measures.
 
   * Connected Pattern: Event Pattern from MODL. This pattern is highly suitable for representing any discrete occurrence, such as a road crash, that involves participants (drivers, vehicles), a location, and a time.
+  * Pattern Source: https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/event
 
   * Data Source: Fatality Analysis Reporting System (FARS)
 
