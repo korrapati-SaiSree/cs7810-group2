@@ -21,7 +21,8 @@
 
   * Rationale: Vehicle Condition encompasses the mechanical state of the vehicle, such as the quality of its brakes, tires, and safety features (like airbags or ABS). A well-maintained vehicle can reduce crash severity, while poorly maintained vehicles are more prone to malfunctions that could lead to a crash. In this knowledge graph, capturing vehicle conditions provides insights into how different types of vehicle defects—combined with other factors like road or weather conditions—contribute to accidents. It’s essential to model these conditions dynamically, as vehicle conditions change over time and can vary significantly from one crash event to another.
 
-  * Connected Pattern: Car 
+  * Connected Pattern/ Source: CS-MODL Car (from CS-MODL)
+    https://github.com/kastle-lab/commonsense-micropatterns/blob/master/csmodl/patterns/Car.ttl 
 
   * Data Source: Fatality Analysis Reporting System (FARS)
 
