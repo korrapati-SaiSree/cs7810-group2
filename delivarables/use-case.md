@@ -45,6 +45,8 @@ Because it incorporates elements that are frequently disregarded in current mode
 1. Fatality Analysis Reporting System(FARS) : https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars
 2. Highway Safety Information System(HSIS): https://highways.dot.gov/research/safety/hsis
 3. SSN/SOSA Ontology: https://www.w3.org/TR/vocab-ssn/
+4. Traffic Volume Trends: https://www.fhwa.dot.gov/policyinformation/travel_monitoring/tvt.cfm
+5. Socioeconomic Condition Data: https://www.census.gov/topics/income-poverty/income/data/tables.html
 
 
 #  Contributors
