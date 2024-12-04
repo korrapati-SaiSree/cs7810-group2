@@ -56,7 +56,6 @@ for _,row in vehicle_data.iterrows():
 
     #driver uri
     driver_uri = URIRef(pfs['rc-res'][f"Driver_{crash_id}_{row['VEH_NO']}_1"])
-    add_object_property(graph, driver_uri, pfs["rc-ont"]['isInVehicle'],vehicle_uri)
     add_literal_property(graph, driver_uri, pfs['rc-ont']['hasLicenseStatus'],row['L_STATUSNAME'],pfs["xsd"].string)
     add_literal_property(graph, driver_uri, pfs['rc-ont']['hasLicenseType'],row['L_TYPENAME'],pfs["xsd"].string)
     add_literal_property(graph, driver_uri, pfs['rc-ont']['hasWeight'],row['DR_WGT'],pfs["xsd"].integer)

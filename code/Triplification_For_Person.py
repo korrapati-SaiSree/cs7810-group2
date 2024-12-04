@@ -4,7 +4,7 @@ from rdflib import URIRef
 from helper.init_kg import init_kg, add_literal_property, add_object_property, add_subclass_property, pfs
 
 # Paths
-data_path = "/home/ruman/ruman_v/nexus/wright/intro_to_knowledge_engineering/Project/cs7810-group2/code/data_processing/dataset/"
+data_path = "./code/data_processing/dataset/"
 output_path = "./output/"
 os.makedirs(output_path, exist_ok=True)
 
@@ -21,6 +21,7 @@ for _,row in person_data.iterrows():
     crash_uri = URIRef(pfs["rc-res"][f"Crash_{crash_id}"])
     participant_uri = URIRef(pfs['rc-res'][f"Participant_{crash_id}"])
     person_uri = URIRef(pfs['rc-res'][f"Person_{crash_id}_{row['VEH_NO']}_{row['PER_NO']}"])
+    vehicle_uri = URIRef(pfs['rc-res'][f"Vehicle_{crash_id}_{row['VEH_NO']}"])
     graph.add((person_uri, a, pfs['rc-ont']['Person']))
     add_subclass_property(graph,person_uri,participant_uri)
     add_literal_property(graph,person_uri,pfs['rc-ont']['hasAge'],row['AGE'],pfs["xsd"].integer)
@@ -64,6 +65,7 @@ for _,row in person_data.iterrows():
         occupant_uri = URIRef(pfs['rc-res'][f"Occupant_{crash_id}_{row['VEH_NO']}_{row['PER_NO']}"])
         graph.add((occupant_uri,a,pfs['rc-ont']['Occupant']))
         add_subclass_property(graph,occupant_uri,person_in_crash_uri)
+        add_object_property(graph, occupant_uri, pfs["rc-ont"]['isInVehicle'],vehicle_uri)
         add_literal_property(graph,occupant_uri,pfs['rc-ont']['seatPosition'],row['SEAT_POSNAME'],pfs["xsd"].string)
         add_literal_property(graph,occupant_uri,pfs['rc-ont']['safetyRestrainUsed'],row['REST_USENAME'],pfs["xsd"].string)
         add_literal_property(graph,occupant_uri,pfs['rc-ont']['hasAirbagDeployed'],row['AIR_BAGNAME'],pfs["xsd"].string)
