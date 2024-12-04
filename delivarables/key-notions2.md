@@ -13,6 +13,7 @@
   * Rationale: Driver Condition captures the state of the driver at the time of the crash, including factors like distraction, fatigue, alcohol or drug influence, and overall experience. Drivers are often the most critical factor in accidents, and the knowledge graph needs to model how different states of driver impairment or distraction influence the likelihood and severity of crashes. The relationship between driver condition and environmental factors (like weather or road infrastructure) can reveal new insights into high-risk scenarios that traditional analyses may overlook.
 
     * Connected Pattern: AgentRole Pattern from MODL. This pattern models the different roles that agents (e.g., drivers) play in events, such as being a distracted driver in a crash event.
+    * Pattern Source:  https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/agent-role/agent-role-pattern.pdf
         
     * Data Source: Fatality Analysis Reporting System (FARS)
 
@@ -20,7 +21,7 @@
 
   * Rationale: Vehicle Condition encompasses the mechanical state of the vehicle, such as the quality of its brakes, tires, and safety features (like airbags or ABS). A well-maintained vehicle can reduce crash severity, while poorly maintained vehicles are more prone to malfunctions that could lead to a crash. In this knowledge graph, capturing vehicle conditions provides insights into how different types of vehicle defects—combined with other factors like road or weather conditions—contribute to accidents. It’s essential to model these conditions dynamically, as vehicle conditions change over time and can vary significantly from one crash event to another.
 
-  * Connected Pattern: ObjectFeature Pattern from CS-MODL. This pattern effectively models changing features of physical objects, such as vehicles, over time.
+  * Connected Pattern: Car 
 
   * Data Source: Fatality Analysis Reporting System (FARS)
 
