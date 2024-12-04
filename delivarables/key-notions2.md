@@ -57,7 +57,8 @@
 
   * Rationale: Road crashes are largely caused by driver impairments like weariness, drug or alcohol usage, and distractions. By capturing these variables, the knowledge graph can show relationships between particular impairments and the chance of a crash, supporting focused awareness campaigns and the implementation of policies.
  
-  * Connected Pattern: AgentRole Pattern from MODL. This pattern models the impaired driver’s role in crash scenarios.
+  * Connected Pattern: Description Situation Pattern from MODL.
+  * Pattern Source: https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/description-situation/description-situation-pattern.pdf
  
   * Data Source: Fatality Analysis Reporting System (FARS)
  
