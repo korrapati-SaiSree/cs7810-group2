@@ -30,7 +30,8 @@
 
   * Rationale: Geographic Location is crucial for understanding where crashes occur. By linking crash events to specific locations, we can analyze regional accident patterns, assess the impact of urban versus rural roads, and identify accident-prone zones. This helps local authorities prioritize infrastructure improvements and safety interventions. Geographic location also interacts with other factors, such as socioeconomic conditions, traffic density, and weather patterns, to provide a complete picture of crash risks.
 
-  * Connected Pattern: Place Pattern from GeoSPARQL. This pattern allows the representation of spatial entities and their properties, such as coordinates and geographic classification.
+  * Connected Pattern: Spatial Extent Pattern from MODl.
+  * Pattern Source: https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/spatial-extent/spatial-extent-pattern.pdf
 
   * Data Source: Fatality Analysis Reporting System (FARS)
 
