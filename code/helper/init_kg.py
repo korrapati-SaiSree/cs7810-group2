@@ -42,3 +42,7 @@ def convert_to_24_hour(time_str):
         return datetime.strptime(time_str, "%I:%M%p").strftime("%H:%M:%S")
     except ValueError:
         return None
+    
+def filter_hours_and_mins(time):
+    invalid_values = {99, 98, 88}
+    return time if time not in invalid_values else None

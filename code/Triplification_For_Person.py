@@ -40,7 +40,7 @@ for _,row in person_data.iterrows():
 
     if(row['REST_USENAME'] == 'Not a Motor Vehicle Occupant'):
         non_occupant_uri = URIRef(pfs['rc-res'][f"NonOccupant_{crash_id}_{row['VEH_NO']}_{row['PER_NO']}"])
-        graph.add((occupant_uri,a,pfs['rc-ont']['Occupant']))
+        graph.add((non_occupant_uri,a,pfs['rc-ont']['NonOccupant']))
         add_subclass_property(graph,non_occupant_uri,person_in_crash_uri)
         add_literal_property(graph,non_occupant_uri,pfs['rc-ont']['locationDuringCrash'],row['LOCATIONNAME'],pfs["xsd"].string)
 
