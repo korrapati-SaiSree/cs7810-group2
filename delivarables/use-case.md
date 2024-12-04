@@ -21,12 +21,12 @@ Because it incorporates elements that are frequently disregarded in current mode
 2. What patterns can be seen between weather conditions, seasons, and the chances of fatalities in crashes?
 3. How do EMS response times (from being notified to arriving at the crash site and transporting to a hospital) affect survival rates?
 4. How does driver impairment (from alcohol, drugs, or fatigue) impact crash rates?
-5. ---------
+5. Which drivers involved in crashes have a history of prior accidents, Driving While Intoxicated (DWI) offenses, or speeding violations, and how do their past records compare?
 6. How do a driver's license status and type relate to the rate of crashes?
 7. How do specific road conditions affect the likelihood and severity of crashes?
 8. How do a state's socio-economic conditions influence crash rates?
-9. ----------
-10. ---------
+9. How do driver attributes such as age, sex, weight, and height impact the severity of injuries sustained in road crashes?
+10. How does the speed of the vehicle and age of the occupant during the crash relate to the Fatality?
 
 
 
