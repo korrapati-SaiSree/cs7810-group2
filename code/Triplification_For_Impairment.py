@@ -24,7 +24,7 @@ for _,row in impairment_data.iterrows():
     driver_uri = URIRef(pfs['rc-res'][f"Driver_{crash_id}_{row['VEH_NO']}_{row['PER_NO']}"])
 
     impairment_uri = URIRef(pfs['rc-res'][f"Impairment_{crash_id}_{row['VEH_NO']}_{row['PER_NO']}"])
-    graph.add((impairment_uri,a,pfs['rc-ont']['Impariment']))
+    graph.add((impairment_uri,a,pfs['rc-ont']['Impairment']))
     add_literal_property(graph,impairment_uri,pfs['rc-ont']['impairmentAsString'],row['DRIMPAIRNAME'],pfs["xsd"].string)
 
     distraction_uri = URIRef(pfs['rc-res'][f"Distraction_{crash_id}_{row['VEH_NO']}_{row['PER_NO']}"])
