@@ -33,8 +33,8 @@ Source: census data for socioeconomic conditions: https://www.census.gov/
 <!-- There should be one module section per module (essentially per key-notion) -->
 
 ### Crash
-**Source Pattern:** Event Pattern from MODL. 
-**Source Data:** Asterank, MP3C, NASA_JPL  
+**Source Pattern:** Event Pattern from MODL 
+**Source Data:** Fatality Analysis Reporting System (FARS)  
 
 #### Description
 The Crash Event is the focal point of the entire knowledge graph. Every piece of data—whether it's about driver behavior, vehicle condition, or road infrastructure—ultimately ties back to the crash event. Modeling a crash event allows us to ask critical questions like "What caused this crash?", "Where and when did it happen?", and "Who was involved?". Understanding each crash as a distinct event with its own unique set of contributing factors is essential to uncover patterns in road accidents, identify high-risk conditions, and develop preventive measures.
