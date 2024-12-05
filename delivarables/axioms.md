@@ -1,10 +1,10 @@
 # Road Crashes Ontology
 
-![Road Crashes all together](https://github.com/korrapati-SaiSree/cs7810-group2/blob/main/delivarables/Schema_Diagram/All_Together/All_Together_Final_Schema.png)
+![Road Crashes all together](https://github.com/korrapati-SaiSree/cs7810-group2/blob/main/Schema_Diagram/All_Together/All_Together_Final_Schema.png)
 
 ## Driver Condition
 
-![Driver Condition](https://github.com/korrapati-SaiSree/cs7810-group2/blob/main/delivarables/Schema_Diagram/Driver/Driver_Schema_Final.png)
+![Driver Condition](https://github.com/korrapati-SaiSree/cs7810-group2/blob/main/Schema_Diagram/Driver/Driver_Schema_Final.png)
 
 
 ### Axioms
@@ -87,18 +87,18 @@
 * `owl:Thing SubClassOf atYear only xsd:integer`<br>
   Everthing in ontology may have atYear, if it does, it must be of datatype integer.
 
-14. RecentDrivingCondition → atYear → xsd:integer
-* `RecentDrivingCondition SubClassOf atYear exactly 1 xsd:integer`<br/>
-  Each recent driving condition must have exactly one associated month.
+14. RecentDrivingConviction → atYear → xsd:integer
+* `RecentDrivingConviction SubClassOf atYear exactly 1 xsd:integer`<br/>
+  Each recent driving Conviction must have exactly one associated month.
 
-15. RecentDrivingCondition → atMonth → xsd:integer
-* `RecentDrivingCondition SubClassOf atMonth exactly 1 xsd:integer`<br/>
-  Each recent driving condition must have exactly one associated month.
+15. RecentDrivingConviction → atMonth → xsd:integer
+* `RecentDrivingConviction SubClassOf atMonth exactly 1 xsd:integer`<br/>
+  Each recent driving Conviction must have exactly one associated month.
 
 
 ## EMS
 
-![EMS](https://github.com/korrapati-SaiSree/cs7810-group2/blob/main/delivarables/Schema_Diagram/EMS/EMS_Final_Schema.png)
+![EMS](https://github.com/korrapati-SaiSree/cs7810-group2/blob/main/Schema_Diagram/EMS/EMS_Final_Schema.png)
 
 
 ### Axioms
@@ -122,7 +122,7 @@
   Every emergency medical service can have arrivalTimeToHospital, only if its instance of PointInTime.
 
 ## Impairment
-![Impairment](https://github.com/korrapati-SaiSree/cs7810-group2/blob/main/delivarables/Schema_Diagram/Impairment/Impairment_Final_Schema.png)
+![Impairment](https://github.com/korrapati-SaiSree/cs7810-group2/blob/main/Schema_Diagram/Impairment/Impairment_Final_Schema.png)
 
 ### Axioms
 
@@ -155,7 +155,7 @@
 
 ## Person
 
-![image](https://github.com/korrapati-SaiSree/cs7810-group2/blob/main/delivarables/Schema_Diagram/Person/Person_Final_Schema.png)
+![Person](https://github.com/korrapati-SaiSree/cs7810-group2/blob/main/Schema_Diagram/Person/Person_Final_Schema.png)
 
 ### Axioms
 
@@ -256,7 +256,7 @@ Every Passenger is a subclass of Occupant.
 
 ## Time
 
-![Time](https://github.com/korrapati-SaiSree/cs7810-group2/blob/main/delivarables/Schema_Diagram/Time/Time_Final_Schema.png)
+![Time](https://github.com/korrapati-SaiSree/cs7810-group2/blob/main/Schema_Diagram/Time/Time_Final_Schema.png)
 
 ### Axioms
 
@@ -313,7 +313,7 @@ Every TimeInterval is a subclass of TemporalExtent, representing a span or inter
 
 ## Crash
 
-![image](https://github.com/korrapati-SaiSree/cs7810-group2/blob/main/delivarables/Schema_Diagram/Crash/Crash_Final_Schema.png)
+![Crash](https://github.com/korrapati-SaiSree/cs7810-group2/blob/main/Schema_Diagram/Crash/Crash_Final_Schema.png)
 
 
 
@@ -373,9 +373,39 @@ Every TimeInterval is a subclass of TemporalExtent, representing a span or inter
 * `Crash SubClassOf hasCondition some Condition`<br/>
   Every Crash must have at least one Condition.
 
+9. WeatherCondition → Condition  
+* `WeatherCondition SubClassOf Condition`<br/>
+  Every weather condition is Condition.
+
+10. WeatherCondition → weatherConditionAsString → xsd:string  
+* `WeatherCondition SubClassOf weatherConditionAsString only xsd:string`<br/>
+  WeatherCondition may have weatherConditionAsString, if it does it must be a string.
+* `WeatherCondition SubClassOf weatherConditionAsString some xsd:string`<br/>
+  WeatherCondition must have atleast one weatherConditionAsString and it must be a string.
+
+11. RoadCondition → Condition  
+* `RoadCondition SubClassOf Condition`<br/>
+  Every Road condition is Condition.
+
+8. RoadCondition → roadConditionAsString → xsd:string  
+* `RoadCondition SubClassOf roadConditionAsString only xsd:string`<br/>
+  RoadCondition may have roadConditionAsString, if it does it must be a string.
+* `RoadCondition SubClassOf roadConditionAsString some xsd:string`<br/>
+  RoadCondition must have atleast one roadConditionAsString and it must be a string.
+
+9. LightingCondition → Condition  
+* `LightingCondition SubClassOf Condition`<br/>
+  Every LightingCondition is Condition.
+
+8. LightingCondition → weatherConditionAsString → xsd:string  
+* `LightingCondition SubClassOf lightingConditionAsString only xsd:string`<br/>
+  LightingCondition may have LightingConditionAsString, if it does it must be a string.
+* `LightingCondition SubClassOf lightingConditionAsString some xsd:string`<br/>
+  LightingCondition must have atleast one LightingConditionAsString and it must be a string.
+
 ## Location
 
-![image](https://github.com/korrapati-SaiSree/cs7810-group2/blob/main/delivarables/Schema_Diagram/Location/Location_Final_Schema.png)
+![Location](https://github.com/korrapati-SaiSree/cs7810-group2/blob/main/Schema_Diagram/Location/Location_Final_Schema.png)
 
 
 ### Axioms
@@ -436,7 +466,7 @@ Every TimeInterval is a subclass of TemporalExtent, representing a span or inter
 
 
 ## SocioEconomic Condition
-![image](https://github.com/korrapati-SaiSree/cs7810-group2/blob/main/delivarables/Schema_Diagram/SocioEconomic/socioEconomicCondition_Final_Schema.png)
+![SocioEconomicCondition](https://github.com/korrapati-SaiSree/cs7810-group2/blob/main/Schema_Diagram/SocioEconomic/socioEconomicCondition_Final_Schema.png)
 
 ### Axioms
 
@@ -495,7 +525,7 @@ Every TimeInterval is a subclass of TemporalExtent, representing a span or inter
 
 ## Vehicle
 
-![image](https://github.com/korrapati-SaiSree/cs7810-group2/blob/main/delivarables/Schema_Diagram/Vehicle/Vehicle_Scheme_Final.png)
+![Vehicle](https://github.com/korrapati-SaiSree/cs7810-group2/blob/main/Schema_Diagram/Vehicle/Vehicle_Scheme_Final.png)
 
 
 ### Axioms
