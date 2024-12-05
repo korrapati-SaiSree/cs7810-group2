@@ -4,25 +4,26 @@
 
 ## Use Case Scenario
 ### Narrative 
-The rich minerals on Earth remain a non-renewable resource for humans as they continue to refine the currently available resources to build products from everyday use items to hardware for technological advances. Due to the limited availability of rich minerals, humans will eventually need to branch out from Earth to other planetary bodies for mineral excavations. SOL Of Life plans to support the missions of space exploration and research by providing a tool to query collected data of asteroids within Sol, our solar system. Users of our tool could range anywhere from government entities, researchers, analysts, other space research institutions, and space enthusiasts. 
+With over 1.35 million deaths and countless injuries annually, road crashes have been one of the most critical global concerns that bring financial and psychological hardship. Road accidents continue to happen due to the complex interaction of factors such as driver behavior, environmental circumstances, and socioeconomic inequality, even with technical breakthroughs in vehicles and infrastructure. A Knowledge Graph (KG) can be a game-changer in addressing these problems since it captures the interactions between various factors in a sophisticated and integrated manner.
 
-The available research and data can be cumbersome to navigate through. A knowledge graph is interesting in the case of mining in space because it is an uncharted frontier. There are so many questions that are difficult to answer surrounding the viability and cost. A knowledge graph would provide a method for answering those questions without the need for a specialized analyst to go out and make the various connections themselves from the existing research and data.
+By offering a structured, semantic framework for crash data analysis, the Road Crashes Knowledge Graph seeks to assist stakeholders including emergency responders, urban planners, transportation agencies, researchers, and insurance. The KG helps stakeholders find trends and obtain useful insights by displaying things like drivers, road conditions, weather, and socioeconomic aspects, as well as the connections between them. For instance, it can show how socioeconomic inequality affects crash frequency or how weather and EMS response times affect survival rates.
 
-Our focus is on asteroids that can be found within approximately 2AU of Earth because of their potential for containing valuable minerals and a wealth of existing data. As defined by NASA, an asteroid exists as a space rock that orbits the sun with a size between 10 meters and 530 kilometers. 
+Unlike other conventional relational databases, a KG can easily represent and query complex relationships. A KG represents the dynamic, interconnected character of crash data, whereas tabular data models are limited to static and linear representations. Its powerful querying capabilities enable the detection of hidden patterns and trends, while its schema-less structure lets it adapt to new kinds of data and relationships as they develop. Due to this, it can be considered the ideal tool to address the complex nature of road traffic accidents and design effective treatments.
 
-Open source data provided by researchers and institutions such as Neil deGrasse Tyson, NASA, and Space Force, can be re-purposed into a knowledge graph to provide insight into excavation missions. With all of the data gathered together, the knowledge graph helps to filter the information into a readable state. Data that includes celestial body mineralogy predicted from infrared readings combined with data of the body’s trajectory path could be used together for humans to plan space missions in order to send out spacecrafts for mining expeditions. We also hope to serve humans of Planet Earth against celestial bodies that may be on a course for impact into the planet.  
+Because it incorporates elements that are frequently disregarded in current models, such as inadequate road maintenance, socioeconomic circumstances, and driver distractions, this initiative is both innovative and timely. The KG offers a thorough viewpoint by integrating these less obvious reasons with more conventional elements like the weather and vehicle conditions. This all-encompassing strategy might greatly improve road safety programs, lower the number of fatalities, and guide the development of life-saving and transportation-improving laws globally.
 
 ### Competency Questions
-1. What are the top 5 most frequently occuring minerals within 1.5 astronomical units from Earth in 2024?
-2. What are the top 3 most occuring asteroid types within 1.5au from Earth in 2025?
-3. Which is the closest asteroid to Earth in the next 24 months and when does that occur?
-4. What are the 5 closest asteroids that may contain iron?
-5. What are the 3 most potentially profitable asteroids within 0.75au of Earth in 2024?  
-6. When will 162173 Ryugu be within 1au of Earth?
-7. How long will 162173 Ryugu be within 1au of Earth?
-8. Based on current trajectory of 162173 Ryugu, how far from Earth will 162173 Ryugu be in 8 months?
-9. How much time is available until the 162173 Ryugu is within 1au of Earth?
-10. Which asteroid is the first to come within 0.5au of Earth that contains iron?
+1. How do different types of collisions (like head-on or rear-end) and seat positions affect fatality rates?
+2. What patterns can be seen between weather conditions, seasons, and the chances of fatalities in crashes?
+3. How do EMS response times (from being notified to arriving at the crash site and transporting to a hospital) affect survival rates?
+4. How does driver impairment (from alcohol, drugs, or fatigue) impact crash rates?
+5. Which drivers involved in crashes have a history of prior accidents, Driving While Intoxicated (DWI) offenses, or speeding violations, and how do their past records compare?
+6. How do a driver's license status and type relate to the rate of crashes?
+7. How do specific road conditions affect the likelihood and severity of crashes?
+8. How do a state's income levels influence the rate of crashes?
+9. How do driver attributes such as age, sex, weight, and height impact the severity of injuries sustained in road crashes?
+10. How does the speed of the vehicle and age of the occupant during the crash relate to the Fatality?
+
 
 ### Integrated Datasets
 Source: [Asterrank](https://www.asterank.com/)
