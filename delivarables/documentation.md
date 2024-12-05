@@ -26,32 +26,20 @@ Because it incorporates elements that are frequently disregarded in current mode
 
 
 ### Integrated Datasets
-Source: [Asterrank](https://www.asterank.com/)
-- Asterank is built atop Nasa's Small Body Database to provide asteroid orbital data as well as estimates for asteroid value and distance metrics.  SOL of Life will contain a subset of Asterrank's data focusing on asteroid worth and distance metrics.
-
-Source:  [Asteroid Spectral Types](https://en.wikipedia.org/wiki/Asteroid_spectral_types)
-- Overview of the various Asteroid SMASSII classes and their properties.
-
-Source: [MP3C](https://mp3c.oca.eu/)
-- Similar to the Nasa-JPL Small Body Database, MP3C Asteroid Database also serves as a source for physcial and orbital data on asteroids.  MP3C's database is maintained by the Observatoire de la Côte d'Azur and includes measurements and observations on the orbital and physical properties of asteroids.  SOL of Life will utilize the MP3C's database as a secondary source for orbital data on asteroids.  
-
-Source:  [Nasa-JPL: SBDB](https://ssd.jpl.nasa.gov/tools/sbdb_query.html)  
-- Nasa-JPL Small Body Database (SBDB) serves as a well established and primary source for data on asteroids as well as other "small bodies".  The SBDB includes extensive information on orbital, physical, and historical properties.  SOL of Life will utilize the SBDB for data relating to orbital properties for asteroids.  
-
-Source:  [Sky Live](https://theskylive.com/)
-- Historical and Predictive measurements of celestial bodies given their orbital trajectory can be recorded from the Sky Live tool.
-
+Source: Fatality Analysis Reporting System(FARS) : https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars
+Source: census data for socioeconomic conditions: https://www.census.gov/
 
 ## Modules
 <!-- There should be one module section per module (essentially per key-notion) -->
 
-### Asteroid
-**Source Pattern:** SOSA Feature of Interest  
+### Crash
+**Source Pattern:** Event Pattern from MODL. 
 **Source Data:** Asterank, MP3C, NASA_JPL  
 
 #### Description
-The domain of space objects are broken into three subcategories: Artificial Space Objects, Space Weather Phenomena, and Natural Space Objects.  Asteroids exist as a Natural Space Object where object can be further defined as a material object.  An Asteroid is represented by NASA as an object that orbits the sun of the Sol Solar System measuring 33 feet (10 meters) to 329 miles (530 kilometers).  For the SOL of Life, the only celestial body to be concerned with is Asteroid; therefore, the derived understanding begins with an OWL Thing consisting of multiple properties; such as, labeled naming conventions and quantitative measurable components of velocity, semi-major axis, and minimum orbit intersection distance.  Researchers have also predicted properties that benefit exomining operations such as the average profit gained after a mining excavation with consideration of the available valuable materials.  A subsumption is made for Asteroids into Near-Earth Asteroids when their semi-major axis measurement is within a threshold.  The SOSA pattern best reflects the usage of SOL of Life's knowledge graph with respect to the layer of Observations. Asteroids can be represented as a Feature of Interest with a Observations, a Classification, and a Distance Record.  
-![Asteroid](../schema-diagrams/asteroid/asteroid.jpg)  
+The Crash Event is the focal point of the entire knowledge graph. Every piece of data—whether it's about driver behavior, vehicle condition, or road infrastructure—ultimately ties back to the crash event. Modeling a crash event allows us to ask critical questions like "What caused this crash?", "Where and when did it happen?", and "Who was involved?". Understanding each crash as a distinct event with its own unique set of contributing factors is essential to uncover patterns in road accidents, identify high-risk conditions, and develop preventive measures.
+![image](https://github.com/user-attachments/assets/de6e6fd3-dcae-448b-b353-e656679e51a2)
+
 
 #### Axioms
 1. * `Asteroid SubClassOf FeatureOfInterest` <br />
