@@ -174,7 +174,8 @@ ORDER BY DESC(?totalCrash)
 ```
 
 **Results:**
-![image](https://github.com/user-attachments/assets/e2192d4f-0308-45dd-8ac5-eb5e58001790)
+![image](https://github.com/user-attachments/assets/ed838b3c-e8a9-49ca-9df2-4c941ffbb3f4)
+
 
 
 ## Drivers with Prior Records
@@ -216,11 +217,11 @@ WHERE {
 }
 ORDER BY DESC(?prevAccidents) DESC(?prevDWI) DESC(?prevSpeeding)
 limit 10
-}
+
 ```
 
 **Results:**
-![image](https://github.com/user-attachments/assets/03b93603-a213-495e-8da8-52a8f25430c8)
+![image](https://github.com/user-attachments/assets/d4f6082f-1652-4f6d-9726-1c8f2259052d)
 
 
 ## License Status Crash Rate
@@ -255,7 +256,8 @@ ORDER BY DESC(?totalCrash)
 ```
 
 **Results:**
-![image](https://github.com/user-attachments/assets/69a53f77-1662-4c0c-8229-dd682a50490a)
+![image](https://github.com/user-attachments/assets/467bbe98-3f9b-4295-aacc-6a3c324d852b)
+
 
 
 ## Road Condition Impact
@@ -288,7 +290,8 @@ ORDER BY DESC(?crashCount)
 ```
 
 **Results:**
-![image](https://github.com/user-attachments/assets/2da2ab3d-bc84-4d75-bf62-ba556b92ac41)
+![image](https://github.com/user-attachments/assets/9335a075-139c-441e-9254-23ac17ebeb75)
+
 
 
 ## Socioeconomic Impact on Crashes
@@ -326,7 +329,8 @@ ORDER BY DESC(?medianIncomeAsDecimal)
 ```
 
 **Results:**
-![image](https://github.com/user-attachments/assets/c234d1cf-05e3-49c2-8bab-e157f1a535e4)
+![image](https://github.com/user-attachments/assets/cd8e0605-1315-42b3-9012-92ea20cf1aea)
+
 
 
 ## Driver Attributes and Injuries
@@ -378,7 +382,8 @@ ORDER BY DESC(?driverCount)
 ```
 
 **Results:**
-![image](https://github.com/user-attachments/assets/4de78b4e-e4f3-4ad8-9729-f588869e9540)
+![image](https://github.com/user-attachments/assets/aa6f49a1-c58f-491e-86c8-6beb0b474023)
+
 
 ## Speed and Fatalities
 **Competency Question:** "How does the speed of the vehicle and age of the occupant during the crash relate to the Fatality?"
@@ -422,7 +427,4 @@ ORDER BY DESC(?FatalityCount)
 ```
 
 **Results:**
-![image](https://github.com/user-attachments/assets/0f624fad-7f0f-41ba-93c3-e25920460dd9)
-
-
-
+![image](https://github.com/user-attachments/assets/8a6b0dc7-85a6-4cbe-b42e-d16b6d7e09fb)
