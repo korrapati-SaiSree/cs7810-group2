@@ -40,192 +40,68 @@ Source: census data for socioeconomic conditions: https://www.census.gov/
 The Crash Event is the focal point of the entire knowledge graph. Every piece of data—whether it's about driver behavior, vehicle condition, or road infrastructure—ultimately ties back to the crash event. Modeling a crash event allows us to ask critical questions like "What caused this crash?", "Where and when did it happen?", and "Who was involved?". Understanding each crash as a distinct event with its own unique set of contributing factors is essential to uncover patterns in road accidents, identify high-risk conditions, and develop preventive measures.
 ![image](https://github.com/user-attachments/assets/de6e6fd3-dcae-448b-b353-e656679e51a2)
 
+### Axioms
 
-#### Axioms
-1. * `Asteroid SubClassOf FeatureOfInterest` <br />
-Every Asteroid is a Feature of Interest.
-2. * `NearEarthAsteroid SubClassOf Asteroid` <br />
-Every NearEarthAsteroid is an Asteroid.
-3. * `Asteroid SubClassOf hasNumericID only xsd:int` <br />
-The scoped range of hasNumericID, scoped by Asteroid, is an xsd:integer.
-4. * `Asteroid SubClassOf hasNumericID exactly 1 xsd:int` <br />
-Every Asteroid has exactly 1 Numeric ID. 
-5. * `Asteroid SubClassOf hasCommonName only rdfs:Literal` <br />
-The scoped range of hasCommonName, scoped by Asteroid, is an rdfs:Literal
-6. * `Asteroid SubClassOf hasCommonName max 1 rdfs:Literal` <br />
-Every Asteroid has at maximum 1 Common Name. 
-7. * `Asteroid SubClassOf hasDiscoveryName only rdfs:Literal` <br />
-The scoped range of hasDiscoveryName, scoped by Asteroid, is an rdfs:Literal
-8. * `Asteroid SubClassOf hasDiscoveryName exactly 1 rdfs:Literal` <br />
-Every Asteroid has exactly 1 Discovery Name.
-9. * `Asteroid SubClassOf hasAsteroidClassification only AsteroidClassification` <br />
-The scoped range of hasAsteroidClassification, scoped by Asteroid, is AsteroidClassification
-10. * `Asteroid SubClassOf hasAsteroidClassification exactly 1 AsteroidClassification` <br />
-Every Asteroid has exactly 1 AsteroidClassification.
-11. * `Asteroid SubClassOf hasDistanceRecord only DistanceRecord` <br />
-The scoped range of hasDistanceRecord, scoped by Asteroid, is DistanceRecord
-12. * `Asteroid SubClassOf hasDistanceRecord min 0 DistanceRecord` <br />
-Every Asteroid has at minimum 0 DistanceRecord.
-13. * `Asteroid SubClassOf hasObservation only Observation` <br />
-The scoped range of hasObservation, scoped by Asteroid, is Observation
-14. * `Asteroid SubClassOf hasObservation min 1 Observation` <br />
-Every Asteroid has at minimum 1 Observation.
+1. Crash → hasTemporalExtent → TemporalExtent  
+* `owl:Thing SubClassOf hasTemporalExtent only TemporalExtent`<br/>
+  The range of the property hasTemporalExtent must belong to the class TemporalExtent.  
+* `Crash SubClassOf hasTemporalExtent exactly 1 TemporalExtent`<br/> 
+  Every Crash must have exactly one associated temporal extent.
+
+2. Crash → occurredAt → Location  
+* `Crash SubClassOf occurredAt only Location`<br/> 
+  The range of the property occurredAt must belong to the class Location.  
+* `Crash SubClassOf occurredAt exactly 1 Location`<br/>
+  Every Crash must occur at exactly one location.
+
+3. Crash → hasTotalFatalities → xsd:integer  
+* `Crash SubClassOf hasTotalFatalities only xsd:integer`<br/>
+  The range of the property hasTotalFatalities must be an integer.  
+* `Crash SubClassOf hasTotalFatalities min 0 xsd:integer`<br/>
+  Every Crash may have an associated integer value representing total fatalities.
+
+4. Crash → hasTotalPeopleInvolved → xsd:integer  
+* `Crash SubClassOf hasTotalPeopleInvolved only xsd:integer`<br/> 
+  The range of the property hasTotalPeopleInvolved must be an integer.  
+* `Crash SubClassOf hasTotalPeopleInvolved some xsd:integer`<br/>
+  Every Crash must have an associated integer value representing total people involved.
+
+4. Crash → hasTotalVehiclesInvolved → xsd:integer
+* `Crash SubClassOf hasTotalVehiclesInvolved only xsd:integer` <br/>
+  The range of the property hasTotalVehiclesInvolved must be an integer.  
+* `Crash SubClassOf hasTotalVehiclesInvolved some xsd:integer` <br/>
+  Every Crash must have an associated integer value representing total vehicles.
+
+5. Crash → hasParticipant → Participant  
+* `Crash SubClassOf hasParticipant only Participant`<br/> 
+  The range of the property hasParticipant must belong to the class Participant.  
+* `Crash SubClassOf hasParticipant some Participant`<br>
+  Every Crash must have at least one associated Participant.
+
+6. Crash → isNearWorkZone → xsd:string  
+* `Crash SubClassOf isNearWorkZone only xsd:string`<br/>
+  The value of the property isNearWorkZone must be a string.
+* `Crash SubClassOf isNearWorkZone some xsd:string`<br/>
+  Crash must have atleast one isNearWorkZone and it must be a string.
+
+7. Crash → occurredInIntersection → xsd:string  
+* `Crash SubClassOf occurredInIntersection only xsd:string`<br/>
+  The value of the property occurredInIntersection must be a string.
+* `Crash SubClassOf occurredInIntersection some xsd:string`<br/>
+  Crash must have atleast one occurredInIntersection and it must be a string.
+
+8. Crash → hasCondition → Condition  
+* `Crash SubClassOf hasCondition only Condition`<br/>
+  The condition of any Crash must be of type Condition.
+* `Crash SubClassOf hasCondition some Condition`<br/>
+  Every Crash must have at least one Condition.
+
 
 ### Asteroid Classification
 **Source Pattern:** No Source Pattern  
 **Source Data:** Asterank, Asteroid Spectral Types  
 
-#### Description
-The derived elemental composition of an Asteroid is a prediction based from infrared readings, as traveling to each individual asteroid remains an unrealistic task. As such, infrared reflections and readings are compared for similarities against known Earth elements and denote the components from the Asteroid's surface. The infrared data has been collected to formulate classifications among clusters of all asteroids for similarities of readings. The infrared readings and cluster family of similar asteroids result in a SMASSII classification which can be represented as a label. For our use case, we're only interested in the asteroid type as a label and decided to disregard the initial observation that lead to the classification.  
-![Asteroid Classification](../schema-diagrams/asteroid-classification/asteroid-classification.jpg)
 
-#### Axioms
-1. * `AsteroidClassification SubClassOf EntityWithProvenance` <br />
-Every AsteroidClassification is an Entity With Provenance .
-2. * `AsteroidClassification SubClassOf hasSMASSIIClass only SMASSIIClass` <br />
-The scoped range of hasSMASSIIClass, scoped by AsteroidClassification, is SMASSIIClass.
-3. * `AsteroidClassification SubClassOf hasSMASSIIClass exactly 1 SMASSIIClass` <br />
-Every AsteroidClassification has exactly 1 SMASSII Class.
-4. * `ElementalComposition SubClassOf derivesFrom min 1 SMASSIIClass` <br />
-Every ElementalComposition is derived from at minimum 1 SMASSII Class.
-5. * `ElementalComposition SubClassOf hasElement only dbo:ChemicalElement` <br />
-The scoped range of hasElement, scoped by ElementalComposition, is dbo:ChemicalElement.
-6. * `ElementalComposition SubClassOf hasElement min 1 dbo:ChemicalElement` <br />
-Every ElementalComposition has at minimum 1 Element.
-7. * `SMASSIIClass SubClassOf hasElementalComposition only ElementalComposition` <br />
-The scoped range of hasElementalComposition, scoped by SMASSIIClass, is ElementalComposition.
-8. * `SMASSIIClass SubClassOf hasElementalComposition exactly 1 ElementalComposition` <br />
-Every SMASSIIClass has exactly 1 ElementalComposition.
-9. * `SMASSIIClass SubClassOf hasLabel only rdfs:Literal` <br />
-The scoped range of hasLabel, scoped by SMASSIIClass, is an rdfs:Literal.
-10. * `SMASSIIClass SubClassOf hasLabel exactly 1 rdfs:Literal` <br />
-Every SMASSIIClass has exactly 1 Label.
-
-### Distance Record
-**Source Pattern:** MODL's Record  
-**Source Data:** SkyLive  
-
-#### Description
-The end-goal of SOL of Life is to provide insight at a specific point of time for whether an Asteroid is within a means of distance for exomining companies to travel to for mineral extraction operations. As such, the spatial coordinates of an Asteroid is less important than the actual distance from Earth, which acts as a baseline for exomining operations. We used the Record pattern for distance from Earth because it accounts for some Event that occurs at a specific point in time. For our ontology, the Event is simplified as a result for a quantifiable metric for distance from Earth.  
-![Distance Record](../schema-diagrams/distance-record/distance-record.jpg)
-
-#### Axioms
-1. * `DistanceRecord SubClassOf EntityWithProvenance` <br />
-Every DistanceRecord is an Entity With Provenance.
-2. * `DistanceRecord SubClassOf hasResult exactly 1 Result` <br />
-Every DistanceRecord has exactly 1 Result.
-3. * `DistanceRecord SubClassOf hasTemporalExtent only TemporalExtent` <br />
-The scoped range of hasTemporalExtent, scoped by DistanceRecord, is TemporalExtent.
-4. * `DistanceRecord SubClassOf hasTemporalExtent exactly 1 TemporalExtent` <br />
-Every DistanceRecord has exactly 1 Temporal Extent.
-5. * `TemporalExtent SubClassOf recordedAt only xsd:dateTime` <br />
-The scoped range of recordedAt, scoped by TemporalExtent, is an xsd:date.  
-6. * `TemporalExtent SubClassOf recordedAt exactly 1 xsd:dateTime` <br />
-Every TemporalExtent has exactly 1 xsd:date.  
-
-### Entity With Provenance
-**Source Pattern:** MODL's Entity With Provenance  
-**Source Data:** Asterank, MP3C, NASA_JPL, Skylive
-
-#### Description
-Attributes of asteroids can fit into the Entity With Provenance pattern provided by MODL. Most of our data is gathered by experts in astronomy, such as NASA and MP3C. Using this pattern allows for our end users to trace our data back to a source and the agent or organization that performed the data collection.  
-![Entity With Provenance](../schema-diagrams/entity-with-provenance/entity-with-provenance.jpg)
-
-#### Axioms
-1. * `EntityWithProvenance SubClassOf generatedBy only ProvenanceActivity` <br />
-The scoped range of generatedBy, scoped by EntityWithProvenance, is ProvenanceActivity.
-2. * `EntityWithProvenance SubClassOf generatedBy exactly 1 ProvenanceActivity` <br />
-Every EntityWithProvenance is generated by exactly 1 Provenance Activity.
-3. * `EntityWithProvenance SubClassOf attributedTo only Agent` <br />
-The scoped range of attributedTo, scoped by EntityWithProvenance, is Agent.
-4. * `EntityWithProvenance SubClassOf attributedTo exactly 1 Agent` <br />
-Every EntityWithProvenance is attributed to by exactly 1 Agent.
-5. * `ProvenanceActivity SubClassOf performedBy only Agent` <br />
-The scoped range of performedBy, scoped by ProvenanceActivity, is Agent.
-6. * `ProvenanceActivity SubClassOf performedBy exactly 1 Agent` <br />
-Every ProvenanceActivity is performed by exactly 1 Agent.
-7. *  `ProvenanceActivity SubClassOf hasDescription only xsd:string` <br />
-The scoped range of hasDescription, scoped by ProvenanceActivity, is an xsd:string.
-8. *  `ProvenanceActivity SubClassOf hasDescription exactly 1 xsd:string` <br />
-Every ProvenanceActivity has exactly 1 Description.
-9. *  `Agent SubClassOf hasName only xsd:string` <br />
-The scoped range of hasName, scoped by Agent, is an xsd:string.
-10. *  `Agent SubClassOf hasName exactly 1 xsd:string` <br />
-Every Agent has exactly 1 Name.
-
-### Observation
-**Source Pattern:** SOSA Observation  
-**Source Data:** Asterank, MP3C, NASA_JPL  
-
-#### Description
-Data that describes Asteroids can be represented as Observations from the SOSA pattern which consists of the property that describes the observation along with the quantifiable value. The description of the property follows SOSA's ObservableProperty pattern, and the value follows the aforementioned Result pattern.  With that in mind, the measurable data; such as, mass, value, and velocity are represented as an instance of an Observation.  
-![Observation](../schema-diagrams/observation/observation.jpg)  
-
-#### Axioms
-1. * `Observation SubClassOf hasFeatureOfInterest only Asteroid` <br />
-The scoped range of hasFeatureOfInterest, scoped by Observation, is Asteroid.
-2. * `Observation SubClassOf hasFeatureOfInterest exactly 1 Asteroid` <br />
-Every Observation has exactly 1 Feature of Interest, which is an Asteroid.
-3. * `Observation SubClassOf hasObservableProperty only ObservableProperty` <br />
-The scoped range of hasObservableProperty, scoped by Observation, is ObservableProperty.
-4. * `Observation SubClassOf hasObservableProperty exactly 1 ObservableProperty` <br />
-Every Observation has exactly 1 ObservableProperty.
-5. * `Observation SubClassOf hasResult exactly 1 Result` <br />
-Every Observation has exactly 1 Result.
-6. * `Observation SubClassOf EntityWithProvenance` <br />
-Every Observation is an Entity With Provenance.
-7. * `EconomicProperty SubClassOf ObservableProperty` <br />
-Every EconomicProperty is an Observable Property.
-8. * `OrbitalProperty SubClassOf ObservableProperty` <br />
-Every OrbitalProperty is an Observable Property.
-9. * `PhysicalProperty SubClassOf ObservableProperty` <br />
-Every PhysicalProperty is an Observable Property.
-
-### Result
-**Source Pattern:** MODL's Result and Quantity  
-**Source Data:** Asterank, MP3C, NASA_JPL  
-
-#### Description
-A Result pattern is used to describe the quantifiable values in the properties of an Asteroid. In our case, the Result notion has a Quantity associated with it, which is a pattern in MODL. A Quantity consists of a Quantity Kind, which is the description indicating the Result's usage, along with the quantifiable value and unit of measurement. Similarly to how controlled vocabularies are used in the Enslaved Ontology, we implement them as a means of scalability of our ontology. They are considered to be separate from the actual ontology yet complement it. A Quantity Kind as controlled vocabulary can consist of, but is not limited to mass, distance from Earth, and velocity. A Unit as controlled vocabulary can consist of, but is not limited to km/s, kg, and AU.  
-![Result](../schema-diagrams/result/result.jpg)
-
-#### Axioms
-1. *  `Quantity SubClassOf hasQuantityValue only QuantityValue` <br />
-The scoped range of hasQuantityValue, scoped by Quantity, is QuantityValue.
-2. *  `Quantity SubClassOf hasQuantityKind only QuantityKind` <br />
-The scoped range of hasQuantityKind, scoped by Quantity, is QuantityKind.
-3. *  `Quantity SubClassOf hasQuantityKind exactly 1 QuantityKind` <br />
-Every Quantity has exactly 1 Quantity Kind.
-4. *  `Result SubClassOf hasQuantity only Quantity` <br />
-The scoped range of hasQuantity, scoped by Result, is Quantity.
-5. *  `Quantity SubClassOf hasQuantityValue exactly 1 QuantityValue` <br />
-Every Quantity has exactly 1 Quantity Value.
-6. *  `Result SubClassOf hasQuantity exactly 1 Quantity` <br />
-Every Result has exactly 1 Quantity.
-7. *  `QuantityValue SubClassOf hasNumericValue only xsd:double` <br />
-The scoped range of hasNumericValue, scoped by QuantityValue, is an xsd:double.
-8. *  `QuantityValue SubClassOf hasNumericValue exactly 1 xsd:double` <br />
-Every QuantityValue has exactly 1 Numeric Value.
-9. *  `QuantityValue SubClassOf hasUnit only Unit` <br />
-The scoped range of hasUnit, scoped by QuantityValue, is Unit.
-10. *  `QuantityValue SubClassOf hasUnit exactly 1 Unit` <br />
-Every QuantityValue has exactly 1 Unit.
-11. *  `Result SubClassOf  inverse (hasResult) exactly 1 (Observation or DistanceRecord)` <br />
-Every Result belongs to exactly 1 Observation or DistanceRecord.
-
-#### Remarks
-* A result can be associated with a DistanceRecord or an Observation
-
-## The Overall Knowledge Graph
-### Namespaces
-* @base <http://www.soloflife.org> .
-* @prefix sol-ont: <http://soloflife.org/lod/ontology/> .
-* @prefix sol-qk: <http://soloflife.org/lod/quantitykinds> .
-* @prefix sol-unit: <http://soloflife.org/lod/units> .
-* @prefix solr: <http://soloflife.org/lod/resource/> .
-
-### All-Together
-![image](../schema-diagrams/all-together/all-together.jpg)
 
 # Materialization
 The following directory contains all scripts used throughout the triplification of datasets and the materialization of the knowledge graph.  Triplification is done separately for each dataset used.
