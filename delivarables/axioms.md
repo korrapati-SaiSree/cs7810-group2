@@ -146,53 +146,53 @@
 ### Axioms
 
 1. Person → hasGender → xsd:string
-* Person SubClassOf hasGender exactly 1 xsd:string<br/>  
+* Person SubClassOf hasGender exactly 1 xsd:string<br/>
   Every Person must have exactly one associated gender, represented as a string.
-* Person SubClassOf hasGender only xsd:string<br/> 
+* Person SubClassOf hasGender only xsd:string<br/>
   Every Person may have a hasGender property, and if it exists, it must be a string.
 
 2. Person → hasAge → xsd:integer
-* Person SubClassOf hasAge exactly 1 xsd:integer<br/>  
+* Person SubClassOf hasAge exactly 1 xsd:integer<br/>
   Every Person must have exactly one associated age, represented as an integer.
 * Person SubClassOf hasAge only xsd:integer<br/>
   Every Person may have a hasAge property, and if it exists, it must be an integer.
 
 3. Person → performsPersonInCrash → PersonInCrash
-* Person SubClassOf performsPersonInCrash some PersonInCrash<br/>  
+* Person SubClassOf performsPersonInCrash some PersonInCrash<br/>
   Every Person must perform at least one PersonInCrash in the context of a crash.
-* Person SubClassOf performsPersonInCrash only PersonInCrash<br/> 
+* Person SubClassOf performsPersonInCrash only PersonInCrash<br/>
   Every Person may have a performsPersonInCrash property, and if it exists, it must be an instance of PersonInCrash.
 
 4. Crash → providesPersonInCrash → PersonInCrash
-* Crash SubClassOf providesPersonInCrash some PersonInCrash<br/> 
+* Crash SubClassOf providesPersonInCrash some PersonInCrash<br/>
   Every Crash must provide at least one PersonInCrash role.
-* Crash SubClassOf providesPersonInCrash only PersonInCrash<br/> 
+* Crash SubClassOf providesPersonInCrash only PersonInCrash<br/>
   Every Crash may have a providesPersonInCrash property, and if it exists, it must be an instance of PersonInCrash.
 
 5. PersonInCrash → hasInjurySeverity → InjurySeverity
-* PersonInCrash SubClassOf hasInjurySeverity some InjurySeverity<br/> 
+* PersonInCrash SubClassOf hasInjurySeverity some InjurySeverity<br/>
   Every PersonInCrash must have at least one associated InjurySeverity.
-* PersonInCrash SubClassOf hasInjurySeverity only InjurySeverity<br/>  
+* PersonInCrash SubClassOf hasInjurySeverity only InjurySeverity<br/>
   Every PersonInCrash may have a hasInjurySeverity property, and if it exists, it must be an instance of InjurySeverity.
 
 6. PersonInCrash → hasLagTime → TemporalExtent  
-* PersonInCrash SubClassOf hasLagTime min 0 TemporalExtent<br/>  
+* PersonInCrash SubClassOf hasLagTime min 0 TemporalExtent<br/>
   Every PersonInCrash may have associated TemporalExtent representing the lag time between the crash and the fatality.  
-* PersonInCrash SubClassOf hasLagTime only TemporalExtent<br/>  
+* PersonInCrash SubClassOf hasLagTime only TemporalExtent<br/>
   Every PersonInCrash may have the relation hasLagTime; if it does, it must be an instance of TemporalExtent.
 
 7. NonOccupant → PersonInCrash
-* NonOccupant SubClassOf PersonInCrash<br/> 
+* NonOccupant SubClassOf PersonInCrash<br/>
   Every NonOccupant is a subclass of PersonInCrash.
 
 8. NonOccupant → locationDuringCrash → xsd:string
-* NonOccupant SubClassOf locationDuringCrash exactly 1 xsd:string<br/>  
+* NonOccupant SubClassOf locationDuringCrash exactly 1 xsd:string<br/> 
   Every NonOccupant must have exactly one associated location during the crash, represented as a string.
-* NonOccupant SubClassOf locationDuringCrash only xsd:string<br/>  
+* NonOccupant SubClassOf locationDuringCrash only xsd:string<br/>
   Every NonOccupant may have a locationDuringCrash property, and if it exists, it must be a string.
 
 9. Pedestrian → NonOccupant
-* Pedestrian SubClassOf NonOccupant<br/> 
+* Pedestrian SubClassOf NonOccupant<br/>
 Every Pedestrian is a subclass of NonOccupant.
 
 10. Cyclist → NonOccupant
@@ -200,7 +200,7 @@ Every Pedestrian is a subclass of NonOccupant.
   Every Cyclist is a subclass of NonOccupant.
 
 11. Other/PersonalConveyance → NonOccupant
-* Other/PersonalConveyance SubClassOf NonOccupant<br/>  
+* Other/PersonalConveyance SubClassOf NonOccupant<br/>
   Every Other/PersonalConveyance is a subclass of NonOccupant.
 
 12. Occupant → PersonInCrash
@@ -208,35 +208,35 @@ Every Pedestrian is a subclass of NonOccupant.
   Every Occupant is a subclass of PersonInCrash.
 
 13. Occupant → seatPosition → xsd:string
-* Occupant SubClassOf seatPosition exactly 1 xsd:string<br/>  
+* Occupant SubClassOf seatPosition exactly 1 xsd:string<br/>
   Every Occupant must have exactly one associated seat position, represented as a string.
 * Occupant SubClassOf seatPosition only xsd:string  
   Every Occupant may have a seatPosition property, and if it exists, it must be a string.
 
 14. Occupant → safetyRestraintUsed → xsd:string
-* Occupant SubClassOf safetyRestraintUsed exactly 1 xsd:string<br/>  
+* Occupant SubClassOf safetyRestraintUsed exactly 1 xsd:string<br/>
   Every Occupant must have exactly one associated safety restraint used, represented as a string.
-* Occupant SubClassOf safetyRestraintUsed only xsd:string<br/>  
+* Occupant SubClassOf safetyRestraintUsed only xsd:string<br/>
   Every Occupant may have a safetyRestraintUsed property, and if it exists, it must be a string.
 
 15. Occupant → hasAirbagDeployed → xsd:boolean
-* Occupant SubClassOf hasAirbagDeployed exactly 1 xsd:boolean<br/>  
+* Occupant SubClassOf hasAirbagDeployed exactly 1 xsd:boolean<br/>
   Every Occupant must have exactly one associated boolean value indicating whether an airbag was deployed.
-* Occupant SubClassOf hasAirbagDeployed only xsd:boolean<br/>  
+* Occupant SubClassOf hasAirbagDeployed only xsd:boolean<br/>
   Every Occupant may have a hasAirbagDeployed property, and if it exists, it must be a boolean.
 
 16. Occupant → hasEjectionStatus → xsd:string
-* Occupant SubClassOf hasEjectionStatus exactly 1 xsd:string<br/> 
+* Occupant SubClassOf hasEjectionStatus exactly 1 xsd:string<br/>
   Every Occupant must have exactly one associated ejection status, represented as a string.
-* Occupant SubClassOf hasEjectionStatus only xsd:string<br/>  
+* Occupant SubClassOf hasEjectionStatus only xsd:string<br/>
   Every Occupant may have a hasEjectionStatus property, and if it exists, it must be a string.
 
 17. Driver → Occupant
-* Driver SubClassOf Occupant<br/>  
+* Driver SubClassOf Occupant<br/>
   Every Driver is a subclass of Occupant.
 
-18. Passenger → Occupant<br/>
-* Passenger SubClassOf Occupant  
+18. Passenger → Occupant
+* Passenger SubClassOf Occupant<br/>
 Every Passenger is a subclass of Occupant.
 
 
@@ -449,9 +449,9 @@ Every TimeInterval is a subclass of TemporalExtent, representing a span or inter
   Every EmploymentRate is SocioEconomicCondition
 
 6.EmploymentRate → employmentRateAsDecimal → xsd:decimal  
-* EmploymentRate SubClassOf employmentRateAsDecimal only xsd:decimal<br /> 
+* EmploymentRate SubClassOf employmentRateAsDecimal only xsd:decimal<br/> 
   Every EmploymentRate can only have employmentRateAsString values of type xsd:decimal.
-* EmploymentRate SubClassOf employmentRateAsDecimal some xsd:decimal<br />  
+* EmploymentRate SubClassOf employmentRateAsDecimal some xsd:decimal<br/>
   Every EmploymentRate must have employmentRateAsString values of type xsd:decimal.
 
 7. PopulationDensity → SocioEconomicCondition   
