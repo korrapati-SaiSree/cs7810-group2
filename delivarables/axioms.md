@@ -1,6 +1,6 @@
 # Road Crashes Ontology
 
-![Road Crashes all together](https://github.com/korrapati-SaiSree/cs7810-group2/blob/main/delivarables/scehmaDiagrams_Final/allTogether/allTogether.png)
+![Road Crashes all together](https://github.com/korrapati-SaiSree/cs7810-group2/blob/main/delivarables/Schema_Diagram/All_Together/All_Together_Final_Schema.png)
 
 ## Driver Condition
 
