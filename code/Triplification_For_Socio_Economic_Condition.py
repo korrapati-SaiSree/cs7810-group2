@@ -4,7 +4,7 @@ from rdflib import URIRef
 from helper.init_kg import init_kg, add_literal_property, add_object_property, add_subclass_property, sanitize_label, pfs
 
 # Paths
-data_path = "./code/data_processing/dataset/"
+data_path = "./dataset/"
 output_path = "./output/"
 os.makedirs(output_path, exist_ok=True)
 

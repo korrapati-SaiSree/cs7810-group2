@@ -4,7 +4,7 @@ from rdflib import URIRef
 from helper.init_kg import init_kg, add_literal_property, add_object_property, add_subclass_property, pfs
 
 # Paths
-data_path = "./code/data_processing/dataset/"
+data_path = "./dataset/"
 output_path = "./output/"
 os.makedirs(output_path, exist_ok=True)
 
@@ -33,8 +33,8 @@ for _,row in person_data.iterrows():
     add_object_property(graph,crash_uri,pfs['rc-ont']['providesPersonInCrash'],person_in_crash_uri)
     add_literal_property(graph,person_in_crash_uri,pfs['rc-ont']['hasInjurySeverity'],row['INJ_SEVNAME'],pfs["xsd"].string)
     
-    lag_time_uri = URIRef(pfs['rc-res'][f"LagTime_{crash_id}_{row['VEH_NO']}_{row['PER_NO']}"])
-    graph.add((lag_time_uri,a,pfs['rc-ont']['LagTime']))
+    lag_time_uri = URIRef(pfs['rc-res'][f"PointInTime_LagTime_{crash_id}_{row['VEH_NO']}_{row['PER_NO']}"])
+    graph.add((lag_time_uri,a,pfs['rc-ont']['PointInTime']))
     add_object_property(graph,person_in_crash_uri,pfs['rc-ont']['hasLagTime'],lag_time_uri)
     add_literal_property(graph,lag_time_uri,pfs['rc-ont']['inHours'],row['LAG_HRSNAME'],pfs["xsd"].string)
     add_literal_property(graph,lag_time_uri,pfs['rc-ont']['inMinutes'],row['LAG_MINSNAME'],pfs["xsd"].string)
