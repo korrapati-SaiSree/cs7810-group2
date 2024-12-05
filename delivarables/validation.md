@@ -3,7 +3,7 @@
 ## Collision Fatality Analysis
 **Competency Question:** "How do different types of collisions (like head-on or rear-end) and seat positions affect fatality rates?"
 
-**Bridged Datasets:** dataset 1, dataset 2, ...
+**Bridged Datasets:** Crash.csv, vehicle.csv, person.csv
 
 **SPARQL Query:**
 ```
@@ -49,7 +49,7 @@ ORDER BY DESC(?fatalities)
 ## Weather Fatality Patterns
 **Competency Question:** "What patterns can be seen between weather conditions, seasons, and the chances of fatalities in crashes?
 
-**Bridged Datasets:** dataset 1, dataset 2, ...
+**Bridged Datasets:** Crash.csv, time.csv
 
 **SPARQL Query:**
 ```
@@ -83,7 +83,7 @@ ORDER BY DESC(?totalFatalities)
 ## EMS Impact on Survival
 **Competency Question:** "How do EMS response times (from being notified to arriving at the crash site and transporting to a hospital) affect survival rates?"
 
-**Bridged Datasets:** dataset 1, dataset 2, ...
+**Bridged Datasets:** Crash.csv, EMS.csv
 
 **SPARQL Query:**
 ```
@@ -140,7 +140,7 @@ LIMIT 15
 ## Impairment Crash Rate
 **Competency Question:** "How does driver impairment (from alcohol, drugs, or fatigue) impact crash rates?"
 
-**Bridged Datasets:** dataset 1, dataset 2, ...
+**Bridged Datasets:** Crash.csv, Person.csv, impairment.csv
 
 **SPARQL Query:**
 ```
@@ -180,7 +180,7 @@ ORDER BY DESC(?totalCrash)
 ## Drivers with Prior Records
 **Competency Question:** "Which drivers involved in crashes have a history of prior accidents, Driving While Intoxicated (DWI) offenses, or speeding violations, and how do their past records compare?"
 
-**Bridged Datasets:** dataset 1, dataset 2, ...
+**Bridged Datasets:** Crash.csv, Vehicle.csv
 
 **SPARQL Query:**
 ```
@@ -226,7 +226,7 @@ limit 10
 ## License Status Crash Rate
 **Competency Question:** "How do a driver's license status and type relate to the rate of crashes?"
 
-**Bridged Datasets:** dataset 1, dataset 2, ...
+**Bridged Datasets:** Crash.csv, Vehicle.csv
 
 **SPARQL Query:**
 ```
@@ -261,7 +261,7 @@ ORDER BY DESC(?totalCrash)
 ## Road Condition Impact
 **Competency Question:** "How do specific road conditions affect the likelihood and severity of crashes?"
 
-**Bridged Datasets:** dataset 1, dataset 2, ...
+**Bridged Datasets:** Crash.csv, Vehicle.csv
 
 **SPARQL Query:**
 ```
@@ -294,7 +294,7 @@ ORDER BY DESC(?crashCount)
 ## Socioeconomic Impact on Crashes
 **Competency Question:** "How do a state's income levels influence the rate of crashes?"
 
-**Bridged Datasets:** dataset 1, dataset 2, ...
+**Bridged Datasets:** Crash.csv, location.csv, socioeconomiccondition.csv
 
 **SPARQL Query:**
 ```
@@ -332,7 +332,7 @@ ORDER BY DESC(?medianIncomeAsDecimal)
 ## Driver Attributes and Injuries
 **Competency Question:** "How do driver attributes such as age, sex, weight, and height impact the severity of injuries sustained in road crashes?"
 
-**Bridged Datasets:** dataset 1, dataset 2, ...
+**Bridged Datasets:** crash.csv, Person.csv, Vehicle.csv
 
 **SPARQL Query:**
 ```
@@ -383,7 +383,7 @@ ORDER BY DESC(?driverCount)
 ## Speed and Fatalities
 **Competency Question:** "How does the speed of the vehicle and age of the occupant during the crash relate to the Fatality?"
 
-**Bridged Datasets:** dataset 1, dataset 2, ...
+**Bridged Datasets:** Crash.csv, Person.csv, Vehicle.csv
 
 **SPARQL Query:**
 ```
