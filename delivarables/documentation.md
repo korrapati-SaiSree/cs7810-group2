@@ -712,8 +712,8 @@ Vehicle Condition encompasses the mechanical state of the vehicle, such as the q
 
 Following contains all the triplification code
 
-Insert materialization link here.
-
+[materialization link here.
+](https://github.com/korrapati-SaiSree/cs7810-group2/tree/main/code)
 # Validation
 
 ## Collision Fatality Analysis
