@@ -96,6 +96,13 @@ The Crash Event is the focal point of the entire knowledge graph. Every piece of
 * `Crash SubClassOf hasCondition some Condition`<br/>
   Every Crash must have at least one Condition.
 
+## The Overall Knowledge Graph
+### Namespaces
+* @base <http://www.soloflife.org> .
+* @prefix sol-ont: <http://soloflife.org/lod/ontology/> .
+* @prefix sol-qk: <http://soloflife.org/lod/quantitykinds> .
+* @prefix sol-unit: <http://soloflife.org/lod/units> .
+* @prefix solr: <http://soloflife.org/lod/resource/> .
 
 # All Together Schema
 
