@@ -890,7 +890,8 @@ ORDER BY DESC(?totalCrash)
 ```
 
 **Results:**
-![image](https://github.com/user-attachments/assets/e2192d4f-0308-45dd-8ac5-eb5e58001790)
+![image](https://github.com/user-attachments/assets/ed838b3c-e8a9-49ca-9df2-4c941ffbb3f4)
+
 
 
 ## Drivers with Prior Records
@@ -932,11 +933,11 @@ WHERE {
 }
 ORDER BY DESC(?prevAccidents) DESC(?prevDWI) DESC(?prevSpeeding)
 limit 10
-}
+
 ```
 
 **Results:**
-![image](https://github.com/user-attachments/assets/03b93603-a213-495e-8da8-52a8f25430c8)
+![image](https://github.com/user-attachments/assets/d4f6082f-1652-4f6d-9726-1c8f2259052d)
 
 
 ## License Status Crash Rate
