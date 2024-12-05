@@ -24,7 +24,7 @@ Because it incorporates elements that are frequently disregarded in current mode
 5. Which drivers involved in crashes have a history of prior accidents, Driving While Intoxicated (DWI) offenses, or speeding violations, and how do their past records compare?
 6. How do a driver's license status and type relate to the rate of crashes?
 7. How do specific road conditions affect the likelihood and severity of crashes?
-8. How do a state's socio-economic conditions influence crash rates?
+8. How do a state's income levels influence the rate of crashes?
 9. How do driver attributes such as age, sex, weight, and height impact the severity of injuries sustained in road crashes?
 10. How does the speed of the vehicle and age of the occupant during the crash relate to the Fatality?
 
