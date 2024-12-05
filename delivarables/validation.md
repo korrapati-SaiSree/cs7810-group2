@@ -422,6 +422,7 @@ ORDER BY DESC(?FatalityCount)
 ```
 
 **Results:**
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/0f624fad-7f0f-41ba-93c3-e25920460dd9)
+
 
 
