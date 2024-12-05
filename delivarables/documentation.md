@@ -695,11 +695,11 @@ Vehicle Condition encompasses the mechanical state of the vehicle, such as the q
 
 ## The Overall Knowledge Graph
 ### Namespaces
-* @base <http://www.soloflife.org> .
-* @prefix sol-ont: <http://soloflife.org/lod/ontology/> .
-* @prefix sol-qk: <http://soloflife.org/lod/quantitykinds> .
-* @prefix sol-unit: <http://soloflife.org/lod/units> .
-* @prefix solr: <http://soloflife.org/lod/resource/> .
+* @base <http://roadcrash.org/> .
+* @prefix rc-ont: <http://roadcrash.org/ontology/> .
+* @prefix rc-res: <http://roadcrash.org/resource/> .
+* @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+* @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # All Together Schema
 

@@ -150,7 +150,7 @@
 * `Distraction SubClassOf distractionAsString exactly 1 xsd:string`<br />
   Each Distraction can have exactly one associated string description. 
 * `Distraction SubClassOf distractionAsString only xsd:string`<br />
-  Each Distraction mmay have exactly description, if it does, it must be in string. 
+  Each Distraction may have description, if it does, it must be in string. 
 
 
 ## Person
