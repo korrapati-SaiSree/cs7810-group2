@@ -97,16 +97,18 @@ The Crash Event is the focal point of the entire knowledge graph. Every piece of
   Every Crash must have at least one Condition.
 
 
-### Asteroid Classification
-**Source Pattern:** No Source Pattern  
-**Source Data:** Asterank, Asteroid Spectral Types  
+# All Together Schema
+
+![image](https://github.com/user-attachments/assets/06e2175c-eca5-47ab-9f56-a7cb7c1e14ac)
+
 
 
 
 # Materialization
-The following directory contains all scripts used throughout the triplification of datasets and the materialization of the knowledge graph.  Triplification is done separately for each dataset used.
 
-[Scripts for Triplification and Materialization](../code/)
+Following contains all the triplification code
+
+https://github.com/korrapati-SaiSree/cs7810-group2/tree/main/code
 
 # Validation
 
