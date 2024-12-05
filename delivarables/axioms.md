@@ -387,17 +387,17 @@ Every TimeInterval is a subclass of TemporalExtent, representing a span or inter
 * `RoadCondition SubClassOf Condition`<br/>
   Every Road condition is Condition.
 
-8. RoadCondition → roadConditionAsString → xsd:string  
+12. RoadCondition → roadConditionAsString → xsd:string  
 * `RoadCondition SubClassOf roadConditionAsString only xsd:string`<br/>
   RoadCondition may have roadConditionAsString, if it does it must be a string.
 * `RoadCondition SubClassOf roadConditionAsString some xsd:string`<br/>
   RoadCondition must have atleast one roadConditionAsString and it must be a string.
 
-9. LightingCondition → Condition  
+13. LightingCondition → Condition  
 * `LightingCondition SubClassOf Condition`<br/>
   Every LightingCondition is Condition.
 
-8. LightingCondition → weatherConditionAsString → xsd:string  
+14. LightingCondition → weatherConditionAsString → xsd:string  
 * `LightingCondition SubClassOf lightingConditionAsString only xsd:string`<br/>
   LightingCondition may have LightingConditionAsString, if it does it must be a string.
 * `LightingCondition SubClassOf lightingConditionAsString some xsd:string`<br/>
