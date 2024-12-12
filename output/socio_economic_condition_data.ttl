@@ -1,0 +1,1105 @@
+@prefix rc-ont: <http://roadcrash.org/ontology/> .
+@prefix rc-res: <http://roadcrash.org/resource/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+rc-res:EducationLevel_Alabama rc-ont:bachelorsDegreeOrHigher 26.3 ;
+    rc-ont:highSchoolOrHigher 86.5 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Alabama .
+
+rc-res:EducationLevel_Alaska rc-ont:bachelorsDegreeOrHigher 31.7 ;
+    rc-ont:highSchoolOrHigher 92.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Alaska .
+
+rc-res:EducationLevel_Arizona rc-ont:bachelorsDegreeOrHigher 30.5 ;
+    rc-ont:highSchoolOrHigher 88.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Arizona .
+
+rc-res:EducationLevel_Arkansas rc-ont:bachelorsDegreeOrHigher 24.3 ;
+    rc-ont:highSchoolOrHigher 86.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Arkansas .
+
+rc-res:EducationLevel_California rc-ont:bachelorsDegreeOrHigher 37.0 ;
+    rc-ont:highSchoolOrHigher 83.9 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_California .
+
+rc-res:EducationLevel_Colorado rc-ont:bachelorsDegreeOrHigher 42.1 ;
+    rc-ont:highSchoolOrHigher 92.1 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Colorado .
+
+rc-res:EducationLevel_Connecticut rc-ont:bachelorsDegreeOrHigher 39.4 ;
+    rc-ont:highSchoolOrHigher 91.3 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Connecticut .
+
+rc-res:EducationLevel_Delaware rc-ont:bachelorsDegreeOrHigher 34.6 ;
+    rc-ont:highSchoolOrHigher 89.5 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Delaware .
+
+rc-res:EducationLevel_Florida rc-ont:bachelorsDegreeOrHigher 30.9 ;
+    rc-ont:highSchoolOrHigher 88.5 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Florida .
+
+rc-res:EducationLevel_Georgia rc-ont:bachelorsDegreeOrHigher 32.7 ;
+    rc-ont:highSchoolOrHigher 87.5 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Georgia .
+
+rc-res:EducationLevel_Hawaii rc-ont:bachelorsDegreeOrHigher 34.7 ;
+    rc-ont:highSchoolOrHigher 92.5 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Hawaii .
+
+rc-res:EducationLevel_Idaho rc-ont:bachelorsDegreeOrHigher 29.5 ;
+    rc-ont:highSchoolOrHigher 90.5 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Idaho .
+
+rc-res:EducationLevel_Illinois rc-ont:bachelorsDegreeOrHigher 36.2 ;
+    rc-ont:highSchoolOrHigher 89.6 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Illinois .
+
+rc-res:EducationLevel_Indiana rc-ont:bachelorsDegreeOrHigher 27.3 ;
+    rc-ont:highSchoolOrHigher 89.3 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Indiana .
+
+rc-res:EducationLevel_Iowa rc-ont:bachelorsDegreeOrHigher 29.3 ;
+    rc-ont:highSchoolOrHigher 92.1 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Iowa .
+
+rc-res:EducationLevel_Kansas rc-ont:bachelorsDegreeOrHigher 31.1 ;
+    rc-ont:highSchoolOrHigher 91.2 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Kansas .
+
+rc-res:EducationLevel_Kentucky rc-ont:bachelorsDegreeOrHigher 24.2 ;
+    rc-ont:highSchoolOrHigher 85.9 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Kentucky .
+
+rc-res:EducationLevel_Louisiana rc-ont:bachelorsDegreeOrHigher 23.1 ;
+    rc-ont:highSchoolOrHigher 86.8 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Louisiana .
+
+rc-res:EducationLevel_Maine rc-ont:bachelorsDegreeOrHigher 32.8 ;
+    rc-ont:highSchoolOrHigher 91.5 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Maine .
+
+rc-res:EducationLevel_Maryland rc-ont:bachelorsDegreeOrHigher 40.8 ;
+    rc-ont:highSchoolOrHigher 90.3 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Maryland .
+
+rc-res:EducationLevel_Massachusetts rc-ont:bachelorsDegreeOrHigher 44.1 ;
+    rc-ont:highSchoolOrHigher 91.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Massachusetts .
+
+rc-res:EducationLevel_Michigan rc-ont:bachelorsDegreeOrHigher 29.6 ;
+    rc-ont:highSchoolOrHigher 90.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Michigan .
+
+rc-res:EducationLevel_Minnesota rc-ont:bachelorsDegreeOrHigher 36.4 ;
+    rc-ont:highSchoolOrHigher 93.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Minnesota .
+
+rc-res:EducationLevel_Mississippi rc-ont:bachelorsDegreeOrHigher 22.5 ;
+    rc-ont:highSchoolOrHigher 85.2 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Mississippi .
+
+rc-res:EducationLevel_Missouri rc-ont:bachelorsDegreeOrHigher 29.2 ;
+    rc-ont:highSchoolOrHigher 88.9 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Missouri .
+
+rc-res:EducationLevel_Montana rc-ont:bachelorsDegreeOrHigher 32.1 ;
+    rc-ont:highSchoolOrHigher 92.2 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Montana .
+
+rc-res:EducationLevel_Nebraska rc-ont:bachelorsDegreeOrHigher 30.6 ;
+    rc-ont:highSchoolOrHigher 93.4 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Nebraska .
+
+rc-res:EducationLevel_Nevada rc-ont:bachelorsDegreeOrHigher 25.4 ;
+    rc-ont:highSchoolOrHigher 87.5 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Nevada .
+
+rc-res:EducationLevel_New_Hampshire rc-ont:bachelorsDegreeOrHigher 36.9 ;
+    rc-ont:highSchoolOrHigher 94.5 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_New_Hampshire .
+
+rc-res:EducationLevel_New_Jersey rc-ont:bachelorsDegreeOrHigher 40.5 ;
+    rc-ont:highSchoolOrHigher 91.8 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_New_Jersey .
+
+rc-res:EducationLevel_New_Mexico rc-ont:bachelorsDegreeOrHigher 29.9 ;
+    rc-ont:highSchoolOrHigher 86.3 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_New_Mexico .
+
+rc-res:EducationLevel_New_York rc-ont:bachelorsDegreeOrHigher 37.7 ;
+    rc-ont:highSchoolOrHigher 89.1 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_New_York .
+
+rc-res:EducationLevel_North_Carolina rc-ont:bachelorsDegreeOrHigher 30.8 ;
+    rc-ont:highSchoolOrHigher 87.7 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_North_Carolina .
+
+rc-res:EducationLevel_North_Dakota rc-ont:bachelorsDegreeOrHigher 31.2 ;
+    rc-ont:highSchoolOrHigher 92.4 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_North_Dakota .
+
+rc-res:EducationLevel_Ohio rc-ont:bachelorsDegreeOrHigher 30.4 ;
+    rc-ont:highSchoolOrHigher 90.2 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Ohio .
+
+rc-res:EducationLevel_Oklahoma rc-ont:bachelorsDegreeOrHigher 25.7 ;
+    rc-ont:highSchoolOrHigher 86.7 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Oklahoma .
+
+rc-res:EducationLevel_Oregon rc-ont:bachelorsDegreeOrHigher 34.4 ;
+    rc-ont:highSchoolOrHigher 89.5 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Oregon .
+
+rc-res:EducationLevel_Pennsylvania rc-ont:bachelorsDegreeOrHigher 32.9 ;
+    rc-ont:highSchoolOrHigher 90.7 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Pennsylvania .
+
+rc-res:EducationLevel_Rhode_Island rc-ont:bachelorsDegreeOrHigher 34.8 ;
+    rc-ont:highSchoolOrHigher 91.6 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Rhode_Island .
+
+rc-res:EducationLevel_South_Carolina rc-ont:bachelorsDegreeOrHigher 27.9 ;
+    rc-ont:highSchoolOrHigher 86.3 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_South_Carolina .
+
+rc-res:EducationLevel_South_Dakota rc-ont:bachelorsDegreeOrHigher 28.8 ;
+    rc-ont:highSchoolOrHigher 92.3 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_South_Dakota .
+
+rc-res:EducationLevel_Tennessee rc-ont:bachelorsDegreeOrHigher 29.0 ;
+    rc-ont:highSchoolOrHigher 87.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Tennessee .
+
+rc-res:EducationLevel_Texas rc-ont:bachelorsDegreeOrHigher 29.3 ;
+    rc-ont:highSchoolOrHigher 85.8 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Texas .
+
+rc-res:EducationLevel_Utah rc-ont:bachelorsDegreeOrHigher 34.0 ;
+    rc-ont:highSchoolOrHigher 92.5 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Utah .
+
+rc-res:EducationLevel_Vermont rc-ont:bachelorsDegreeOrHigher 39.7 ;
+    rc-ont:highSchoolOrHigher 94.8 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Vermont .
+
+rc-res:EducationLevel_Virginia rc-ont:bachelorsDegreeOrHigher 38.0 ;
+    rc-ont:highSchoolOrHigher 89.6 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Virginia .
+
+rc-res:EducationLevel_Washington rc-ont:bachelorsDegreeOrHigher 37.3 ;
+    rc-ont:highSchoolOrHigher 90.8 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Washington .
+
+rc-res:EducationLevel_West_Virginia rc-ont:bachelorsDegreeOrHigher 20.4 ;
+    rc-ont:highSchoolOrHigher 85.5 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_West_Virginia .
+
+rc-res:EducationLevel_Wisconsin rc-ont:bachelorsDegreeOrHigher 29.9 ;
+    rc-ont:highSchoolOrHigher 91.4 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Wisconsin .
+
+rc-res:EducationLevel_Wyoming rc-ont:bachelorsDegreeOrHigher 28.4 ;
+    rc-ont:highSchoolOrHigher 92.2 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Wyoming .
+
+rc-res:EmploymentRate_Alabama a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 57.2 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Alabama .
+
+rc-res:EmploymentRate_Alaska a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 61.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Alaska .
+
+rc-res:EmploymentRate_Arizona a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 59.4 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Arizona .
+
+rc-res:EmploymentRate_Arkansas a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 55.7 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Arkansas .
+
+rc-res:EmploymentRate_California a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 59.8 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_California .
+
+rc-res:EmploymentRate_Colorado a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 65.5 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Colorado .
+
+rc-res:EmploymentRate_Connecticut a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 61.4 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Connecticut .
+
+rc-res:EmploymentRate_Delaware a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 61.2 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Delaware .
+
+rc-res:EmploymentRate_Florida a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 56.1 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Florida .
+
+rc-res:EmploymentRate_Georgia a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 58.3 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Georgia .
+
+rc-res:EmploymentRate_Hawaii a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 60.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Hawaii .
+
+rc-res:EmploymentRate_Idaho a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 62.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Idaho .
+
+rc-res:EmploymentRate_Illinois a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 62.1 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Illinois .
+
+rc-res:EmploymentRate_Indiana a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 60.5 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Indiana .
+
+rc-res:EmploymentRate_Iowa a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 67.1 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Iowa .
+
+rc-res:EmploymentRate_Kansas a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 65.3 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Kansas .
+
+rc-res:EmploymentRate_Kentucky a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 57.8 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Kentucky .
+
+rc-res:EmploymentRate_Louisiana a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 55.3 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Louisiana .
+
+rc-res:EmploymentRate_Maine a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 60.1 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Maine .
+
+rc-res:EmploymentRate_Maryland a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 63.5 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Maryland .
+
+rc-res:EmploymentRate_Massachusetts a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 63.9 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Massachusetts .
+
+rc-res:EmploymentRate_Michigan a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 59.5 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Michigan .
+
+rc-res:EmploymentRate_Minnesota a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 67.3 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Minnesota .
+
+rc-res:EmploymentRate_Mississippi a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 53.5 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Mississippi .
+
+rc-res:EmploymentRate_Missouri a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 59.9 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Missouri .
+
+rc-res:EmploymentRate_Montana a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 60.3 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Montana .
+
+rc-res:EmploymentRate_Nebraska a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 68.3 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Nebraska .
+
+rc-res:EmploymentRate_Nevada a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 60.2 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Nevada .
+
+rc-res:EmploymentRate_New_Hampshire a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 64.2 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_New_Hampshire .
+
+rc-res:EmploymentRate_New_Jersey a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 62.5 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_New_Jersey .
+
+rc-res:EmploymentRate_New_Mexico a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 55.9 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_New_Mexico .
+
+rc-res:EmploymentRate_New_York a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 58.4 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_New_York .
+
+rc-res:EmploymentRate_North_Carolina a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 57.7 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_North_Carolina .
+
+rc-res:EmploymentRate_North_Dakota a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 68.7 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_North_Dakota .
+
+rc-res:EmploymentRate_Ohio a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 59.1 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Ohio .
+
+rc-res:EmploymentRate_Oklahoma a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 58.9 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Oklahoma .
+
+rc-res:EmploymentRate_Oregon a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 61.7 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Oregon .
+
+rc-res:EmploymentRate_Pennsylvania a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 60.6 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Pennsylvania .
+
+rc-res:EmploymentRate_Rhode_Island a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 60.5 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Rhode_Island .
+
+rc-res:EmploymentRate_South_Carolina a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 56.4 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_South_Carolina .
+
+rc-res:EmploymentRate_South_Dakota a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 66.1 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_South_Dakota .
+
+rc-res:EmploymentRate_Tennessee a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 56.7 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Tennessee .
+
+rc-res:EmploymentRate_Texas a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 59.8 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Texas .
+
+rc-res:EmploymentRate_Utah a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 63.8 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Utah .
+
+rc-res:EmploymentRate_Vermont a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 61.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Vermont .
+
+rc-res:EmploymentRate_Virginia a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 62.9 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Virginia .
+
+rc-res:EmploymentRate_Washington a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 62.7 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Washington .
+
+rc-res:EmploymentRate_West_Virginia a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 53.1 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_West_Virginia .
+
+rc-res:EmploymentRate_Wisconsin a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 64.1 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Wisconsin .
+
+rc-res:EmploymentRate_Wyoming a rc-ont:EmploymentRate ;
+    rc-ont:employmentRateAsDecimal 64.5 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Wyoming .
+
+rc-res:IncomeHouseHoldMedian_Alabama a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 54943.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Alabama .
+
+rc-res:IncomeHouseHoldMedian_Alaska a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 77790.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Alaska .
+
+rc-res:IncomeHouseHoldMedian_Arizona a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 65913.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Arizona .
+
+rc-res:IncomeHouseHoldMedian_Arkansas a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 52528.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Arkansas .
+
+rc-res:IncomeHouseHoldMedian_California a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 84907.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_California .
+
+rc-res:IncomeHouseHoldMedian_Colorado a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 80184.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Colorado .
+
+rc-res:IncomeHouseHoldMedian_Connecticut a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 83771.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Connecticut .
+
+rc-res:IncomeHouseHoldMedian_Delaware a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 75284.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Delaware .
+
+rc-res:IncomeHouseHoldMedian_Florida a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 63062.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Florida .
+
+rc-res:IncomeHouseHoldMedian_Georgia a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 61224.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Georgia .
+
+rc-res:IncomeHouseHoldMedian_Hawaii a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 88005.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Hawaii .
+
+rc-res:IncomeHouseHoldMedian_Idaho a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 66474.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Idaho .
+
+rc-res:IncomeHouseHoldMedian_Illinois a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 74398.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Illinois .
+
+rc-res:IncomeHouseHoldMedian_Indiana a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 60529.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Indiana .
+
+rc-res:IncomeHouseHoldMedian_Iowa a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 65600.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Iowa .
+
+rc-res:IncomeHouseHoldMedian_Kansas a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 65379.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Kansas .
+
+rc-res:IncomeHouseHoldMedian_Kentucky a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 56467.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Kentucky .
+
+rc-res:IncomeHouseHoldMedian_Louisiana a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 52087.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Louisiana .
+
+rc-res:IncomeHouseHoldMedian_Maine a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 63182.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Maine .
+
+rc-res:IncomeHouseHoldMedian_Maryland a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 97456.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Maryland .
+
+rc-res:IncomeHouseHoldMedian_Massachusetts a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 93870.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Massachusetts .
+
+rc-res:IncomeHouseHoldMedian_Michigan a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 63682.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Michigan .
+
+rc-res:IncomeHouseHoldMedian_Minnesota a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 77989.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Minnesota .
+
+rc-res:IncomeHouseHoldMedian_Mississippi a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 51967.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Mississippi .
+
+rc-res:IncomeHouseHoldMedian_Missouri a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 61601.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Missouri .
+
+rc-res:IncomeHouseHoldMedian_Montana a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 67518.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Montana .
+
+rc-res:IncomeHouseHoldMedian_Nebraska a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 71659.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Nebraska .
+
+rc-res:IncomeHouseHoldMedian_Nevada a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 72138.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Nevada .
+
+rc-res:IncomeHouseHoldMedian_New_Hampshire a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 86281.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_New_Hampshire .
+
+rc-res:IncomeHouseHoldMedian_New_Jersey a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 96347.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_New_Jersey .
+
+rc-res:IncomeHouseHoldMedian_New_Mexico a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 54079.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_New_Mexico .
+
+rc-res:IncomeHouseHoldMedian_New_York a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 75157.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_New_York .
+
+rc-res:IncomeHouseHoldMedian_North_Carolina a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 63788.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_North_Carolina .
+
+rc-res:IncomeHouseHoldMedian_North_Dakota a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 70494.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_North_Dakota .
+
+rc-res:IncomeHouseHoldMedian_Ohio a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 63987.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Ohio .
+
+rc-res:IncomeHouseHoldMedian_Oklahoma a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 58520.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Oklahoma .
+
+rc-res:IncomeHouseHoldMedian_Oregon a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 73495.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Oregon .
+
+rc-res:IncomeHouseHoldMedian_Pennsylvania a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 72743.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Pennsylvania .
+
+rc-res:IncomeHouseHoldMedian_Rhode_Island a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 76867.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Rhode_Island .
+
+rc-res:IncomeHouseHoldMedian_South_Carolina a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 57762.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_South_Carolina .
+
+rc-res:IncomeHouseHoldMedian_South_Dakota a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 65699.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_South_Dakota .
+
+rc-res:IncomeHouseHoldMedian_Tennessee a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 58214.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Tennessee .
+
+rc-res:IncomeHouseHoldMedian_Texas a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 67404.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Texas .
+
+rc-res:IncomeHouseHoldMedian_Utah a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 79335.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Utah .
+
+rc-res:IncomeHouseHoldMedian_Vermont a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 71264.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Vermont .
+
+rc-res:IncomeHouseHoldMedian_Virginia a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 81947.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Virginia .
+
+rc-res:IncomeHouseHoldMedian_Washington a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 84541.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Washington .
+
+rc-res:IncomeHouseHoldMedian_West_Virginia a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 51584.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_West_Virginia .
+
+rc-res:IncomeHouseHoldMedian_Wisconsin a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 68683.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Wisconsin .
+
+rc-res:IncomeHouseHoldMedian_Wyoming a rc-ont:IncomeHouseHoldMedian ;
+    rc-ont:incomeHouseHoldMedianAsDecimal 67423.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Wyoming .
+
+rc-res:PopulationDensity_Alabama a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 99.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Alabama .
+
+rc-res:PopulationDensity_Alaska a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 1.3 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Alaska .
+
+rc-res:PopulationDensity_Arizona a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 64.3 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Arizona .
+
+rc-res:PopulationDensity_Arkansas a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 58.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Arkansas .
+
+rc-res:PopulationDensity_California a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 253.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_California .
+
+rc-res:PopulationDensity_Colorado a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 56.7 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Colorado .
+
+rc-res:PopulationDensity_Connecticut a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 739.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Connecticut .
+
+rc-res:PopulationDensity_Delaware a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 507.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Delaware .
+
+rc-res:PopulationDensity_Florida a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 400.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Florida .
+
+rc-res:PopulationDensity_Georgia a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 181.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Georgia .
+
+rc-res:PopulationDensity_Hawaii a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 218.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Hawaii .
+
+rc-res:PopulationDensity_Idaho a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 22.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Idaho .
+
+rc-res:PopulationDensity_Illinois a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 232.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Illinois .
+
+rc-res:PopulationDensity_Indiana a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 190.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Indiana .
+
+rc-res:PopulationDensity_Iowa a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 55.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Iowa .
+
+rc-res:PopulationDensity_Kansas a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 36.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Kansas .
+
+rc-res:PopulationDensity_Kentucky a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 110.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Kentucky .
+
+rc-res:PopulationDensity_Louisiana a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 108.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Louisiana .
+
+rc-res:PopulationDensity_Maine a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 44.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Maine .
+
+rc-res:PopulationDensity_Maryland a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 635.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Maryland .
+
+rc-res:PopulationDensity_Massachusetts a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 884.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Massachusetts .
+
+rc-res:PopulationDensity_Michigan a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 176.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Michigan .
+
+rc-res:PopulationDensity_Minnesota a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 71.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Minnesota .
+
+rc-res:PopulationDensity_Mississippi a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 63.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Mississippi .
+
+rc-res:PopulationDensity_Missouri a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 89.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Missouri .
+
+rc-res:PopulationDensity_Montana a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 7.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Montana .
+
+rc-res:PopulationDensity_Nebraska a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 25.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Nebraska .
+
+rc-res:PopulationDensity_Nevada a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 28.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Nevada .
+
+rc-res:PopulationDensity_New_Hampshire a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 148.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_New_Hampshire .
+
+rc-res:PopulationDensity_New_Jersey a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 1210.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_New_Jersey .
+
+rc-res:PopulationDensity_New_Mexico a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 17.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_New_Mexico .
+
+rc-res:PopulationDensity_New_York a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 421.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_New_York .
+
+rc-res:PopulationDensity_North_Carolina a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 214.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_North_Carolina .
+
+rc-res:PopulationDensity_North_Dakota a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 11.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_North_Dakota .
+
+rc-res:PopulationDensity_Ohio a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 282.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Ohio .
+
+rc-res:PopulationDensity_Oklahoma a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 57.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Oklahoma .
+
+rc-res:PopulationDensity_Oregon a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 43.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Oregon .
+
+rc-res:PopulationDensity_Pennsylvania a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 284.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Pennsylvania .
+
+rc-res:PopulationDensity_Rhode_Island a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 1018.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Rhode_Island .
+
+rc-res:PopulationDensity_South_Carolina a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 162.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_South_Carolina .
+
+rc-res:PopulationDensity_South_Dakota a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 11.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_South_Dakota .
+
+rc-res:PopulationDensity_Tennessee a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 167.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Tennessee .
+
+rc-res:PopulationDensity_Texas a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 112.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Texas .
+
+rc-res:PopulationDensity_Utah a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 40.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Utah .
+
+rc-res:PopulationDensity_Vermont a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 68.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Vermont .
+
+rc-res:PopulationDensity_Virginia a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 218.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Virginia .
+
+rc-res:PopulationDensity_Washington a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 117.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Washington .
+
+rc-res:PopulationDensity_West_Virginia a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 76.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_West_Virginia .
+
+rc-res:PopulationDensity_Wisconsin a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 106.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Wisconsin .
+
+rc-res:PopulationDensity_Wyoming a rc-ont:EducationLevel,
+        rc-ont:PopulationDensity ;
+    rc-ont:populationDensityAsDecimal 6.0 ;
+    rdfs:subClassOf rc-res:SocioEconomicCondition_Wyoming .
+
+rc-res:State_Alabama rc-ont:hasPopulation 5074296 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Alabama .
+
+rc-res:State_Alaska rc-ont:hasPopulation 733583 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Alaska .
+
+rc-res:State_Arizona rc-ont:hasPopulation 7359197 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Arizona .
+
+rc-res:State_Arkansas rc-ont:hasPopulation 3045637 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Arkansas .
+
+rc-res:State_California rc-ont:hasPopulation 39029342 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_California .
+
+rc-res:State_Colorado rc-ont:hasPopulation 5839926 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Colorado .
+
+rc-res:State_Connecticut rc-ont:hasPopulation 3582597 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Connecticut .
+
+rc-res:State_Delaware rc-ont:hasPopulation 1018396 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Delaware .
+
+rc-res:State_Florida rc-ont:hasPopulation 22244823 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Florida .
+
+rc-res:State_Georgia rc-ont:hasPopulation 10912876 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Georgia .
+
+rc-res:State_Hawaii rc-ont:hasPopulation 1441553 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Hawaii .
+
+rc-res:State_Idaho rc-ont:hasPopulation 1939033 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Idaho .
+
+rc-res:State_Illinois rc-ont:hasPopulation 12582032 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Illinois .
+
+rc-res:State_Indiana rc-ont:hasPopulation 6833037 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Indiana .
+
+rc-res:State_Iowa rc-ont:hasPopulation 3199540 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Iowa .
+
+rc-res:State_Kansas rc-ont:hasPopulation 2937200 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Kansas .
+
+rc-res:State_Kentucky rc-ont:hasPopulation 4512310 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Kentucky .
+
+rc-res:State_Louisiana rc-ont:hasPopulation 4590241 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Louisiana .
+
+rc-res:State_Maine rc-ont:hasPopulation 1385340 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Maine .
+
+rc-res:State_Maryland rc-ont:hasPopulation 6164660 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Maryland .
+
+rc-res:State_Massachusetts rc-ont:hasPopulation 7122396 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Massachusetts .
+
+rc-res:State_Michigan rc-ont:hasPopulation 10034113 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Michigan .
+
+rc-res:State_Minnesota rc-ont:hasPopulation 5717184 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Minnesota .
+
+rc-res:State_Mississippi rc-ont:hasPopulation 2938592 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Mississippi .
+
+rc-res:State_Missouri rc-ont:hasPopulation 6168187 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Missouri .
+
+rc-res:State_Montana rc-ont:hasPopulation 1122867 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Montana .
+
+rc-res:State_Nebraska rc-ont:hasPopulation 1983268 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Nebraska .
+
+rc-res:State_Nevada rc-ont:hasPopulation 3177772 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Nevada .
+
+rc-res:State_New_Hampshire rc-ont:hasPopulation 1395231 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_New_Hampshire .
+
+rc-res:State_New_Jersey rc-ont:hasPopulation 9261699 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_New_Jersey .
+
+rc-res:State_New_Mexico rc-ont:hasPopulation 2113344 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_New_Mexico .
+
+rc-res:State_New_York rc-ont:hasPopulation 19677151 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_New_York .
+
+rc-res:State_North_Carolina rc-ont:hasPopulation 10698973 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_North_Carolina .
+
+rc-res:State_North_Dakota rc-ont:hasPopulation 812728 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_North_Dakota .
+
+rc-res:State_Ohio rc-ont:hasPopulation 11780017 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Ohio .
+
+rc-res:State_Oklahoma rc-ont:hasPopulation 4019800 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Oklahoma .
+
+rc-res:State_Oregon rc-ont:hasPopulation 4237256 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Oregon .
+
+rc-res:State_Pennsylvania rc-ont:hasPopulation 12972008 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Pennsylvania .
+
+rc-res:State_Rhode_Island rc-ont:hasPopulation 1095610 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Rhode_Island .
+
+rc-res:State_South_Carolina rc-ont:hasPopulation 5282634 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_South_Carolina .
+
+rc-res:State_South_Dakota rc-ont:hasPopulation 909824 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_South_Dakota .
+
+rc-res:State_Tennessee rc-ont:hasPopulation 7051339 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Tennessee .
+
+rc-res:State_Texas rc-ont:hasPopulation 30029572 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Texas .
+
+rc-res:State_Utah rc-ont:hasPopulation 3385420 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Utah .
+
+rc-res:State_Vermont rc-ont:hasPopulation 647064 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Vermont .
+
+rc-res:State_Virginia rc-ont:hasPopulation 8683619 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Virginia .
+
+rc-res:State_Washington rc-ont:hasPopulation 7785786 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Washington .
+
+rc-res:State_West_Virginia rc-ont:hasPopulation 1755715 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_West_Virginia .
+
+rc-res:State_Wisconsin rc-ont:hasPopulation 5892539 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Wisconsin .
+
+rc-res:State_Wyoming rc-ont:hasPopulation 581381 ;
+    rc-ont:hasSocioEconomicCondition rc-res:SocioEconomicCondition_Wyoming .
+
+rc-res:SocioEconomicCondition_Alabama a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Alaska a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Arizona a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Arkansas a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_California a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Colorado a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Connecticut a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Delaware a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Florida a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Georgia a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Hawaii a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Idaho a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Illinois a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Indiana a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Iowa a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Kansas a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Kentucky a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Louisiana a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Maine a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Maryland a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Massachusetts a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Michigan a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Minnesota a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Mississippi a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Missouri a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Montana a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Nebraska a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Nevada a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_New_Hampshire a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_New_Jersey a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_New_Mexico a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_New_York a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_North_Carolina a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_North_Dakota a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Ohio a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Oklahoma a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Oregon a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Pennsylvania a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Rhode_Island a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_South_Carolina a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_South_Dakota a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Tennessee a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Texas a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Utah a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Vermont a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Virginia a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Washington a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_West_Virginia a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Wisconsin a rc-ont:SocioEconomicCondition .
+
+rc-res:SocioEconomicCondition_Wyoming a rc-ont:SocioEconomicCondition .
+

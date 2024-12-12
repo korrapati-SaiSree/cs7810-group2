@@ -1,0 +1,1242 @@
+@prefix : <http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/> .
+
+<http://roadcrash.org/> rdf:type owl:Ontology .
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#time
+xsd:time rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasArrivalTime
+:hasArrivalTime rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasArrivalTimeToHospital
+:hasArrivalTimeToHospital rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasCity
+:hasCity rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasCondition
+:hasCondition rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasCoordinates
+:hasCoordinates rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasCounty
+:hasCounty rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasDrivingHistory
+:hasDrivingHistory rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasFirstDrivingConviction
+:hasFirstDrivingConviction rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasImpairments
+:hasImpairments rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasLagTime
+:hasLagTime rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasNotificationTime
+:hasNotificationTime rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasParticipant
+:hasParticipant rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasRecentDrivingConviction
+:hasRecentDrivingConviction rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasSocioEconomicCondition
+:hasSocioEconomicCondition rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasState
+:hasState rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasStreet
+:hasStreet rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasTemporalExtent
+:hasTemporalExtent rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasWeatherCondition
+:hasWeatherCondition rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/incomeHouseHoldMedian
+:incomeHouseHoldMedian rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/isFatal
+:isFatal rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/occurredAt
+:occurredAt rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/performsPersonInCrash
+:performsPersonInCrash rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/performsVehicleInCrash
+:performsVehicleInCrash rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/providesPersonInCrash
+:providesPersonInCrash rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/providesVehicleInCrash
+:providesVehicleInCrash rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/totalYearsOfDriving
+:totalYearsOfDriving rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/violationDate
+:violationDate rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/atMonth
+:atMonth rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/atYear
+:atYear rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/bachelorsDegreeOrHigher
+:bachelorsDegreeOrHigher rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/distractionAsString
+:distractionAsString rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/employmentRateAsDecimal
+:employmentRateAsDecimal rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/endsAt
+:endsAt rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasAge
+:hasAge rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasAirbagDeployed
+:hasAirbagDeployed rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasBodyType
+:hasBodyType rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasCityName
+:hasCityName rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasCountyName
+:hasCountyName rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasDayOfTheWeek
+:hasDayOfTheWeek rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasEjectionStatus
+:hasEjectionStatus rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasGender
+:hasGender rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasHeight
+:hasHeight rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasInjurySeverity
+:hasInjurySeverity rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasLatitude
+:hasLatitude rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasLicenseStatus
+:hasLicenseStatus rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasLicenseType
+:hasLicenseType rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasLongitude
+:hasLongitude rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasMannerOfCollision
+:hasMannerOfCollision rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasSeason
+:hasSeason rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasSpeed
+:hasSpeed rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasStateName
+:hasStateName rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasStreetName
+:hasStreetName rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasTimeOfTheDay
+:hasTimeOfTheDay rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasTotalFatalities
+:hasTotalFatalities rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasTotalPeopleInvolved
+:hasTotalPeopleInvolved rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasTotalVehiclesInvolved
+:hasTotalVehiclesInvolved rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasTrailingUnit
+:hasTrailingUnit rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasVIN
+:hasVIN rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasVehicleMake
+:hasVehicleMake rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasVehicleManufacturingYear
+:hasVehicleManufacturingYear rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasVehicleModel
+:hasVehicleModel rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasWeight
+:hasWeight rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/hasWeightRange
+:hasWeightRange rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/highSchoolOrHigher
+:highSchoolOrHigher rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/impairmentsAsString
+:impairmentsAsString rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/inHours
+:inHours rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/inMinutes
+:inMinutes rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/incomeHouseHoldMedianAsDecimal
+:incomeHouseHoldMedianAsDecimal rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/involvedInHitAndRun
+:involvedInHitAndRun rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/isNearWorkZone
+:isNearWorkZone rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/locationDuringCrash
+:locationDuringCrash rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/occurredInIntersection
+:occurredInIntersection rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/populationDensityAsDecimal
+:populationDensityAsDecimal rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/safetyRestraintUsed
+:safetyRestraintUsed rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/seatPosition
+:seatPosition rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/startsAt
+:startsAt rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/substanceImpairmentAsString
+:substanceImpairmentAsString rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/totalPreviousAccidentRecord
+:totalPreviousAccidentRecord rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/totalPreviousDWI
+:totalPreviousDWI rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/totalPreviousSpeeding
+:totalPreviousSpeeding rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/weatherConditionAsString
+:weatherConditionAsString rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10#Other/PersonalConveyance
+<http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10#Other/PersonalConveyance> rdf:type owl:Class ;
+                                                                                                    rdfs:subClassOf :NonOccupant .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/City
+:City rdf:type owl:Class ;
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasCounty ;
+                        owl:someValuesFrom :County
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasCounty ;
+                        owl:allValuesFrom :County
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasCityName ;
+                        owl:allValuesFrom xsd:string
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasCityName ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onDataRange xsd:string
+                      ] .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/Condition
+:Condition rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/Coordinates
+:Coordinates rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasLatitude ;
+                               owl:someValuesFrom xsd:float
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasLongitude ;
+                               owl:someValuesFrom xsd:float
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasLatitude ;
+                               owl:allValuesFrom xsd:float
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasLongitude ;
+                               owl:allValuesFrom xsd:float
+                             ] .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/County
+:County rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasCountyName ;
+                          owl:allValuesFrom xsd:string
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasCountyName ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:string
+                        ] .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/Crash
+:Crash rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasCondition ;
+                         owl:someValuesFrom :Condition
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasParticipant ;
+                         owl:someValuesFrom :Participant
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :providesPersonInCrash ;
+                         owl:someValuesFrom :PersonInCrash
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :providesVehicleInCrash ;
+                         owl:someValuesFrom :VehicleInCrash
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasCondition ;
+                         owl:allValuesFrom :Condition
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasParticipant ;
+                         owl:allValuesFrom :Participant
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :occurredAt ;
+                         owl:allValuesFrom :Location
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :providesPersonInCrash ;
+                         owl:allValuesFrom :PersonInCrash
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :providesVehicleInCrash ;
+                         owl:allValuesFrom :VehicleInCrash
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasTemporalExtent ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :TemporalExtent
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :occurredAt ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :Location
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasTotalPeopleInvolved ;
+                         owl:someValuesFrom xsd:integer
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasTotalVehiclesInvolved ;
+                         owl:someValuesFrom xsd:integer
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :isNearWorkZone ;
+                         owl:someValuesFrom xsd:string
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :occurredInIntersection ;
+                         owl:someValuesFrom xsd:string
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasTotalFatalities ;
+                         owl:allValuesFrom xsd:integer
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasTotalPeopleInvolved ;
+                         owl:allValuesFrom xsd:integer
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasTotalVehiclesInvolved ;
+                         owl:allValuesFrom xsd:integer
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :isNearWorkZone ;
+                         owl:allValuesFrom xsd:string
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :occurredInIntersection ;
+                         owl:allValuesFrom xsd:string
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasTotalFatalities ;
+                         owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:integer
+                       ] .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/Cyclist
+:Cyclist rdf:type owl:Class ;
+         rdfs:subClassOf :NonOccupant .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/Distraction
+:Distraction rdf:type owl:Class ;
+             rdfs:subClassOf :Impairments ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :distractionAsString ;
+                               owl:allValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :distractionAsString ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/Driver
+:Driver rdf:type owl:Class ;
+        rdfs:subClassOf :Occupant ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasDrivingHistory ;
+                          owl:someValuesFrom :DrivingHistory
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasDrivingHistory ;
+                          owl:allValuesFrom :DrivingHistory
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasImpairments ;
+                          owl:allValuesFrom :Impairments
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasImpairments ;
+                          owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Impairments
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasLicenseStatus ;
+                          owl:allValuesFrom xsd:string
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasLicenseType ;
+                          owl:allValuesFrom xsd:string
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasHeight ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:integer
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasLicenseStatus ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:string
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasLicenseType ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:string
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasWeight ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:integer
+                        ] .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/DrivingHistory
+:DrivingHistory rdf:type owl:Class ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasFirstDrivingConviction ;
+                                  owl:allValuesFrom :FirstDrivingConviction
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasRecentDrivingConviction ;
+                                  owl:allValuesFrom :RecentDrivingCondition
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasFirstDrivingConviction ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass :FirstDrivingConviction
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasRecentDrivingConviction ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass :RecentDrivingCondition
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :totalPreviousAccidentRecord ;
+                                  owl:allValuesFrom xsd:integer
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :totalPreviousDWI ;
+                                  owl:allValuesFrom xsd:integer
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :totalPreviousSpeeding ;
+                                  owl:allValuesFrom xsd:integer
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :totalPreviousAccidentRecord ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:integer
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :totalPreviousDWI ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:integer
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :totalPreviousSpeeding ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:integer
+                                ] .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/EducationLevel
+:EducationLevel rdf:type owl:Class ;
+                rdfs:subClassOf :SocioEconomicCondition ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :bachelorsDegreeOrHigher ;
+                                  owl:allValuesFrom xsd:decimal
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :highSchoolOrHigher ;
+                                  owl:allValuesFrom xsd:string
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :bachelorsDegreeOrHigher ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:decimal
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :highSchoolOrHigher ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:decimal
+                                ] .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/EmergencyMedicalService
+:EmergencyMedicalService rdf:type owl:Class ;
+                         rdfs:subClassOf :Participant ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasArrivalTime ;
+                                           owl:allValuesFrom :PointInTime
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasArrivalTimeToHospital ;
+                                           owl:allValuesFrom :PointInTime
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasNotificationTime ;
+                                           owl:allValuesFrom :PointInTime
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasArrivalTime ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onClass :PointInTime
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasArrivalTimeToHospital ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onClass :PointInTime
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasNotificationTime ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onClass :PointInTime
+                                         ] .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/EmploymentRate
+:EmploymentRate rdf:type owl:Class ;
+                rdfs:subClassOf :SocioEconomicCondition ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :employmentRateAsDecimal ;
+                                  owl:someValuesFrom xsd:decimal
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :employmentRateAsDecimal ;
+                                  owl:allValuesFrom xsd:decimal
+                                ] .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/FirstDrivingConviction
+:FirstDrivingConviction rdf:type owl:Class ;
+                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                          owl:onProperty :atMonth ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onDataRange xsd:integer
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :atYear ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onDataRange xsd:integer
+                                        ] .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/Impairments
+:Impairments rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty :impairmentsAsString ;
+                               owl:allValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :impairmentsAsString ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/IncomeHouseHoldMedian
+:IncomeHouseHoldMedian rdf:type owl:Class ;
+                       rdfs:subClassOf :SocioEconomicCondition ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :incomeHouseHoldMedianAsDecimal ;
+                                         owl:someValuesFrom xsd:decimal
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :incomeHouseHoldMedianAsDecimal ;
+                                         owl:allValuesFrom xsd:decimal
+                                       ] .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/Location
+:Location rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasSocioEconomicCondition ;
+                            owl:someValuesFrom :SocioEconomicCondition
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasState ;
+                            owl:someValuesFrom :State
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasCoordinates ;
+                            owl:allValuesFrom :Coordinates
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasSocioEconomicCondition ;
+                            owl:allValuesFrom :SocioEconomicCondition
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasState ;
+                            owl:allValuesFrom :State
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasCoordinates ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :Coordinates
+                          ] .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/NonOccupant
+:NonOccupant rdf:type owl:Class ;
+             rdfs:subClassOf :PersonInCrash ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :locationDuringCrash ;
+                               owl:allValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :locationDuringCrash ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/Occupant
+:Occupant rdf:type owl:Class ;
+          rdfs:subClassOf :PersonInCrash ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasAirbagDeployed ;
+                            owl:allValuesFrom xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasEjectionStatus ;
+                            owl:allValuesFrom xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :safetyRestraintUsed ;
+                            owl:allValuesFrom xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :seatPosition ;
+                            owl:allValuesFrom xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasAirbagDeployed ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasEjectionStatus ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :safetyRestraintUsed ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :seatPosition ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:string
+                          ] .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/Participant
+:Participant rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/Passenger
+:Passenger rdf:type owl:Class ;
+           rdfs:subClassOf :Occupant .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/Pedestrian
+:Pedestrian rdf:type owl:Class ;
+            rdfs:subClassOf :NonOccupant .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/Person
+:Person rdf:type owl:Class ;
+        rdfs:subClassOf :Participant ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :performsPersonInCrash ;
+                          owl:someValuesFrom :PersonInCrash
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :performsPersonInCrash ;
+                          owl:allValuesFrom :PersonInCrash
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasAge ;
+                          owl:allValuesFrom xsd:integer
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasGender ;
+                          owl:allValuesFrom xsd:string
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasAge ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:integer
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasGender ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:string
+                        ] .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/PersonInCrash
+:PersonInCrash rdf:type owl:Class ;
+               rdfs:subClassOf :Person ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasLagTime ;
+                                 owl:allValuesFrom :PointInTime
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasLagTime ;
+                                 owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :PointInTime
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasTemporalExtent ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :TemporalExtent
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasInjurySeverity ;
+                                 owl:someValuesFrom xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasInjurySeverity ;
+                                 owl:allValuesFrom xsd:string
+                               ] .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/PointInTime
+:PointInTime rdf:type owl:Class ;
+             rdfs:subClassOf :TemporalExtent ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasTimeOfTheDay ;
+                               owl:someValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :inHours ;
+                               owl:someValuesFrom xsd:integer
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :inMinutes ;
+                               owl:someValuesFrom xsd:integer
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasDayOfTheWeek ;
+                               owl:allValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasSeason ;
+                               owl:allValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasTimeOfTheDay ;
+                               owl:allValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :inHours ;
+                               owl:allValuesFrom xsd:integer
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :inMinutes ;
+                               owl:allValuesFrom xsd:integer
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasDayOfTheWeek ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasSeason ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/PopulationDensity
+:PopulationDensity rdf:type owl:Class ;
+                   rdfs:subClassOf :SocioEconomicCondition ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :populationDensityAsDecimal ;
+                                     owl:someValuesFrom xsd:decimal
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :populationDensityAsDecimal ;
+                                     owl:allValuesFrom xsd:decimal
+                                   ] .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/RecentDrivingCondition
+:RecentDrivingCondition rdf:type owl:Class ;
+                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                          owl:onProperty :atMonth ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onDataRange xsd:integer
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :atYear ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onDataRange xsd:integer
+                                        ] .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/SocioEconomicCondition
+:SocioEconomicCondition rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/State
+:State rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasCity ;
+                         owl:someValuesFrom :City
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasCity ;
+                         owl:allValuesFrom :City
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasStateName ;
+                         owl:allValuesFrom xsd:string
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasStateName ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:string
+                       ] .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/Street
+:Street rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasStreetName ;
+                          owl:allValuesFrom xsd:string
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasStreetName ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:string
+                        ] .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/SubstanceImpairments
+:SubstanceImpairments rdf:type owl:Class ;
+                      rdfs:subClassOf :Impairments ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :substanceImpairmentAsString ;
+                                        owl:allValuesFrom xsd:string
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :substanceImpairmentAsString ;
+                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onDataRange xsd:string
+                                      ] .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/TemporalExtent
+:TemporalExtent rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/TimeInterval
+:TimeInterval rdf:type owl:Class ;
+              rdfs:subClassOf :TemporalExtent ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :endsAt ;
+                                owl:allValuesFrom xsd:time
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :startsAt ;
+                                owl:allValuesFrom xsd:time
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :endsAt ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:time
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :startsAt ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:time
+                              ] .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/Vehicle
+:Vehicle rdf:type owl:Class ;
+         rdfs:subClassOf :Participant ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :performsVehicleInCrash ;
+                           owl:allValuesFrom :VehicleInCrash
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :performsVehicleInCrash ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :VehicleInCrash
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasBodyType ;
+                           owl:allValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasVIN ;
+                           owl:allValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasVehicleMake ;
+                           owl:allValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasVehicleManufacturingYear ;
+                           owl:allValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasVehicleModel ;
+                           owl:allValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasWeightRange ;
+                           owl:allValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasBodyType ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasVIN ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasVehicleMake ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasVehicleManufacturingYear ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasVehicleModel ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasWeightRange ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
+                         ] .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/VehicleInCrash
+:VehicleInCrash rdf:type owl:Class ;
+                rdfs:subClassOf :Vehicle ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :involvedInHitAndRun ;
+                                  owl:someValuesFrom xsd:boolean
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasMannerOfCollision ;
+                                  owl:allValuesFrom xsd:string
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasSpeed ;
+                                  owl:allValuesFrom xsd:integer
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasTrailingUnit ;
+                                  owl:allValuesFrom xsd:string
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :involvedInHitAndRun ;
+                                  owl:allValuesFrom xsd:boolean
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasMannerOfCollision ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:string
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasSpeed ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:integer
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasTrailingUnit ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:string
+                                ] .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/WeatherCondition
+:WeatherCondition rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasTemporalExtent ;
+                                    owl:someValuesFrom :TemporalExtent
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :weatherConditionAsString ;
+                                    owl:allValuesFrom xsd:string
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :weatherConditionAsString ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:string
+                                  ] .
+
+
+###  http://www.semanticweb.org/ruman/ontologies/2024/10/untitled-ontology-10/Weight
+:Weight rdf:type owl:Class .
+
+
+###  http://www.w3.org/2002/07/owl#Thing
+owl:Thing rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasTemporalExtent ;
+                            owl:allValuesFrom :TemporalExtent
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :atMonth ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :atYear ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasHeight ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasWeight ;
+                            owl:allValuesFrom xsd:integer
+                          ] .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty :performsVehicleInCrash ;
+  owl:someValuesFrom :VehicleInCrash ;
+  rdfs:subClassOf :Vehicle
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty :providesVehicleInCrash ;
+  owl:someValuesFrom :VehicleInCrash ;
+  rdfs:subClassOf :Crash
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty :hasVIN ;
+  owl:someValuesFrom xsd:string ;
+  rdfs:subClassOf :Vehicle
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty :hasVehicleMake ;
+  owl:someValuesFrom xsd:string ;
+  rdfs:subClassOf :Vehicle
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty :hasVehicleManufacturingYear ;
+  owl:someValuesFrom xsd:string ;
+  rdfs:subClassOf :Vehicle
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty :hasVehicleModel ;
+  owl:someValuesFrom xsd:string ;
+  rdfs:subClassOf :Vehicle
+] .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
